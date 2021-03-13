@@ -1,20 +1,155 @@
-// ****************** IMPORTS ***************//
+// ****************** IMPORT ***************//
 @import 'vars';
 @import 'fonts';
 @import 'normalize';
 @import 'global';
 
+// ****************** HEADER***************//
+.header {
+  padding: 50px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  &__link {
+    color: $accent;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &__link--plus {
+    position: relative;
+    padding-right: 13px;
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 10px;
+      height: 10px;
+      color: $accent
+    }
+  }
+}
+
+.user {
+  display: flex;
+
+  &__link {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: -13px;
+    right: -18px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: $default;
+    z-index: 5;
+    font-size: 10px;
+    color: $default;
+    text-align: center;
+  }
+}
+
+.user__link--search {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #edf1f4;
+}
+
+.user__link--circle {
+  background-color: #a3bbc8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user__link--search,
+.user__link--heart,
+.user__link--basket,
+.user__link--circle {
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.user__link--search::after {
+  background-image: url("../images/icons/search.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.user__link--heart::after {
+  background-image: url("../images/icons/heart.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.user__link--basket::after {
+  background-image: url("../images/icons/basket.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.user__link--circle::after {
+  background-image: url("../images/icons/icon.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.user__box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fcd7b6;
+  width: 175px;
+  height: 50px;
+  border-radius: 35px;
+  margin-right: 20px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: #fde7d3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+// ****************** MEDIA ***************//
 @import 'media';
