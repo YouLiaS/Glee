@@ -1,7 +1,8 @@
 $(function () {
   $('.home__slider').slick({
     arrows: false,
-    dots: true,
-
+    dots: true
   })
+  //***  MIXITUP ***//
+  mixitup('.products__cards')
 });

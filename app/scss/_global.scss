@@ -11,3 +11,9 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: #191919;
+}
