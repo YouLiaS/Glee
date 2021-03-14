@@ -1,32 +1,46 @@
 // ****************** IMPORT ***************//
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'normalize';
 @import 'global';
+@import 'slick';
 
 // ****************** HEADER***************//
 .header {
-  padding: 50px 0;
+  padding: 50px 0 65px;
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    position: relative;
   }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 0;
 }
 
 .menu {
   display: flex;
 
   &__item:not(:last-child) {
-    margin-right: 34px;
+    margin-right: 40px;
   }
 
   &__link {
     color: $accent;
-    @extend %rubik-500;
     font-size: 15px;
     line-height: 1;
+    @extend %rubik-500;
   }
 
   &__link--plus {
@@ -40,7 +54,7 @@
       transform: translateY(-50%);
       right: 0;
       width: 10px;
-      height: 10px;
+      height: 13px;
       color: $accent
     }
   }
@@ -48,6 +62,8 @@
 
 .user {
   display: flex;
+  position: absolute;
+  right: 0;
 
   &__link {
     position: relative;
@@ -70,27 +86,29 @@
     font-size: 10px;
     color: $default;
     text-align: center;
+    line-height: 1.4;
   }
 }
 
-.user__link--search {
+.user__link--search,
+.user__link--ellipse {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.user__link--search {
   background-color: #edf1f4;
 }
 
-.user__link--circle {
+.user__link--ellipse {
   background-color: #a3bbc8;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 .user__link--search,
 .user__link--heart,
 .user__link--basket,
-.user__link--circle {
+.user__link--ellipse {
   &::after {
     content: '';
     position: absolute;
@@ -100,31 +118,25 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
   }
 }
 
 .user__link--search::after {
   background-image: url("../images/icons/search.svg");
-  width: 16px;
-  height: 16px;
 }
 
 .user__link--heart::after {
   background-image: url("../images/icons/heart.svg");
-  width: 16px;
-  height: 16px;
 }
 
 .user__link--basket::after {
   background-image: url("../images/icons/basket.svg");
-  width: 16px;
-  height: 16px;
 }
 
-.user__link--circle::after {
-  background-image: url("../images/icons/icon.svg");
-  width: 16px;
-  height: 16px;
+.user__link--ellipse::after {
+  background-image: url("../images/icons/ellipse.svg");
 }
 
 .user__box {
@@ -150,6 +162,190 @@
   }
 }
 
+// ****************** HOME ***************//
+.home {
+  &__slider {
+    background-color: #fcd7b6;
+    padding: 100px 0 90px;
+    min-height: 825px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__descr {
+    max-width: 470px;
+    padding-top: 120px;
+    margin-right: 60px;
+
+    p {
+      max-width: 370px;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 55px;
+      color: $accent;
+    }
+  }
+
+  &__title {
+    font-size: 72px;
+    color: $title;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    background-color: #a3bbc8;
+    color: #ffffff;
+    @extend %rubik-500;
+    padding: 21px 102px 23px 27px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__product {
+    position: relative;
+    padding-top: 177px;
+    min-height: 635px;
+    z-index: 5;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 635px;
+      height: 635px;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 0)0%, #fff 100%);
+      border-radius: 50%;
+      right: -115px;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    max-width: 640px;
+    min-height: 265px;
+  }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    button {
+      border: none;
+      font-size: 11px;
+      background-color: #fde3cc;
+      border-radius: 50%;
+      color: $title;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      cursor: pointer;
+      outline: transparent;
+    }
+  }
+
+  .slick-dots .slick-active button {
+    background-color: #fff;
+  }
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fef7f0;
+
+  &__item {
+    padding: 35px 0;
+    max-width: 293px;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 52px;
+      height: 55px;
+      left: 0;
+      top: 48px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &--support::before {
+      background-image: url("../images/icons/support.png");
+    }
+
+    &--delivery::before {
+      background-image: url("../images/icons/delivery.png");
+      left: -7px;
+      top: 33px;
+    }
+
+    &--payment::before {
+      background-image: url("../images/icons/payment.png");
+    }
+
+    &--support::after {
+      content: '';
+      position: absolute;
+      right: -126px;
+      top: 0;
+      height: 160px;
+      width: 1px;
+      background-color: #e8e4df;
+    }
+
+    &--delivery::after {
+      content: '';
+      position: absolute;
+      right: -126px;
+      top: 0;
+      height: 146px;
+      width: 1px;
+      background-color: #e8e4df;
+    }
+
+    p {
+      color: #585858;
+      font-size: 16px;
+      line-height: 1.7;
+      @extend %dmsans-400;
+    }
+  }
+
+  &__title {
+    color: #414141;
+    font-size: 18px;
+    line-height: 2;
+    @extend %dmsans-700;
+  }
+
+}
 
 // ****************** MEDIA ***************//
 @import 'media';
