@@ -15,5 +15,5 @@ body {
 .title {
   @extend %dmsans-700;
   font-size: 36px;
-  color: #191919;
+  color: $default;
 }
