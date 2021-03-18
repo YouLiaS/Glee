@@ -1,0 +1,82 @@
+.goods {
+  padding: 65px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #feefe2;
+    min-height: 385px;
+    position: relative;
+  }
+
+
+  &__img {
+    position: absolute;
+    left: 140px;
+    bottom: 85px;
+    max-width: 235px;
+    min-height: 400px;
+  }
+
+  &__info {
+    padding-top: 94px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-left: 223px;
+
+    &--wide {
+      padding-top: 82px;
+      padding-left: 272px;
+
+      .goods__descr {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+
+  &__title {
+    @extend %dmsans-700;
+    line-height: 1.2;
+    font-size: 26px;
+    color: $title;
+    margin-bottom: 15px;
+    @include line-clamp-2;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 1.8;
+    @include line-clamp-3;
+    margin-bottom: 53px;
+    color: $title;
+  }
+
+  &__link {
+    font-size: 15px;
+    @extend %rubik-500;
+    color: $accent;
+    border: 1px solid #b3b7b5;
+    padding: 21px 86px 21px 21px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 14px;
+      background-image: url('../images/icons/arrow-right-blue.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 25px;
+      height: 10px;
+    }
+  }
+}

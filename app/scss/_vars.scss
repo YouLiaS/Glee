@@ -1,29 +1,30 @@
+$white: #ffffff;
 $accent: #436372;
 $default: #191919;
 $title: #243f4d;
 $light-blue: #a3bbc8;
+$medium-blue: #234969;
 $orange:#fcd7b6;
 $footer-color:#7b7b7b;
 
 /********************************/
 %rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
 
 ;
 
 %rubik-500 {
-  font-family: 'Rubik-Medium',
+  font-family: 'Rubik',
     sans-serif;
   font-weight: 500;
 }
 
 ;
 
-
 %dmsans-400 {
-  font-family: 'DMSans-Regular',
+  font-family: 'DMSans',
     sans-serif;
   font-weight: 400;
 }
@@ -31,7 +32,7 @@ $footer-color:#7b7b7b;
 ;
 
 %dmsans-500 {
-  font-family: 'DMSans-Medium',
+  font-family: 'DMSans',
     sans-serif;
   font-weight: 500;
 }
@@ -39,9 +40,34 @@ $footer-color:#7b7b7b;
 ;
 
 %dmsans-700 {
-  font-family: 'DMSans-Bold',
+  font-family: 'DMSans',
     sans-serif;
   font-weight: 700;
 }
 
 ;
+
+/********************************/
+@mixin line-clamp-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@mixin line-clamp-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@mixin line-clamp-4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}

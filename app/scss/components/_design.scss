@@ -1,0 +1,60 @@
+.design {
+  padding: 35px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-bottom: 30px;
+  }
+
+  &__card {
+    background-repeat: no-repeat;
+    background-position: right center;
+    max-width: 370px;
+    min-height: 245px;
+  }
+
+  &__info {
+    padding: 44px 0 0 37px;
+  }
+
+  &__heading {
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: $default;
+    margin-bottom: 15px;
+    @include line-clamp-2;
+    max-width: 171px;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $light-blue;
+    }
+
+    &:focus {
+      outline-color: $light-blue
+    }
+
+    &:active {
+      color: $default
+    }
+  }
+
+  &__text {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $light-blue;
+  }
+}
