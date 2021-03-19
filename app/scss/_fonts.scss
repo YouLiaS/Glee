@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Rubik-Regular';
+  font-family: 'Rubik';
   font-weight: 400;
   font-style: normal;
   src: local('Rubik-Regular'),
@@ -8,10 +8,8 @@
   font-display: swap;
 }
 
-;
-
 @font-face {
-  font-family: 'Rubik-Medium';
+  font-family: 'Rubik';
   font-weight: 500;
   font-style: normal;
   src: local('Rubik-Medium'),
@@ -20,10 +18,8 @@
   font-display: swap;
 }
 
-;
-
 @font-face {
-  font-family: 'DMSans-Regular';
+  font-family: 'DMSans';
   font-weight: 400;
   font-style: normal;
   src: local('DMSans-Regular'),
@@ -32,10 +28,8 @@
   font-display: swap;
 }
 
-;
-
 @font-face {
-  font-family: 'DMSans-Medium';
+  font-family: 'DMSans';
   font-weight: 500;
   font-style: normal;
   src: local('DMSans-Medium'),
@@ -44,10 +38,8 @@
   font-display: swap;
 }
 
-;
-
 @font-face {
-  font-family: 'DMSans-Bold';
+  font-family: 'DMSans';
   font-weight: 700;
   font-style: normal;
   src: local('DMSans-Bold'),
@@ -56,4 +48,14 @@
   font-display: swap;
 }
 
-;
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?rf0g7i');
+  src: url('../fonts/icomoon.eot?rf0g7i#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?rf0g7i') format('truetype'),
+    url('../fonts/icomoon.woff?rf0g7i') format('woff'),
+    url('../fonts/icomoon.svg?rf0g7i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
