@@ -211,6 +211,16 @@
     border: 1px solid #b3b7b5;
     padding: 21px 86px 21px 21px;
     position: relative;
+    transition: border-color .3s ease;
+
+    &:hover,
+    &:active {
+      border-color: $default;
+    }
+
+    &:focus {
+      outline-color: $default;
+    }
 
     &::after {
       content: "";
