@@ -11,7 +11,9 @@ $(function () {
     arrows: false,
     dots: false,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
   })
 
   mixitup('.products__cards')
