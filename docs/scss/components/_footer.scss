@@ -1,0 +1,183 @@
+.footer {
+  color: $footer-color;
+  font-size: 14px;
+  line-height: 1.8;
+
+  &__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    padding: 70px 0;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $footer-color;
+  }
+
+  &__box {
+    &--connect {
+      max-width: 200px;
+      margin-right: 100px;
+    }
+
+    &--service {
+      max-width: 130px;
+      margin-right: 176px;
+    }
+
+    &--account {
+      max-width: 100px;
+      margin-right: 225px;
+    }
+
+    &--newsletter {
+      max-width: 270px;
+    }
+  }
+
+  &__logo img {
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    color: #1f2044;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    line-height: 2.2;
+    color: $footer-color;
+    transition: color .3s ease;
+
+    &:hover,
+    &:active {
+      color: $default;
+    }
+
+    &:focus {
+      outline-color: $default;
+    }
+  }
+
+  .connect {
+    line-height: 2.2;
+    font-style: normal;
+
+    &__item {
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    &__adress {
+      line-height: 1.7;
+      color: $footer-color;
+    }
+
+    &__phone,
+    &__email {
+      color: $footer-color;
+
+      &:hover,
+      &:active {
+        color: $default;
+      }
+
+      &:focus {
+        outline-color: $default;
+      }
+
+    }
+  }
+
+  &__text {
+    line-height: 1.7;
+    margin-bottom: 31px;
+  }
+
+  .form {
+    position: relative;
+    display: flex;
+
+    &__input {
+      border: none;
+      background-color: #fef7f0;
+      max-width: 170px;
+      width: 100%;
+      padding: 13px 15px;
+      color: $medium-blue;
+      outline-color: transparent;
+      transition: background-color .3s ease;
+
+      &:focus+label {
+        top: -10px;
+        left: 4px;
+        font-size: 12px;
+        @extend %dmsans-500;
+        color: $medium-blue;
+        background-color: transparent;
+        transition: all 0.25s ease;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $medium-blue;
+      }
+    }
+
+    &__label {
+      position: absolute;
+      left: 0;
+      padding: 0 8px;
+      top: 11px;
+      @extend %dmsans-400;
+      color: $medium-blue;
+    }
+
+    &__btn {
+      border: none;
+      background-color: $light-blue;
+      color: $white;
+      padding: 11px 17px 11px 13px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $default;
+      }
+
+      &:focus {
+        outline-color: $default;
+      }
+
+      &:active {
+        color: $light-blue;
+      }
+    }
+  }
+
+  &__bottom {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  &__link:not(:last-child) {
+    padding-right: 35px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      border-right: 1px solid $footer-color;
+      height: 15px;
+      right: 10px;
+      top: 0;
+    }
+  }
+}

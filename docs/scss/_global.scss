@@ -6,7 +6,7 @@ body {
 body {
   font-size: 16px;
   line-height: 1;
-  background-color: #fff;
+  background-color: $white;
   color: $default;
   @extend %rubik-400;
   display: flex;
@@ -23,8 +23,93 @@ body {
   padding: 0 15px;
 }
 
+.container--sm {
+  max-width: 1205px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .title {
   @extend %dmsans-700;
   font-size: 36px;
   color: $default;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    button {
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: #8b8b8b;
+      cursor: pointer;
+      transition: color .3s ease;
+      outline-color: $default;
+
+      &:hover {
+        color: $default;
+      }
+
+      &:focus {
+        outline-color: $default;
+      }
+
+      &:active {
+        color: $light-blue;
+      }
+    }
+  }
+}
+// ************************************************//
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+.icon-heart-o:before {
+  content: "\f08a";
+}
+
+.icon-long-arrow-right:before {
+  content: "\f178";
 }

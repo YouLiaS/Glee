@@ -1,0 +1,91 @@
+.design {
+  padding: 35px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-bottom: 30px;
+    transition: transform .5s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__card {
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 370px;
+    min-height: 245px;
+  }
+
+  &__info {
+    padding: 47px 0 0 37px;
+  }
+
+  &__heading {
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: $default;
+    margin-bottom: 15px;
+    @include line-clamp-2;
+    max-width: 171px;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $light-blue;
+    }
+
+    &:focus {
+      outline-color: $light-blue
+    }
+
+    &:active {
+      color: $default
+    }
+  }
+
+  &__text {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $light-blue;
+  }
+
+  &__video {
+    padding: 100px 0 50px 0;
+  }
+
+  &__popup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../images/icons/play.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 130px;
+      height: 130px;
+    }
+  }
+}
