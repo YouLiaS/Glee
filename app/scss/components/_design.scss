@@ -3,7 +3,7 @@
 
   &__title {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
   }
 
   &__items {
@@ -21,13 +21,13 @@
 
   &__card {
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: center;
     max-width: 370px;
     min-height: 245px;
   }
 
   &__info {
-    padding: 44px 0 0 37px;
+    padding: 47px 0 0 37px;
   }
 
   &__heading {
@@ -56,5 +56,30 @@
     @extend %dmsans-700;
     font-size: 16px;
     color: $light-blue;
+  }
+
+  &__video {
+    padding: 100px 0 50px 0;
+  }
+
+  &__popup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../images/icons/play.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 130px;
+      height: 130px;
+    }
   }
 }

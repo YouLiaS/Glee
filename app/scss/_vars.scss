@@ -71,3 +71,11 @@ $footer-color:#7b7b7b;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
