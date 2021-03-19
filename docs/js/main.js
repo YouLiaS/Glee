@@ -4,7 +4,7 @@ $(function () {
     dots: true,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
   })
 
   $('.partners__carousel').slick({
