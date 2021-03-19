@@ -8,7 +8,7 @@
     margin: 0 auto;
   }
 
-  .footer__top {
+  &__top {
     padding: 70px 0;
     display: flex;
     align-items: flex-start;
@@ -167,7 +167,7 @@
     align-items: center
   }
 
-  &__links &__link:not(:last-child) {
+  &__link:not(:last-child) {
     padding-right: 35px;
     position: relative;
 

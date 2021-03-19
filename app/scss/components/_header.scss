@@ -80,6 +80,57 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+
+    &--search,
+    &--ellipse {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0;
+      border: none;
+    }
+
+    &--search {
+      background-color: #edf1f4;
+    }
+
+    &--ellipse {
+      background-color: $light-blue;
+    }
+
+    &--search,
+    &--heart,
+    &--basket,
+    &--ellipse {
+      &::after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--search::after {
+      background-image: url("../images/icons/search.svg");
+    }
+
+    &--heart::after {
+      background-image: url("../images/icons/heart.svg");
+    }
+
+    &--basket::after {
+      background-image: url("../images/icons/basket.svg");
+    }
+
+    &--ellipse::after {
+      background-image: url("../images/icons/ellipse.svg");
+    }
   }
 
   &__num {
@@ -96,59 +147,7 @@
     color: $default;
     text-align: center;
     line-height: 1.5;
-
   }
-}
-
-.user__link--search,
-.user__link--ellipse {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  padding: 0;
-  border: none;
-}
-
-.user__link--search {
-  background-color: #edf1f4;
-}
-
-.user__link--ellipse {
-  background-color: $light-blue;
-}
-
-.user__link--search,
-.user__link--heart,
-.user__link--basket,
-.user__link--ellipse {
-  &::after {
-    content: '';
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.user__link--search::after {
-  background-image: url("../images/icons/search.svg");
-}
-
-.user__link--heart::after {
-  background-image: url("../images/icons/heart.svg");
-}
-
-.user__link--basket::after {
-  background-image: url("../images/icons/basket.svg");
-}
-
-.user__link--ellipse::after {
-  background-image: url("../images/icons/ellipse.svg");
 }
 
 .user__box {
