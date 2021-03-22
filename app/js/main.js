@@ -16,5 +16,6 @@ $(function () {
     autoplaySpeed: 2000
   })
 
-  mixitup('.products__cards')
+  mixitup('.products__cards');
+  mixitup('.design__items');
 });

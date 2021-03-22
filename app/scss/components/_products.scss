@@ -1,22 +1,18 @@
 .products {
-  padding: 70px 0;
+  padding: 70px 0 0;
 
   &__title {
-    text-align: center;
     margin-bottom: 33px;
   }
 
   &__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
     margin-bottom: 90px;
   }
 
-  &__card {
-    max-width: 270px;
-    width: 100%;
-    margin: 0 auto 35px;
+  .product-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,39 +29,34 @@
         opacity: 1;
       }
     }
-  }
 
-  &__img {
-    max-width: 240px;
-    min-height: 200px;
-    object-fit: contain;
-    margin-bottom: 45px;
-  }
+    &__img {
+      max-width: 240px;
+      min-height: 200px;
+      object-fit: contain;
+      margin-bottom: 45px;
+    }
 
-  &__heading {
-    a {
-      font-size: 16px;
+    &__link {
       line-height: 2.5;
       color: $title;
       border-bottom: 2px solid transparent;
-      transition: border-bottom .3s ease;
+      transition: border-bottom-color .3s ease;
 
       &:hover {
         border-bottom-color: $light-blue;
       }
     }
 
-  }
+    &__price {
+      @extend %dmsans-700;
+      color: $light-blue;
+    }
 
-  &__price {
-    @extend %dmsans-700;
-    font-size: 16px;
-    color: $light-blue;
+    .mixitup-control-active {
+      color: $default;
+    }
   }
-}
-
-.mixitup-control-active {
-  color: $default;
 }
 
 .icons {
@@ -78,107 +69,97 @@
   transform: translate(-50%);
   opacity: 0;
   transition: opacity .4s ease-in-out;
-}
 
-.icon {
-  position: absolute;
-  background-color: $white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 11px 1px rgba(0, 0, 0, 0.77);
-
-  &:hover {
-    background-color: $light-blue;
-  }
-
-  &--search::after,
-  &--basket::after,
-  &--heart::after {
-    content: '';
+  &__icon {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 22px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    color: $light-blue;
-    font-size: 18px;
-  }
+    background-color: $white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 11px 1px rgba(0, 0, 0, 0.77);
+    transition: background-color .4s ease,
+      color .4s ease;
 
-  &--search {
-    left: 55px;
-
-    &::after {
-      content: "\f002";
-    }
-  }
-
-  &--basket {
-    left: 50%;
-    transform: translateX(-50%);
-
-    &::after {
-      content: "\f07a";
+    &:hover {
+      background-color: $light-blue;
     }
 
-  }
-
-  &--heart {
-    right: 55px;
-
     &::after {
-      content: "\f08a";
+      @extend %content;
+      @extend %top-left-50;
+      @extend %bg-contain;
+      color: $light-blue;
+      font-size: 18px;
+    }
+
+    &--search {
+      left: 55px;
+
+      &::after {
+        content: "\f002";
+        font-family: 'icomoon' !important;
+      }
+    }
+
+    &--basket {
+      left: 50%;
+      transform: translateX(-50%);
+
+      &::after {
+        content: "\f07a";
+        font-family: 'icomoon' !important;
+      }
 
     }
-  }
 
-  &--search:hover::after,
-  &--basket:hover::after,
-  &--heart:hover::after {
-    color: $white;
+    &--heart {
+      right: 55px;
+
+      &::after {
+        content: "\f08a";
+        font-family: 'icomoon' !important;
+
+      }
+    }
+
+    &:hover::after {
+      color: $white;
+    }
   }
 }
 
 .goods {
-  padding-top: 62px;
+  padding-top: 85px;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 
   &__item {
-    max-width: 870px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #feefe2;
     min-height: 385px;
-    position: relative;
   }
 
+  &__image {
+    margin-top: -180px;
+  }
 
   &__img {
-    position: absolute;
-    left: 140px;
-    bottom: 85px;
     max-width: 235px;
     min-height: 400px;
+    object-fit: contain;
   }
 
   &__info {
-    padding-top: 94px;
-    max-width: 550px;
-    margin: 0 auto;
-    padding-left: 223px;
+    max-width: 340px;
 
     &--wide {
-      padding-top: 82px;
-      padding-left: 272px;
+      padding-left: 50px;
 
       .goods__descr {
         margin-bottom: 48px;
@@ -186,52 +167,55 @@
     }
   }
 
-
-  &__title {
+  &__link {
     @extend %dmsans-700;
     line-height: 1.2;
     font-size: 26px;
     color: $title;
     margin-bottom: 15px;
     @include line-clamp-2;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__descr {
-    font-size: 16px;
     line-height: 1.8;
-    @include line-clamp-3;
+    @include line-clamp-2;
     margin-bottom: 53px;
     color: $title;
   }
 
-  &__link {
+  &__btn {
     font-size: 15px;
     @extend %rubik-500;
     color: $accent;
     border: 1px solid #b3b7b5;
     padding: 21px 86px 21px 21px;
     position: relative;
-    transition: border-color .3s ease;
+    transition: background-color, color .3s ease;
+    @extend %focus;
 
-    &:hover,
+    &:hover {
+      background-color: $title;
+      color: $white;
+
+      &::after {
+        color: $white;
+      }
+    }
+
     &:active {
       border-color: $default;
     }
 
-    &:focus {
-      outline-color: $default;
-    }
-
     &::after {
-      content: "";
-      position: absolute;
+      @extend %content;
+      content: '\f178';
+      font-family: 'icomoon' !important;
+      font-size: 18px;
       right: 14px;
-      background-image: url('../images/icons/arrow-right-blue.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      width: 25px;
-      height: 10px;
     }
   }
 }

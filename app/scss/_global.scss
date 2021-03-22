@@ -25,14 +25,27 @@ body {
 
 .container--sm {
   max-width: 1205px;
-  margin: 0 auto;
-  padding: 0 15px;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline-color: $default;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .title {
   @extend %dmsans-700;
   font-size: 36px;
   color: $default;
+  text-align: center;
 }
 
 .sr-only {
@@ -60,14 +73,9 @@ body {
 
     button {
       background-color: transparent;
-      padding: 0;
-      border: none;
       @extend %dmsans-700;
-      font-size: 16px;
       color: #8b8b8b;
-      cursor: pointer;
       transition: color .3s ease;
-      outline-color: $default;
 
       &:hover {
         color: $default;
@@ -83,33 +91,5 @@ body {
     }
   }
 }
+
 // ************************************************//
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-search:before {
-  content: "\f002";
-}
-
-.icon-shopping-cart:before {
-  content: "\f07a";
-}
-
-.icon-heart-o:before {
-  content: "\f08a";
-}
-
-.icon-long-arrow-right:before {
-  content: "\f178";
-}

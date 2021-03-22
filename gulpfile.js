@@ -24,7 +24,11 @@ function browsersync() {
 }
 // ***********STYLES************** //
 function styles() {
-  return src('app/scss/style.scss')
+  return src([
+      'node_modules/slick-carousel/slick/slick.scss',
+      // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+      'app/scss/style.scss'
+    ])
     .pipe(scss({
       outputStyle: 'compressed'
     }))

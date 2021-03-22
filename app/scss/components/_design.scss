@@ -1,56 +1,47 @@
 .design {
-  padding: 35px 0;
+  padding: 108px 0 0;
 
   &__title {
-    text-align: center;
     margin-bottom: 22px;
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  &__item {
-    max-width: 370px;
-    width: 100%;
-    background-color: #f8f8f8;
-    margin-bottom: 30px;
-    transition: transform .5s ease;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
   }
 
   &__card {
-    background-repeat: no-repeat;
-    background-position: center;
+    position: relative;
+  }
+
+  .mixitup-control-active {
+    color: $default;
+  }
+
+  &__image {
     max-width: 370px;
     min-height: 245px;
   }
 
   &__info {
-    padding: 47px 0 0 37px;
+    top: 45px;
+    left: 35px;
+    position: absolute;
   }
 
   &__heading {
     @extend %dmsans-700;
     font-size: 20px;
-    color: $default;
+    color: inherit;
     margin-bottom: 15px;
     @include line-clamp-2;
     max-width: 171px;
     transition: color .3s ease;
+    @extend %focus;
 
     &:hover {
       color: $light-blue;
-    }
-
-    &:focus {
-      outline-color: $light-blue
     }
 
     &:active {
@@ -60,12 +51,11 @@
 
   &__text {
     @extend %dmsans-700;
-    font-size: 16px;
     color: $light-blue;
   }
 
   &__video {
-    padding: 100px 0 50px 0;
+    padding: 125px 0 0;
   }
 
   &__popup {
@@ -73,17 +63,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @extend %bg-cover;
+    max-width: 100%;
+    min-height: 500px;
 
     &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @extend %content;
+      @extend %top-left-50;
+      @extend %bg-contain;
       background-image: url('../images/icons/play.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
       width: 130px;
       height: 130px;
     }

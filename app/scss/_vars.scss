@@ -37,35 +37,48 @@ $footer-color:#7b7b7b;
   font-weight: 700;
 }
 
-/********************************/
-@mixin line-clamp-2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+%button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
-@mixin line-clamp-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+%bg-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@mixin line-clamp-4 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+%bg-contain {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
+%content {
+  content: '';
+  position: absolute;
 }
 
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
+%top-50 {
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+%top-left-50 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%focus {
+  &:focus {
+    outline-color: transparent;
+  }
+}
+
+%active {
+  &:active {
+    color: $default
+  }
 }
