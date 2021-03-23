@@ -65,7 +65,7 @@
   }
 
   @include for-desktop {
-    padding: 100px 0 15px;
+    padding: 100px 0 20px;
   }
 
   @include for-tablet-portrait {
@@ -102,6 +102,7 @@
     transition: border-bottom-color .3s ease;
     border-bottom: 2px solid transparent;
     @extend %focus;
+    @extend %active;
 
     @include for-tablet-portrait {
       display: inline-block;
@@ -111,10 +112,6 @@
 
     &:hover {
       border-bottom-color: $accent;
-    }
-
-    &:active {
-      color: $default;
     }
 
     &--plus {

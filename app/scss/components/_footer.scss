@@ -223,6 +223,8 @@
   &__link {
     color: $footer-color;
     transition: color .3s ease;
+    @extend %focus;
+    @extend %active;
 
     &:hover {
       color: $default;

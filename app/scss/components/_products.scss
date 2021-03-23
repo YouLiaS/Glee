@@ -79,6 +79,8 @@
       color: $title;
       border-bottom: 2px solid transparent;
       transition: border-bottom-color .3s ease;
+      @extend %focus;
+      @extend %outline;
 
       &:hover {
         border-bottom-color: $light-blue;
@@ -114,8 +116,7 @@
     height: 40px;
     border-radius: 50%;
     box-shadow: 0px 2px 11px 1px rgba(0, 0, 0, 0.77);
-    transition: background-color .4s ease,
-      color .4s ease;
+    transition: background-color .4s ease, color .4s ease;
 
     &:hover {
       background-color: $light-blue;
@@ -145,7 +146,6 @@
       &::after {
         content: "\f07a";
       }
-
     }
 
     &--heart {
@@ -211,7 +211,6 @@
       @include for-tablet-landscape {
         order: 2;
       }
-
     }
 
     @include for-phone-only {
@@ -304,7 +303,7 @@
     border: 1px solid #b3b7b5;
     padding: 21px 86px 21px 21px;
     position: relative;
-    transition: background-color, color .3s ease;
+    transition: background-color .3s ease, color .3s ease;
     @extend %focus;
 
     &:hover {

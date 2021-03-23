@@ -84,13 +84,10 @@
     max-width: 171px;
     transition: color .3s ease;
     @extend %focus;
+    @extend %active;
 
     &:hover {
       color: $light-blue;
-    }
-
-    &:active {
-      color: $default;
     }
 
     @include for-tablet-landscape {
