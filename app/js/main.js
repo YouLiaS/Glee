@@ -13,8 +13,28 @@ $(function () {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+
+    responsive: [{
+        breakpoint: 749,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 495,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      }
+    ]
   })
 
-  mixitup('.products__cards')
+  $('.header__burger , .menu a').on('click', function () {
+    $('.menu').toggleClass('active')
+  })
+
+  mixitup('.products__cards');
+  mixitup('.design__items');
 });
