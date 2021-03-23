@@ -35,6 +35,12 @@ $(function () {
     $('.menu').toggleClass('active')
   })
 
+  if ($('.header__burger').is(':visible')) {
+    $('body').addClass("lock-scroll");
+  } else {
+    $('body').removeClass("lock-scroll");
+  }
+
   mixitup('.products__cards');
   mixitup('.design__items');
 });
