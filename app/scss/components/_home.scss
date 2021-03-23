@@ -2,20 +2,66 @@
   &__slider {
     background-color: $orange;
     min-height: 825px;
+
+    @include for-big-desktop {
+      min-height: 640px;
+    }
+
+    @include for-desktop {
+      min-height: 600px;
+    }
   }
 
   &__item {
     padding: 220px 0;
+
+    @include for-big-desktop {
+      padding: 140px 0;
+    }
+
+    @include for-desktop {
+      padding: 120px 0;
+    }
+
+    @include for-tablet-landscape {
+      padding: 90px 0;
+    }
+
+    @include for-phone-only {
+      padding: 50px 0;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include for-tablet-landscape {
+      flex-direction: column;
+    }
   }
 
   &__descr {
     max-width: 525px;
+
+    @include for-big-desktop {
+      max-width: 455px;
+    }
+
+    @include for-desktop {
+      max-width: 300px;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    @include for-phone-only {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -24,6 +70,18 @@
     text-transform: uppercase;
     margin-bottom: 25px;
     @include line-clamp-2;
+
+    @include for-big-desktop {
+      font-size: 60px;
+    }
+
+    @include for-desktop {
+      font-size: 50px;
+    }
+
+    @include for-phone-only {
+      font-size: 40px;
+    }
   }
 
   &__text {
@@ -33,6 +91,16 @@
     color: $accent;
     margin-bottom: 55px;
     @include line-clamp-3;
+
+    @include for-desktop {
+      max-width: 300px;
+      margin-bottom: 45px;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 100%;
+      padding: 0 10px;
+    }
   }
 
   &__btn {
@@ -61,6 +129,10 @@
       background-image: url('../images/icons/arrow-right.svg');
       @extend %bg-contain;
     }
+
+    @include for-desktop {
+      padding: 15px 71px 16px 21px;
+    }
   }
 
   &__product {
@@ -76,6 +148,35 @@
       width: 607px;
       height: 629px;
       z-index: -1;
+
+      @include for-big-desktop {
+        top: -77px;
+        right: -71px;
+        width: 438px;
+        height: 457px;
+      }
+
+      @include for-desktop {
+        top: -30px;
+        right: -71px;
+        width: 355px;
+        height: 365px;
+      }
+
+      @include for-tablet-landscape {
+        top: 20px;
+        right: -45px;
+        width: 271px;
+        height: 281px;
+      }
+
+      @include for-tablet-portrait {
+        display: none;
+      }
+    }
+
+    @include for-phone-only {
+      padding-top: 0;
     }
   }
 
@@ -83,6 +184,20 @@
     max-width: 640px;
     min-height: 265px;
     z-index: 5;
+
+    @include for-big-desktop {
+      max-width: 500px;
+      object-fit: contain;
+    }
+
+    @include for-desktop {
+      max-width: 455px;
+    }
+
+    @include for-tablet-portrait {
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 
   .slick-dots {
@@ -123,6 +238,10 @@
   align-items: center;
   background-color: #fef7f0;
 
+  @include for-desktop {
+    flex-wrap: wrap;
+  }
+
   &__item {
     padding: 37px 0;
     max-width: 595px;
@@ -131,6 +250,21 @@
 
     &:not(:last-child) {
       border-right: 1px solid #e8e4df;
+    }
+
+    @include for-desktop {
+      min-height: 105px;
+      padding: 14px 0;
+      width: 50%;
+
+      &:not(:last-child) {
+        border: none;
+      }
+    }
+
+    @include for-tablet-portrait {
+      width: 100%;
+      padding: 25px 10px;
     }
   }
 
@@ -148,6 +282,13 @@
       left: 0;
       top: 0px;
       @extend %bg-contain;
+
+      @include for-tablet-portrait {
+        width: 45px;
+        height: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &--support::before {
@@ -160,6 +301,10 @@
 
     &--payment::before {
       background-image: url("../images/icons/payment.png");
+    }
+
+    @include for-phone-only {
+      padding-left: 65px;
     }
   }
 

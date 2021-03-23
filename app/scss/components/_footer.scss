@@ -4,6 +4,10 @@
   font-size: 14px;
   line-height: 1.8;
 
+  @include for-tablet-portrait {
+    padding: 80px 0 0;
+  }
+
   &__inner {
     max-width: 1180px;
     margin: 0 auto;
@@ -14,6 +18,42 @@
     display: grid;
     grid-template-columns: 25% repeat(2, 1fr) 270px;
     border-bottom: 1px solid $footer-color;
+
+    @include for-desktop {
+      grid-template-columns: 30% repeat(2, 1fr) 270px;
+    }
+
+    @include for-tablet-landscape {
+      grid-template-columns: 40% repeat(1, 1fr) 180px;
+    }
+
+    @include for-tablet-portrait {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      column-gap: 10px;
+      text-align: center;
+      padding-bottom: 45px;
+    }
+
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__box {
+    @include for-tablet-portrait {
+      margin: 0 auto;
+    }
+
+    &:nth-child(3) {
+      @include for-tablet-portrait {
+        order: 4;
+      }
+
+      @include for-phone-only {
+        order: 0;
+      }
+    }
   }
 
   &__img {
@@ -83,7 +123,6 @@
       border: none;
       background-color: #fef7f0;
       max-width: 170px;
-      width: 100%;
       padding: 13px 15px;
       color: $medium-blue;
       outline-color: transparent;
@@ -101,6 +140,15 @@
       &:focus {
         outline: transparent;
         border-color: $medium-blue;
+      }
+
+      @include for-tablet-portrait {
+        max-width: 130px;
+      }
+
+      @include for-phone-only {
+        max-width: 100%;
+        width: 100%;
       }
     }
 
@@ -128,17 +176,37 @@
         color: $light-blue;
       }
     }
+
+    @include for-phone-only {
+      justify-content: center;
+    }
   }
 
   &__bottom {
     min-height: 90px;
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+
+    @include for-tablet-portrait {
+      flex-direction: column-reverse;
+      min-height: 70px;
+      padding: 10px 0;
+    }
+  }
+
+  &__copy {
+    @include for-phone-only {
+      text-align: center;
+    }
   }
 }
 
 .footer-nav {
+
+  @include for-tablet-portrait {
+    margin-bottom: 20px;
+  }
 
   &__list {
     display: flex;

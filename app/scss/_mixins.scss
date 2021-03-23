@@ -1,29 +1,29 @@
 @mixin for-big-desktop {
-  @media (max-width: 1800px) {
+  @media (max-width: 1500px) {
     @content;
   }
 }
 
 @mixin for-desktop {
-  @media (max-width: 1200px) {
+  @media (max-width: 1330px) {
     @content;
   }
 }
 
 @mixin for-tablet-landscape {
-  @media (max-width: 900px) {
+  @media (max-width: 960px) {
     @content;
   }
 }
 
 @mixin for-tablet-portrait {
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     @content;
   }
 }
 
 @mixin for-phone-only {
-  @media (max-width: 599px) {
+  @media (max-width: 395px) {
     @content;
   }
 }
@@ -54,6 +54,7 @@
 }
 
 /***************************************/
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

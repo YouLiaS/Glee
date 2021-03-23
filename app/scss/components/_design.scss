@@ -1,6 +1,10 @@
 .design {
   padding: 108px 0 0;
 
+  @include for-desktop {
+    padding-top: 80px;
+  }
+
   &__title {
     margin-bottom: 22px;
   }
@@ -9,6 +13,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+
+    @include for-tablet-landscape {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+    }
+
+    @include for-tablet-portrait {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    @include for-tablet-portrait {
+      margin: 0 auto;
+    }
   }
 
   &__card {
@@ -22,12 +41,38 @@
   &__image {
     max-width: 370px;
     min-height: 245px;
+
+    @include for-desktop {
+      max-width: 295px;
+      min-height: 200px;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 95%;
+    }
+
+    @include for-tablet-portrait {
+      margin: 0;
+      max-width: 100%;
+    }
   }
 
   &__info {
     top: 45px;
     left: 35px;
     position: absolute;
+
+    @include for-desktop {
+      padding: 0 15px;
+      top: 25px
+    }
+
+    @include for-phone-only {
+      padding: 0;
+      top: 17px
+    }
   }
 
   &__heading {
@@ -45,7 +90,12 @@
     }
 
     &:active {
-      color: $default
+      color: $default;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 250px;
+      font-size: 16px;
     }
   }
 
@@ -56,6 +106,10 @@
 
   &__video {
     padding: 125px 0 0;
+
+    @include for-desktop {
+      padding: 80px 0 0;
+    }
   }
 
   &__popup {
@@ -74,6 +128,28 @@
       background-image: url('../images/icons/play.png');
       width: 130px;
       height: 130px;
+
+      @include for-tablet-landscape {
+        width: 80px;
+        height: 80px;
+      }
+
+      @include for-phone-only {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @include for-desktop {
+      min-height: 350px;
+    }
+
+    @include for-tablet-portrait {
+      min-height: 300px;
+    }
+
+    @include for-phone-only {
+      min-height: 180px;
     }
   }
 }

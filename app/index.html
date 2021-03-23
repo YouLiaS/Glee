@@ -13,13 +13,21 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <nav class="header__nav">
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.png" alt="Glee logo">
           </a>
+          <button class="header__burger">
+            <svg version="1.1" width="28" height="28" viewBox="0 0 28 28">
+              <title>list-ul</title>
+              <path class="header__svg"
+                d="M6 22c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM6 14c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM28 20.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5zM6 6c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM28 12.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5zM28 4.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5z">
+              </path>
+            </svg>
+          </button>
           <ul class="menu">
             <li class="menu__item">
               <a class="menu__link menu__link--plus" href="#">Home</a>
@@ -78,7 +86,7 @@
 
   <main class="main">
     <!-- HOME -->
-    <section class="home">
+    <section class="home" id="home">
       <h1 class="sr-only">Smart furniture</h1>
       <h2 class="sr-only">Trendy design furnitures</h2>
       <div class="container">
@@ -413,9 +421,9 @@
           <div class="goods__inner">
 
             <div class="goods__item">
-              <div class="goods__image">
+              <a class="goods__image" href="#">
                 <img class="goods__img" src="images/goods/lаmp.png" alt="Black lamp with cats">
-              </div>
+              </a>
               <div class="goods__info">
                 <h3 class="goods__title">
                   <a class="goods__link" href="#">Mirum Notare Tellus</a>
@@ -430,9 +438,9 @@
             </div>
 
             <div class="goods__item">
-              <div class="goods__image">
+              <a class="goods__image goods__image--order" href="#">
                 <img class="goods__img" src="images/goods/lamp-big.png" alt="Black long lamp">
-              </div>
+              </a>
               <div class="goods__info goods__info--wide">
                 <h3 class="goods__title">
                   <a class="goods__link" href="#">Malesuada Tempor Euismod</a>
@@ -554,7 +562,7 @@
       </div>
     </section>
     <!-- INSIGHTS -->
-    \ <section class="insights">
+    <section class="insights">
       <div class="container container--sm">
         <div class="insights__top">
           <h2 class="title insights__title">Our Insights & Articles</h2>
@@ -575,7 +583,7 @@
           </a>
         </div>
 
-        <ul class="news">
+        <ul class="news" id="news">
           <li class="news__box">
             <div class="news__image">
               <a class="" href="#">
@@ -590,7 +598,7 @@
             </h3>
             <div class="news__meta">
               <span class="news__date">28 January, 2020</span>
-              <span class="news__author"> By admin</span>
+              <span class="news__author">By admin</span>
             </div>
           </li>
 
@@ -609,7 +617,7 @@
             </h3>
             <div class="news__meta">
               <span class="news__date">28 January, 2020</span>
-              <span class="news__author"> By admin</span>
+              <span class="news__author">By admin</span>
             </div>
           </li>
 
@@ -624,14 +632,14 @@
               <a class="news__descr" href="#">Rncididunt ut labore et dolore magna aliqua. Ut enim</a>
             </h3>
             <div class="news__meta">
-              <span class="news__date"> 28 January, 2020</span>
-              <span class="news__author"> By admin</span>
+              <span class="news__date">28 January, 2020</span>
+              <span class="news__author">By admin</span>
             </div>
           </li>
         </ul>
       </div>
 
-      <div class="partners">
+      <div class="partners" id="partners">
         <div class="container container--sm">
           <ul class="partners__carousel">
 
@@ -682,7 +690,7 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <h2 class="sr-only">Footer</h2>
     <div class="container">
       <div class="footer__inner">

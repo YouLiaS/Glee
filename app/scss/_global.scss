@@ -46,6 +46,14 @@ a {
   font-size: 36px;
   color: $default;
   text-align: center;
+
+  @include for-tablet-portrait {
+    font-size: 30px;
+  }
+
+  @include for-phone-only {
+    font-size: 24px;
+  }
 }
 
 .sr-only {
@@ -65,6 +73,12 @@ a {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+
+  @include for-phone-only {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
   &__item {
     &:not(:last-child) {
@@ -87,6 +101,14 @@ a {
 
       &:active {
         color: $light-blue;
+      }
+    }
+
+    @include for-phone-only {
+      padding: 10px 0;
+
+      &:not(:last-child) {
+        margin-right: 0px;
       }
     }
   }

@@ -26,7 +26,7 @@ function browsersync() {
 function styles() {
   return src([
       'node_modules/slick-carousel/slick/slick.scss',
-      // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
       'app/scss/style.scss'
     ])
     .pipe(scss({

@@ -1,10 +1,19 @@
 .insights {
-  padding: 105px 0 0;
+  padding: 120px 0 0;
+
+  @include for-desktop {
+    padding: 80px 0 0;
+
+  }
 
   &__top {
     display: flex;
     align-items: center;
     margin-bottom: 45px;
+
+    @include for-tablet-portrait {
+      display: block;
+    }
   }
 
   &__link {
@@ -23,6 +32,13 @@
     &:active {
       border-bottom-color: $light-blue;
     }
+
+    @include for-tablet-portrait {
+      display: block;
+      text-align: center;
+      padding-top: 30px;
+      font-size: 14px;
+    }
   }
 
   svg {
@@ -35,12 +51,40 @@
   justify-content: space-between;
   z-index: 5;
 
+  @include for-tablet-landscape {
+    flex-wrap: wrap;
+  }
+
   &__box {
     max-width: 370px;
     min-height: 420px;
     position: relative;
     background-color: $white;
     border-radius: 10px;
+
+    @include for-desktop {
+      max-width: 32%;
+      width: 100%;
+    }
+
+    @include for-tablet-landscape {
+      box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.38);
+      max-width: 45%;
+      width: 100%;
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    @include for-tablet-portrait {
+      max-width: 75%;
+    }
+
+    @include for-phone-only {
+      max-width: 100%;
+    }
   }
 
   &__image {
@@ -52,6 +96,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @include for-tablet-landscape {
+      border-top-right-radius: 11px;
+      border-top-left-radius: 11px;
+    }
   }
 
   &__link {
@@ -70,6 +119,10 @@
 
     &:hover {
       background-color: $default;
+    }
+
+    @include for-tablet-portrait {
+      bottom: 170px;
     }
   }
 
@@ -92,6 +145,11 @@
     &:active {
       color: $light-blue;
     }
+
+    @include for-desktop {
+      padding: 0 10px;
+      text-align: center;
+    }
   }
 
   &__meta {
@@ -99,10 +157,44 @@
     font-size: 12px;
     line-height: 2.5;
     text-transform: uppercase;
+
+    @include for-desktop {
+      padding: 18px 10px 10px 25px;
+    }
+
+    svg {
+      margin: 0 10px;
+    }
   }
 
   &__date {
-    padding-right: 37px;
+    padding-right: 7px;
+  }
+
+  &__date,
+  &__author {
+    position: relative;
+    padding-left: 18px;
+
+    &::before {
+      @extend %content;
+      width: 13px;
+      height: 13px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__date {
+    &::before {
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+
+  &__author {
+    &::before {
+      background-image: url('../images/icons/user.svg');
+    }
   }
 }
 
@@ -112,6 +204,11 @@
   z-index: 1;
   margin-top: -170px;
 
+  @include for-tablet-landscape {
+    padding: 225px 0 75px;
+    margin-top: -174px;
+  }
+
   &__box {
     display: flex;
     justify-content: center;
@@ -119,6 +216,10 @@
     max-width: 260px;
     min-height: 75px;
     padding: 0 33px 0 16px;
+
+    @include for-tablet-portrait {
+      max-width: 100%
+    }
   }
 
   &__logo {

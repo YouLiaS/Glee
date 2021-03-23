@@ -1,6 +1,10 @@
 .products {
   padding: 70px 0 0;
 
+  @include for-tablet-portrait {
+    padding: 45px 0 0;
+  }
+
   &__title {
     margin-bottom: 33px;
   }
@@ -10,6 +14,18 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 90px;
+
+    @include for-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-tablet-landscape {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-tablet-portrait {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .product-card {
@@ -30,11 +46,32 @@
       }
     }
 
+    @include for-desktop {
+      padding: 25px 0;
+    }
+
+    @include for-tablet-portrait {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    @include for-phone-only {
+      max-width: 280px;
+    }
+
     &__img {
       max-width: 240px;
       min-height: 200px;
       object-fit: contain;
       margin-bottom: 45px;
+
+      @include for-desktop {
+        max-width: 200px;
+      }
+
+      @include for-tablet-portrait {
+        margin-bottom: 25px;
+      }
     }
 
     &__link {
@@ -88,6 +125,7 @@
       @extend %content;
       @extend %top-left-50;
       @extend %bg-contain;
+      @extend %ico;
       color: $light-blue;
       font-size: 18px;
     }
@@ -97,7 +135,6 @@
 
       &::after {
         content: "\f002";
-        font-family: 'icomoon' !important;
       }
     }
 
@@ -107,7 +144,6 @@
 
       &::after {
         content: "\f07a";
-        font-family: 'icomoon' !important;
       }
 
     }
@@ -117,8 +153,6 @@
 
       &::after {
         content: "\f08a";
-        font-family: 'icomoon' !important;
-
       }
     }
 
@@ -131,10 +165,19 @@
 .goods {
   padding-top: 85px;
 
+  @include for-tablet-portrait {
+    padding-top: 20px;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
+    @include for-tablet-landscape {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 40px;
+    }
   }
 
   &__item {
@@ -143,23 +186,81 @@
     align-items: center;
     background-color: #feefe2;
     min-height: 385px;
+
+    @include for-desktop {
+      min-height: 325px;
+    }
+
+    @include for-phone-only {
+      flex-direction: column;
+      min-height: 420px;
+      max-width: 290px;
+      margin: 0 auto;
+      padding: 15px;
+    }
   }
 
   &__image {
     margin-top: -180px;
+
+    @include for-tablet-landscape {
+      margin-top: -70px;
+    }
+
+    &--order {
+      @include for-tablet-landscape {
+        order: 2;
+      }
+
+    }
+
+    @include for-phone-only {
+      order: 2;
+      margin-top: 50px;
+    }
   }
 
   &__img {
     max-width: 235px;
     min-height: 400px;
     object-fit: contain;
+
+    @include for-desktop {
+      max-width: 80%;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 75%;
+      min-height: 200px;
+      padding-left: 15px;
+    }
+
+    @include for-phone-only {
+      max-width: 50%;
+      margin: 0 auto;
+      padding-left: 0;
+    }
   }
 
   &__info {
     max-width: 340px;
 
+    @include for-desktop {
+      max-width: 65%;
+      padding: 0 15px;
+    }
+
+    @include for-phone-only {
+      max-width: 100%;
+      text-align: center;
+    }
+
     &--wide {
       padding-left: 50px;
+
+      @include for-desktop {
+        padding-left: 15px;
+      }
 
       .goods__descr {
         margin-bottom: 48px;
@@ -178,6 +279,10 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @include for-phone-only {
+      font-size: 20px;
+    }
   }
 
   &__descr {
@@ -185,6 +290,11 @@
     @include line-clamp-2;
     margin-bottom: 53px;
     color: $title;
+
+    @include for-tablet-landscape {
+      line-height: 1.4;
+      margin-bottom: 35px;
+    }
   }
 
   &__btn {
@@ -213,9 +323,13 @@
     &::after {
       @extend %content;
       content: '\f178';
-      font-family: 'icomoon' !important;
+      @extend %ico;
       font-size: 18px;
       right: 14px;
+    }
+
+    @include for-tablet-landscape {
+      padding: 15px 43px 15px 21px;
     }
   }
 }
