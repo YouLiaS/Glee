@@ -42,7 +42,7 @@
       display: block;
       text-align: center;
       padding-top: 30px;
-      font-size: 14px;
+      font-size: 19px;
     }
 
     &::after {
@@ -119,7 +119,7 @@
   }
 
   &__link {
-    font-size: 14px;
+    font-size: 15px;
     @extend %dmsans-700;
     line-height: 1.4;
     text-transform: uppercase;
@@ -139,6 +139,7 @@
     @include for-tablet-portrait {
       bottom: 150px;
     }
+
   }
 
   &__descr {

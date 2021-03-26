@@ -13,7 +13,6 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-
     responsive: [{
         breakpoint: 749,
         settings: {
@@ -34,11 +33,9 @@ $(function () {
     $('.menu').toggleClass('active')
   })
 
-  // if ($('.header__burger').is(':visible')) {
-  //   $('body').addClass("lock-scroll");
-  // } else {
-  //   $('body').removeClass("lock-scroll");
-  // }
+  $('.header__burger').on('click', function () {
+    $('body').toggleClass('lock-scroll')
+  })
 
   mixitup('.products__cards');
   mixitup('.design__items');

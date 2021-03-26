@@ -11,7 +11,11 @@ body {
   @extend %rubik-400;
 
   @include for-tablet-portrait {
-    font-size: 15px;
+    font-size: 16px;
+  }
+
+  &.lock-scroll {
+    overflow: hidden;
   }
 }
 

@@ -2,6 +2,10 @@
   &__top {
     padding: 30px 0;
     background-color: #edf1f4;
+
+    @include for-phone-only {
+      padding: 20px 0;
+    }
   }
 
   &__title {
@@ -11,6 +15,9 @@
     color: #222933;
     margin-bottom: 11px;
 
+    @include for-tablet-portrait {
+      font-size: 32px;
+    }
   }
 
   &__holder {
@@ -22,22 +29,75 @@
     padding: 120px 0;
     display: flex;
     justify-content: space-between;
+
+    @include for-desktop {
+      padding: 50px 0;
+    }
+
+    @include for-tablet-landscape {
+      flex-direction: column-reverse;
+      padding: 30px 0;
+    }
+
+    @include for-phone-only {
+      padding: 20px 0;
+    }
   }
 
   &__image {
     max-width: 570px;
     min-height: 675px;
+
+    @include for-desktop {
+      max-width: 80%;
+      width: 100%;
+      min-height: 500px;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 65%;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 400px;
+    }
+
+    @include for-tablet-portrait {
+      max-width: 80%;
+      min-height: 350px;
+    }
+
+    @include for-phone-only {
+      max-width: 100%;
+      min-height: 250px;
+    }
   }
 
   &__content {
     max-width: 555px;
     width: 100%;
     color: $title;
+
+    @include for-desktop {
+      padding: 0 20px;
+    }
+
+    @include for-tablet-landscape {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
   &__descr {
     padding: 70px 0 60px;
     border-bottom: 1px solid $about-decorate;
+
+    @include for-desktop {
+      padding: 60px 0 40px;
+    }
+
+    @include for-tablet-landscape {
+      padding: 15px 0;
+    }
   }
 
   &__box {
@@ -51,10 +111,22 @@
     font-size: 140px;
     color: $light-blue;
     margin-right: 25px;
+
+    @include for-desktop {
+      font-size: 100px;
+    }
+
+    @include for-phone-only {
+      font-size: 80px;
+    }
   }
 
   &__item {
     line-height: 1.8;
+
+    @include for-desktop {
+      line-height: 1.4;
+    }
   }
 
   &__heading {
@@ -62,21 +134,54 @@
     @extend %dmsans-700;
     margin-bottom: 40px;
     @include line-clamp-2;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color .4s ease;
+
+    @include for-desktop {
+      font-size: 29px;
+      margin-bottom: 25px;
+    }
+
+    &:hover {
+      border-bottom-color: $title;
+    }
   }
 
   &__list {
     padding-top: 20px;
+
+    @include for-desktop {
+      padding: 0;
+    }
   }
 
   &__text {
     line-height: 1.8;
     @include line-clamp-4;
+
+    @include for-desktop {
+      line-height: 1.4;
+    }
   }
 
   &__items {
     padding-top: 40px;
     display: flex;
     justify-content: space-between;
+
+    @include for-desktop {
+      padding-top: 20px;
+    }
+
+    @include for-tablet-landscape {
+      justify-content: space-evenly;
+    }
+
+    @include for-phone-only {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__clause {
@@ -87,6 +192,10 @@
     @extend %dmsans-700;
     position: relative;
 
+    @include for-tablet-portrait {
+      padding: 15px 26px 15px 38px;
+    }
+
     &::before {
       @extend %content;
       left: 0;
@@ -94,6 +203,11 @@
       height: 40px;
       @extend %top-50;
       @extend %bg-contain;
+
+      @include for-desktop {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &--projects {
@@ -121,6 +235,10 @@
         width: 1px;
         height: 75px;
         right: 0;
+
+        @include for-tablet-portrait {
+          display: none;
+        }
       }
     }
   }
@@ -128,10 +246,27 @@
   &__num {
     font-size: 36px;
     text-transform: uppercase;
+
+    @include for-desktop {
+      font-size: 27px;
+    }
+
+    @include for-tablet-portrait {
+      font-size: 19px;
+    }
+
+    @include for-phone-only {
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
   }
 
   &__span {
     color: #4c4c4c;
+
+    @include for-phone-only {
+      font-size: 17px;
+    }
   }
 }
 
@@ -143,6 +278,15 @@
     padding: 90px 0 70px;
     display: flex;
     justify-content: space-around;
+
+    @include for-desktop {
+      padding: 40px 0;
+    }
+
+    @include for-tablet-landscape {
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -155,6 +299,10 @@
     @extend %dmsans-700;
     position: relative;
 
+    @include for-tablet-landscape {
+      margin-bottom: 25px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -164,6 +312,24 @@
       border-radius: 50%;
       top: 29px;
       right: 91px;
+
+      @include for-desktop {
+        top: 21px;
+        right: 90px;
+      }
+
+      @include for-tablet-landscape {
+        width: 25px;
+        height: 25px;
+        right: 102px;
+      }
+
+      @include for-phone-only {
+        width: 20px;
+        height: 19px;
+        top: 11px;
+        right: 109px;
+      }
     }
   }
 
@@ -171,16 +337,53 @@
     padding-top: 15px;
     font-size: 36px;
     margin-bottom: 12px;
+
+    @include for-desktop {
+      font-size: 27px;
+    }
+
+    @include for-tablet-landscape {
+      font-size: 22px;
+    }
+
+    @include for-tablet-portrait {
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
     font-size: 18px;
     line-height: 1.7;
+
+    @include for-desktop {
+      line-height: 1.4;
+      font-size: 16px;
+    }
+
+    @include for-tablet-landscape {
+      line-height: 1;
+    }
   }
 
   &__icon {
     width: 70px;
     height: 65px;
     z-index: 10;
+
+    @include for-desktop {
+      width: 55px;
+      height: 50px;
+    }
+
+    @include for-tablet-landscape {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include for-phone-only {
+      width: 35px;
+      height: 30px;
+    }
   }
 }
