@@ -1,12 +1,7 @@
 .footer {
-  padding-top: 100px;
   color: $footer-color;
   font-size: 14px;
   line-height: 1.8;
-
-  @include for-tablet-portrait {
-    padding: 80px 0 0;
-  }
 
   &__inner {
     max-width: 1180px;
@@ -14,9 +9,9 @@
   }
 
   &__top {
-    padding-bottom: 70px;
+    padding: 100px 0 70px;
     display: grid;
-    grid-template-columns: 25% repeat(2, 1fr) 270px;
+    grid-template-columns: 26% repeat(2, 1fr) 270px;
     border-bottom: 1px solid $footer-color;
 
     @include for-desktop {
@@ -24,40 +19,26 @@
     }
 
     @include for-tablet-landscape {
-      grid-template-columns: 40% repeat(1, 1fr) 180px;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+      column-gap: 10px;
+      text-align: center;
+      padding: 80px 0 45px;
     }
 
     @include for-tablet-portrait {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      column-gap: 10px;
-      text-align: center;
-      padding-bottom: 45px;
-    }
-
-    @include for-phone-only {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 
   &__box {
-    @include for-tablet-portrait {
+    @include for-tablet-landscape {
       margin: 0 auto;
-    }
-
-    &:nth-child(3) {
-      @include for-tablet-portrait {
-        order: 4;
-      }
-
-      @include for-phone-only {
-        order: 0;
-      }
     }
   }
 
   &__img {
-    margin: -15px 0 15px;
+    margin-bottom: 5px;
   }
 
   &__title {
@@ -71,10 +52,13 @@
   &__link {
     line-height: 2.2;
     color: $footer-color;
-    transition: color .3s ease;
+    transition: border-bottom .4s ease;
     @extend %focus;
 
-    &:hover,
+    &:hover {
+      border-bottom: 1px solid $footer-color;
+    }
+
     &:active {
       color: $default;
     }
@@ -86,11 +70,6 @@
 
     &__item {
       max-width: 200px;
-      transition: color .3s ease;
-
-      &:hover {
-        color: $default;
-      }
 
       span {
         text-transform: uppercase;
@@ -100,10 +79,13 @@
     &__link {
       line-height: 1.7;
       color: $footer-color;
-      transition: color .3s ease;
+      transition: border-bottom .4s ease;
       @extend %focus;
 
-      &:hover,
+      &:hover {
+        border-bottom: 1px solid $footer-color;
+      }
+
       &:active {
         color: $default;
       }
@@ -127,6 +109,12 @@
       color: $medium-blue;
       outline-color: transparent;
 
+      @include for-tablet-landscape {
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+      }
+
       &:focus+label {
         top: -10px;
         left: 4px;
@@ -141,15 +129,6 @@
         outline: transparent;
         border-color: $medium-blue;
       }
-
-      @include for-tablet-portrait {
-        max-width: 130px;
-      }
-
-      @include for-phone-only {
-        max-width: 100%;
-        width: 100%;
-      }
     }
 
     &__label {
@@ -159,6 +138,7 @@
       top: 11px;
       @extend %dmsans-400;
       color: $medium-blue;
+      user-select: none;
     }
 
     &__btn {
@@ -203,7 +183,6 @@
 }
 
 .footer-nav {
-
   @include for-tablet-portrait {
     margin-bottom: 20px;
   }
@@ -222,12 +201,12 @@
 
   &__link {
     color: $footer-color;
-    transition: color .3s ease;
+    transition: border-bottom .4s ease;
     @extend %focus;
     @extend %active;
 
     &:hover {
-      color: $default;
+      border-bottom: 1px solid $footer-color;
     }
   }
 }

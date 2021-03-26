@@ -69,6 +69,7 @@
     color: $title;
     text-transform: uppercase;
     margin-bottom: 25px;
+    @extend %rubik-500;
     @include line-clamp-2;
 
     @include for-big-desktop {
@@ -103,7 +104,7 @@
     }
   }
 
-  &__btn {
+  &__link {
     background-color: $light-blue;
     color: $white;
     @extend %rubik-500;
@@ -203,7 +204,7 @@
   .slick-dots {
     display: flex;
     position: absolute;
-    bottom: 50px;
+    bottom: 45px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -250,16 +251,20 @@
 
     &:not(:last-child) {
       border-right: 1px solid #e8e4df;
+
+      @include for-desktop {
+        border-right: none;
+      }
+
+      @include for-tablet-portrait {
+        border-bottom: 1px solid #e8e4df;
+      }
     }
 
     @include for-desktop {
       min-height: 105px;
       padding: 14px 0;
       width: 50%;
-
-      &:not(:last-child) {
-        border: none;
-      }
     }
 
     @include for-tablet-portrait {

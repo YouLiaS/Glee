@@ -1,9 +1,8 @@
 .insights {
-  padding: 120px 0 0;
+  padding-top: 110px;
 
   @include for-desktop {
-    padding: 80px 0 0;
-
+    padding-top: 80px;
   }
 
   &__top {
@@ -18,12 +17,27 @@
 
   &__link {
     @extend %dmsans-700;
-    color: #262626;
+    color: $dark-grey;
+    padding-top: 5px;
     margin-left: auto;
-    padding-bottom: 4px;
     @extend %focus;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .4s ease;
+    margin-right: 12px;
+
+
+    @include for-tablet-portrait {
+      display: block;
+      text-align: center;
+      padding-top: 30px;
+      font-size: 19px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      padding-left: 5px;
+    }
 
     &:hover {
       border-bottom-color: $default;
@@ -32,17 +46,6 @@
     &:active {
       border-bottom-color: $light-blue;
     }
-
-    @include for-tablet-portrait {
-      display: block;
-      text-align: center;
-      padding-top: 30px;
-      font-size: 14px;
-    }
-  }
-
-  svg {
-    margin-left: 10px;
   }
 }
 
@@ -104,7 +107,7 @@
   }
 
   &__link {
-    font-size: 14px;
+    font-size: 15px;
     @extend %dmsans-700;
     line-height: 1.4;
     text-transform: uppercase;
@@ -122,8 +125,9 @@
     }
 
     @include for-tablet-portrait {
-      bottom: 170px;
+      bottom: 150px;
     }
+
   }
 
   &__descr {
@@ -148,12 +152,11 @@
 
     @include for-desktop {
       padding: 0 10px;
-      text-align: center;
     }
   }
 
   &__meta {
-    padding: 18px 0 0 27px;
+    padding: 14px 0 0 34px;
     font-size: 12px;
     line-height: 2.5;
     text-transform: uppercase;
@@ -222,7 +225,7 @@
     }
   }
 
-  &__logo {
+  &__box {
     @extend %focus;
   }
 }

@@ -21,10 +21,8 @@
             <img class="logo__img" src="images/logo.png" alt="Glee logo">
           </a>
           <button class="header__burger" type="button">
-            <svg version="1.1" width="28" height="28" viewBox="0 0 28 28">
-              <path class="header__svg"
-                d="M6 22c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM6 14c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM28 20.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5zM6 6c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM28 12.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5zM28 4.5v3c0 0.266-0.234 0.5-0.5 0.5h-19c-0.266 0-0.5-0.234-0.5-0.5v-3c0-0.266 0.234-0.5 0.5-0.5h19c0.266 0 0.5 0.234 0.5 0.5z">
-              </path>
+            <svg class="icon">
+              <use xlink:href="images/icons/sprite.svg#burger-menu"></use>
             </svg>
           </button>
           <ul class="menu">
@@ -48,33 +46,32 @@
             </li>
           </ul>
           <div class="user">
-            <button type="button" class="user__link user__link--search">
-              <span class="sr-only">Seach</span>
+            <button class="user__link user__link--search" type="button">
+              <span class="sr-only">Seach button</span>
+              <svg class="icon__search">
+                <use xlink:href="images/icons/sprite.svg#search"></use>
+              </svg>
             </button>
             <div class="user__box">
               <a class="user__link user__link--heart" href="#">
-                <span class="sr-only">Favorites</span>
+                <span class="sr-only">Favorites link</span>
                 <span class="user__num">0</span>
+                <svg class="icon__heart">
+                  <use xlink:href="images/icons/sprite.svg#heart"></use>
+                </svg>
               </a>
               <a class="user__link user__link--basket" href="#">
-                <span class="sr-only">Basket</span>
+                <span class="sr-only">Basket link</span>
+                <svg class="icon__basket">
+                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                </svg>
                 <span class="user__num">0</span>
               </a>
             </div>
-            <button type="button" class="user__link user__link--ellipse">
+            <button class="user__link user__link--ellipse" type="button">
               <span class="sr-only">Menu button</span>
-              <svg width="20.03" height="20.031" viewBox="0 0 20.03 20.031">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #fff;
-                      fill-rule: evenodd;
-                    }
-                  </style>
-                </defs>
-                <path class="cls-1"
-                  d="M1813.15,67.881a2.146,2.146,0,1,1,2.14-2.145A2.145,2.145,0,0,1,1813.15,67.881Zm0,7.869a2.146,2.146,0,1,1,2.14-2.147A2.146,2.146,0,0,1,1813.15,75.75Zm0,7.868a2.146,2.146,0,1,1,2.14-2.146A2.145,2.145,0,0,1,1813.15,83.618Zm7.86-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1821.01,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1821.01,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1821.01,83.618Zm7.87-15.737a2.146,2.146,0,1,1,2.15-2.145A2.143,2.143,0,0,1,1828.88,67.881Zm0,7.869a2.146,2.146,0,1,1,2.15-2.147A2.144,2.144,0,0,1,1828.88,75.75Zm0,7.868a2.146,2.146,0,1,1,2.15-2.146A2.143,2.143,0,0,1,1828.88,83.618Z"
-                  transform="translate(-1811 -63.594)" />
+              <svg class="icon">
+                <use xlink:href="images/icons/sprite.svg#ellipse"></use>
               </svg>
             </button>
           </div>
@@ -86,7 +83,7 @@
   <main class="main">
     <!-- HOME -->
     <section class="home" id="home">
-      <h1 class="sr-only">Smart and high quality furniture.Wide assortment of home furnishings</h1>
+      <h1 class="sr-only">Glee.Smart and high quality furniture.Wide assortment of home furnishings</h1>
       <h2 class="sr-only">Trendy design furnitures</h2>
       <div class="container">
         <ul class="home__slider">
@@ -100,7 +97,7 @@
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
-                <a class="home__btn" href="#">Shop now</a>
+                <a class="home__link" href="#">Shop now</a>
               </div>
               <div class="home__product">
                 <img class="home__img" src="images/home/sofa.png" alt="beige sofa">
@@ -117,7 +114,7 @@
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
-                <a class="home__btn" href="#">Shop now</a>
+                <a class="home__link" href="#">Shop now</a>
               </div>
               <div class="home__product">
                 <img class="home__img" src="images/home/sofa.png" alt="beige sofa">
@@ -134,7 +131,7 @@
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
-                <a class="home__btn" href="#">Shop now</a>
+                <a class="home__link" href="#">Shop now</a>
               </div>
               <div class="home__product">
                 <img class="home__img" src="images/home/sofa.png" alt="beige sofa">
@@ -204,8 +201,8 @@
           </li>
         </ul>
 
-        <ul class="products__cards mix category-chairs">
-          <li class="products__card">
+        <ul class="products__cards">
+          <li class="products__card mix category-chairs">
             <article class="product-card">
               <a class="product-card__image" href="#">
                 <img class="product-card__img" src="images/products/wooden-radio.png" alt="White wooden radio chair">
@@ -218,13 +215,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -244,13 +241,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -270,13 +267,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -296,13 +293,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -322,13 +319,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -348,13 +345,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -374,13 +371,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -400,13 +397,13 @@
               </div>
 
               <div class="icons">
-                <a href="#" class="icons__icon icons__icon--search">
+                <a class="icons__icon icons__icon--search" href="#">
                   <span class="sr-only">Search</span>
                 </a>
-                <button type="button" class="icons__icon icons__icon--basket">
+                <button class="icons__icon icons__icon--basket" type="button">
                   <span class="sr-only">Basket</span>
                 </button>
-                <button type="button" class="icons__icon icons__icon--heart">
+                <button class="icons__icon icons__icon--heart" type="button">
                   <span class="sr-only">Favorites</span>
                 </button>
               </div>
@@ -417,42 +414,42 @@
 
       <div class="goods">
         <div class="container">
-          <div class="goods__inner">
+          <ul class="goods__inner">
 
-            <div class="goods__item">
+            <li class="goods__item">
               <a class="goods__image" href="#">
                 <img class="goods__img" src="images/goods/lаmp.png" alt="Black lamp with cats">
               </a>
               <div class="goods__info">
                 <h3 class="goods__title">
-                  <a class="goods__link" href="#">Mirum Notare Tellus</a>
+                  <a class="goods__caption" href="#">Mirum Notare Tellus</a>
                 </h3>
                 <div class="goods__descr">
                   <p>
                     LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                   </p>
                 </div>
-                <a class="goods__btn" href="#">View More</a>
+                <a class="goods__more" href="#">View More</a>
               </div>
-            </div>
+            </li>
 
-            <div class="goods__item">
+            <li class="goods__item">
               <a class="goods__image goods__image--order" href="#">
                 <img class="goods__img" src="images/goods/lamp-big.png" alt="Black long lamp">
               </a>
-              <div class="goods__info goods__info--wide">
+              <div class="goods__info">
                 <h3 class="goods__title">
-                  <a class="goods__link" href="#">Malesuada Tempor Euismod</a>
+                  <a class="goods__caption" href="#">Malesuada Tempor Euismod</a>
                 </h3>
                 <div class="goods__descr">
                   <p>
                     50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
                   </p>
                 </div>
-                <a class="goods__btn" href="#">View More</a>
+                <a class="goods__more" href="#">View More</a>
               </div>
-            </div>
-          </div>
+            </li>
+            </г>
         </div>
       </div>
     </section>
@@ -466,118 +463,119 @@
             <button class="filter__btn" data-filter="all">All</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-furnitures">Furnitures</button>
+            <button class="filter__btn" data-filter=".category-furniture">Furnitures</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-chairs">Chairs</button>
+            <button class="filter__btn" data-filter=".category-chair">Chairs</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-lighting">Lighting</button>
+            <button class="filter__btn" data-filter=".category-light">Lighting</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-decor">Decor</button>
+            <button class="filter__btn" data-filter=".category-decoration">Decor</button>
           </li>
         </ul>
 
         <ul class="design__items">
-          <li class="design__item mix category-furnitures">
+          <li class="design__item mix category-furniture">
             <article class="design__card">
-              <img class="design__image" src="images/design/sofa.jpg" alt="white sofa">
-              <div class="design__info">
-                <h3 class="design__caption">
-                  <a class="design__heading" href="#">Beat Flat Pendant Black</a>
-                </h3>
-                <span class="design__text">Classic</span>
-              </div>
+              <a class="design__box" href="#">
+                <img class="design__image" src="images/design/sofa.png" alt="white sofa">
+                <div class="design__info">
+                  <h3 class="design__caption">
+                    <a class="design__heading" href="#">Beat Flat Pendant Black</a>
+                  </h3>
+                  <span class="design__text">Classic</span>
+                </div>
+              </a>
             </article>
           </li>
 
-          <li class="design__item mix category-furnitures">
+          <li class="design__item mix category-furniture">
             <article class="design__card">
-              <img class="design__image" src="images/design/bed.jpg" alt="big designer bed">
-              <div class="design__info">
-                <h3 class="design__caption">
-                  <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
-                </h3>
-                <span class="design__text">Classic</span>
-              </div>
+              <a class="design__box" href="#">
+                <img class="design__image" src="images/design/bed.png" alt="big designer bed">
+                <div class="design__info">
+                  <h3 class="design__caption">
+                    <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
+                  </h3>
+                  <span class="design__text">Classic</span>
+                </div>
+              </a>
             </article>
           </li>
 
-          <li class="design__item mix category-chairs">
+          <li class="design__item mix category-chair">
             <article class="design__card">
-              <img class="design__image" src="images/design/chair.jpg" alt="black leather armchair">
-              <div class="design__info">
-                <h3 class="design__caption">
-                  <a class="design__heading" href="#">Rattan Rocking Chair</a>
-                </h3>
-                <span class="design__text">Classic</span>
-              </div>
+              <a class="design__box" href="#">
+                <img class="design__image" src="images/design/chair.png" alt="black leather armchair">
+                <div class="design__info">
+                  <h3 class="design__caption">
+                    <a class="design__heading" href="#">Rattan Rocking Chair</a>
+                  </h3>
+                  <span class="design__text">Classic</span>
+                </div>
+              </a>
             </article>
           </li>
 
-          <li class="design__item mix category-furnitures">
+          <li class="design__item mix category-furniture">
             <article class="design__card">
-              <img class="design__image" src="images/design/bed-2.jpg" alt="big designer bed">
-              <div class="design__info">
-                <h3 class="design__caption">
-                  <a class="design__heading" href="#">Rattan Rocking Chair</a>
-                </h3>
-                <span class="design__text">Classic</span>
-              </div>
+              <a class="design__box" href="#">
+                <img class="design__image" src="images/design/bed-2.png" alt="big designer bed">
+                <div class="design__info">
+                  <h3 class="design__caption">
+                    <a class="design__heading" href="#">Rattan Rocking Chair</a>
+                  </h3>
+                  <span class="design__text">Classic</span>
+                </div>
+              </a>
             </article>
           </li>
 
-          <li class="design__item mix category-chairs">
+          <li class="design__item mix category-chair">
             <article class="design__card">
-              <img class="design__image" src="images/design/white-chair.jpg" alt="white leather armchair">
-              <div class="design__info">
-                <h3 class="design__caption">
-                  <a class="design__heading" href="#">Rattan Rocking Chair</a>
-                </h3>
-                <span class="design__text">Classic</span>
-              </div>
+              <a class="design__box" href="#">
+                <img class="design__image" src="images/design/chair-2.png" alt="white leather armchair">
+                <div class="design__info">
+                  <h3 class="design__caption">
+                    <a class="design__heading" href="#">Rattan Rocking Chair</a>
+                  </h3>
+                  <span class="design__text">Classic</span>
+                </div>
+              </a>
             </article>
           </li>
 
-          <li class="design__item mix category-furnitures">
+          <li class="design__item mix category-furniture">
             <article class="design__card">
-              <img class="design__image" src="images/design/sofa-2.jpg" alt="beige sofa">
-              <div class="design__info">
-                <h3 class="design__caption">
-                  <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
-                </h3>
-                <span class="design__text">Classic</span>
-              </div>
+              <a class="design__box" href="#">
+                <img class="design__image" src="images/design/sofa-2.png" alt="beige sofa">
+                <div class="design__info">
+                  <h3 class="design__caption">
+                    <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
+                  </h3>
+                  <span class="design__text">Classic</span>
+                </div>
+              </a>
             </article>
           </li>
         </ul>
       </div>
 
-      <div class="design__video">
-        <a class="design__popup" data-fancybox href="https://www.youtube.com/watch?v=_Ecl_XEETEA"
-          style="background-image: url(images/design/video-bg.jpg)">
-        </a>
-      </div>
+      <a class="design__popup" data-fancybox href="https://www.youtube.com/watch?v=_Ecl_XEETEA"
+        style="background-image: url(images/design/video-bg.jpg)">
+      </a>
     </section>
     <!-- INSIGHTS -->
     <section class="insights">
       <div class="container container--sm">
         <div class="insights__top">
           <h2 class="title insights__title">Our Insights & Articles</h2>
+
           <a class="insights__link" href="#">View all
-            <svg width="6.1" height="10.97" viewBox="0 0 6.1 10.97">
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: #262626;
-                    fill-rule: evenodd;
-                  }
-                </style>
-              </defs>
-              <path class="cls-1"
-                d="M1539.33,4295.69a0.53,0.53,0,0,1-.41-0.19,0.6,0.6,0,0,1-.15-0.4,0.631,0.631,0,0,1,.17-0.43l4.55-4.47-4.55-4.48a0.607,0.607,0,0,1-.17-0.42,0.629,0.629,0,0,1,.15-0.41,0.559,0.559,0,0,1,.8-0.02l4.98,4.9,0.01,0.01a0.657,0.657,0,0,1,.12.17h0a0.7,0.7,0,0,1,.05.25h0a0.742,0.742,0,0,1-.05.25h0a0.61,0.61,0,0,1-.12.16c0,0.01-.01.01-0.01,0.02l-4.98,4.9A0.589,0.589,0,0,1,1539.33,4295.69Z"
-                transform="translate(-1538.78 -4284.72)" />
+            <svg class="icon">
+              <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
             </svg>
           </a>
         </div>
@@ -585,11 +583,11 @@
         <ul class="news" id="news">
           <li class="news__box">
             <div class="news__image">
-              <a class="" href="#">
+              <a class="news__holder" href="#">
                 <img class="news__img" src="images/insights/interier-bedroom.jpg" alt="bedroom interier">
               </a>
             </div>
-            <a href="#" class="news__link">News</a>
+            <a class="news__link" href="#">News</a>
             <h3 class="news__title">
               <a class="news__descr" href="#">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                 minim veniam
@@ -603,7 +601,7 @@
 
           <li class="news__box">
             <div class="news__image">
-              <a class="" href="#">
+              <a class="news__holder" href="#">
                 <img class="news__img" src="images/insights/interier-room.jpg" alt="room interier">
               </a>
             </div>
@@ -622,7 +620,7 @@
 
           <li class="news__box">
             <div class="news__image">
-              <a class="" href="#">
+              <a class="news__holder" href="#">
                 <img class="news__img" src="images/insights/interier-salon.jpg" alt="salon room interier">
               </a>
             </div>
@@ -690,20 +688,21 @@
   </main>
   <!-- FOOTER -->
   <footer class="footer" id="contact">
-    <h2 class="sr-only">Footer</h2>
+    <h2 class="sr-only">Lower section of the site with contact information</h2>
     <div class="container">
       <div class="footer__inner">
         <div class="footer__top">
 
           <div class="footer__box footer__box--connect">
-            <a class="footer__logo" href="#">
-              <img class="footer__img" src="images/logo.png" alt="Glee logo">
-            </a>
             <address class="connect">
+              <a class="footer__logo" href="#">
+                <img class="footer__img" src="images/logo.png" alt="Glee logo">
+              </a>
               <ul class="connect__list">
                 <li class="connect__item">
                   <span>Address:</span>
-                  <a class="connect__link" href="#">4772 Wines Lane
+                  <a class="connect__link" href="#">
+                    4772 Wines Lane
                     Houston, TX 77032
                   </a>
                 </li>

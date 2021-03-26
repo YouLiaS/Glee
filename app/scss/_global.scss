@@ -9,22 +9,24 @@ body {
   background-color: $white;
   color: $default;
   @extend %rubik-400;
-  display: flex;
-  flex-direction: column;
-}
 
-.main {
-  flex-grow: 1;
+  @include for-tablet-portrait {
+    font-size: 16px;
+  }
+
+  &.lock-scroll {
+    overflow: hidden;
+  }
 }
 
 .container {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
-}
 
-.container--sm {
-  max-width: 1205px;
+  &--sm {
+    max-width: 1205px;
+  }
 }
 
 button {
@@ -80,28 +82,32 @@ a {
     margin-bottom: 50px;
   }
 
+  &__btn {
+    background-color: transparent;
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $default;
+    }
+
+    &:focus {
+      outline-color: $default;
+    }
+
+    &:active {
+      color: $light-blue;
+    }
+
+    &.mixitup-control-active {
+      color: $default;
+    }
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
-    }
-
-    button {
-      background-color: transparent;
-      @extend %dmsans-700;
-      color: #8b8b8b;
-      transition: color .3s ease;
-
-      &:hover {
-        color: $default;
-      }
-
-      &:focus {
-        outline-color: $default;
-      }
-
-      &:active {
-        color: $light-blue;
-      }
     }
 
     @include for-phone-only {
@@ -114,8 +120,72 @@ a {
   }
 }
 
-.lock-scroll {
-  overflow: hidden;
+.caption {
+  padding: 33px 0;
+  background-color: #edf1f4;
+
+  @include for-phone-only {
+    padding: 20px 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    @extend %rubik-300;
+    color: #222933;
+    margin-bottom: 11px;
+
+    @include for-tablet-portrait {
+      font-size: 32px;
+    }
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+
+  &__item {
+    position: relative;
+    padding-right: 20px;
+    color: #979ba0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:not(:last-child) {
+
+      &::after {
+        content: '/';
+        position: absolute;
+        font-size: 14px;
+        right: 6px;
+        top: 3px;
+        color: inherit;
+      }
+    }
+  }
+
+  &__link {
+    @extend %rubik-400;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .4s ease;
+
+    &:hover {
+      border-bottom-color: #979ba0;
+    }
+  }
+}
+
+
+.icon {
+  width: 18px;
+  height: 18px;
 }
 
 // ************************************************//

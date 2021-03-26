@@ -1,10 +1,20 @@
 @font-face {
   font-family: 'Rubik';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Rubik-Light'),
+    url('../fonts/rubik/Rubik-Light.woff2') format('woff2'),
+    url('../fonts/rubik/Rubik-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
   font-weight: 400;
   font-style: normal;
   src: local('Rubik-Regular'),
-    url('../fonts/Rubik-Regular.woff2') format('woff2'),
-    url('../fonts/Rubik-Regular.woff') format('woff');
+    url('../fonts/rubik/Rubik-Regular.woff2') format('woff2'),
+    url('../fonts/rubik/Rubik-Regular.woff') format('woff');
   font-display: swap;
 }
 
@@ -13,8 +23,18 @@
   font-weight: 500;
   font-style: normal;
   src: local('Rubik-Medium'),
-    url('../fonts/Rubik-Medium.woff2') format('woff2'),
-    url('../fonts/Rubik-Medium.woff') format('woff');
+    url('../fonts/rubik/Rubik-Medium.woff2') format('woff2'),
+    url('../fonts/rubik/Rubik-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Rubik-Bold'),
+    url('../fonts/rubik/Rubik-Bold.woff2') format('woff2'),
+    url('../fonts/rubik/Rubik-Bold.woff') format('woff');
   font-display: swap;
 }
 
@@ -23,8 +43,8 @@
   font-weight: 400;
   font-style: normal;
   src: local('DMSans-Regular'),
-    url('../fonts/DMSans-Regular.woff2') format('woff2'),
-    url('../fonts/DMSans-Regular.woff') format('woff');
+    url('../fonts/dmsans/DMSans-Regular.woff2') format('woff2'),
+    url('../fonts/dmsans/DMSans-Regular.woff') format('woff');
   font-display: swap;
 }
 
@@ -33,8 +53,8 @@
   font-weight: 500;
   font-style: normal;
   src: local('DMSans-Medium'),
-    url('../fonts/DMSans-Medium.woff2') format('woff2'),
-    url('../fonts/DMSans-Medium.woff') format('woff');
+    url('../fonts/dmsans/DMSans-Medium.woff2') format('woff2'),
+    url('../fonts/dmsans/DMSans-Medium.woff') format('woff');
   font-display: swap;
 }
 
@@ -43,8 +63,8 @@
   font-weight: 700;
   font-style: normal;
   src: local('DMSans-Bold'),
-    url('../fonts/DMSans-Bold.woff2') format('woff2'),
-    url('../fonts/DMSans-Bold.woff') format('woff');
+    url('../fonts/dmsans/DMSans-Bold.woff2') format('woff2'),
+    url('../fonts/dmsans/DMSans-Bold.woff') format('woff');
   font-display: swap;
 }
 

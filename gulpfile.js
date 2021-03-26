@@ -12,6 +12,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+
 // **************************************** //
 // ***********BROWSER-SYNC************** //
 function browsersync() {
@@ -80,6 +81,7 @@ function images() {
     ]))
     .pipe(dest('dist/images'))
 }
+
 // ***********BUILD************** //
 function build() {
   return src([
