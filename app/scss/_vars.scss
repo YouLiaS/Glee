@@ -6,8 +6,17 @@ $light-blue: #a3bbc8;
 $medium-blue: #234969;
 $orange:#fcd7b6;
 $footer-color:#7b7b7b;
+$dark-grey :#262626;
+$about-decorate: #e6eaf0;
+$sort-grey:#565872;
 
 /********************************/
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -17,6 +26,12 @@ $footer-color:#7b7b7b;
   font-family: 'Rubik',
     sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik',
+    sans-serif;
+  font-weight: 700;
 }
 
 %dmsans-400 {

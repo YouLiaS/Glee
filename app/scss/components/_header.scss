@@ -1,10 +1,8 @@
 .header {
-
   &__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-height: 140px;
+    min-height: 145px;
     position: relative;
   }
 
@@ -30,10 +28,6 @@
     @include for-tablet-portrait {
       display: block;
     }
-  }
-
-  &__svg {
-    fill: $light-blue;
   }
 }
 
@@ -90,11 +84,9 @@
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
-    }
 
-    @include for-tablet-portrait {
-      &:not(:last-child) {
-        margin-right: 0px;
+      @include for-tablet-portrait {
+        margin-right: 0;
       }
     }
   }
@@ -159,7 +151,6 @@
       @extend %top-left-50;
       width: 18px;
       height: 18px;
-      @extend %ico;
     }
 
     &--search,
@@ -175,12 +166,9 @@
       }
     }
 
-    &--heart,
-    &--basket {
-
-      &:hover::after {
-        color: $white;
-      }
+    svg {
+      width: 18px;
+      height: 18px;
     }
 
     &--search {
@@ -188,49 +176,35 @@
 
       &:hover {
         background-color: $default;
-
-        &::after {
-          color: $white;
-        }
       }
     }
 
     &--ellipse {
       background-color: $light-blue;
 
-      .cls-1 {
-        fill: $white;
-      }
-
       &:hover {
         background-color: $default;
       }
     }
 
-    &--search::after {
-      content: '\f002';
-    }
-
-    &--heart::after {
-      content: '\f08a';
-    }
-
-    &--basket::after {
-      content: '\f07a';
+    &--heart {
+      svg {
+        width: 17px;
+        height: 17px;
+      }
     }
   }
 
   &__num {
     position: absolute;
-    top: -18px;
-    right: -18px;
+    top: -8px;
+    right: -13px;
     padding: 1px 5px;
     height: 15px;
     background-color: $white;
     border-radius: 30px;
     z-index: 5;
     font-size: 10px;
-    color: inherit;
     text-align: center;
     line-height: 1.5;
   }

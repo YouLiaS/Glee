@@ -1,0 +1,186 @@
+.about {
+  &__top {
+    padding: 30px 0;
+    background-color: #edf1f4;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    @extend %rubik-300;
+    color: #222933;
+    margin-bottom: 11px;
+
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__inner {
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    max-width: 570px;
+    min-height: 675px;
+  }
+
+  &__content {
+    max-width: 555px;
+    width: 100%;
+    color: $title;
+  }
+
+  &__descr {
+    padding: 70px 0 60px;
+    border-bottom: 1px solid $about-decorate;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__subject {
+    @extend %rubik-700;
+    font-size: 140px;
+    color: $light-blue;
+    margin-right: 25px;
+  }
+
+  &__item {
+    line-height: 1.8;
+  }
+
+  &__heading {
+    font-size: 36px;
+    @extend %dmsans-700;
+    margin-bottom: 40px;
+    @include line-clamp-2;
+  }
+
+  &__list {
+    padding-top: 20px;
+  }
+
+  &__text {
+    line-height: 1.8;
+    @include line-clamp-4;
+  }
+
+  &__items {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__clause {
+    padding-left: 55px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    @extend %dmsans-700;
+    position: relative;
+
+    &::before {
+      @extend %content;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      @extend %top-50;
+      @extend %bg-contain;
+    }
+
+    &--projects {
+      &::before {
+        background-image: url('../images/icons/project.svg');
+      }
+    }
+
+    &--revenue {
+      &::before {
+        background-image: url('../images/icons/revenue.svg');
+      }
+    }
+
+    &--awards {
+      &::before {
+        background-image: url('../images/icons/awards.svg');
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        @extend %content;
+        border-right: 1px solid $about-decorate;
+        width: 1px;
+        height: 75px;
+        right: 0;
+      }
+    }
+  }
+
+  &__num {
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+
+  &__span {
+    color: #4c4c4c;
+  }
+}
+
+.benefits {
+  background-color: $orange;
+  color: $title;
+
+  &__list {
+    padding: 90px 0 70px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @extend %dmsans-700;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      background-color: $light-blue;
+      border-radius: 50%;
+      top: 29px;
+      right: 91px;
+    }
+  }
+
+  &__num {
+    padding-top: 15px;
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 65px;
+    z-index: 10;
+  }
+}

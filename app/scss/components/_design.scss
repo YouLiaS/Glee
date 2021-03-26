@@ -1,18 +1,23 @@
 .design {
-  padding: 108px 0 0;
+  padding-top: 100px;
 
   @include for-desktop {
     padding-top: 80px;
   }
 
   &__title {
-    margin-bottom: 22px;
+    margin-bottom: 27px;
   }
 
   &__items {
+    margin-bottom: 125px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+
+    @include for-desktop {
+      margin-bottom: 80px;
+    }
 
     @include for-tablet-landscape {
       grid-template-columns: repeat(2, 1fr);
@@ -25,8 +30,14 @@
   }
 
   &__item {
+    transition: transform .4s ease;
+
     @include for-tablet-portrait {
       margin: 0 auto;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
@@ -34,19 +45,15 @@
     position: relative;
   }
 
-  .mixitup-control-active {
-    color: $default;
-  }
-
   &__image {
     max-width: 370px;
     min-height: 245px;
 
     @include for-desktop {
-      max-width: 295px;
+      max-width: 100%;
       min-height: 200px;
-      margin: 0 auto;
       object-fit: cover;
+      margin: 0 auto;
     }
 
     @include for-tablet-landscape {
@@ -101,14 +108,6 @@
     color: $light-blue;
   }
 
-  &__video {
-    padding: 125px 0 0;
-
-    @include for-desktop {
-      padding: 80px 0 0;
-    }
-  }
-
   &__popup {
     position: relative;
     display: flex;
@@ -117,6 +116,18 @@
     @extend %bg-cover;
     max-width: 100%;
     min-height: 500px;
+
+    @include for-desktop {
+      min-height: 350px;
+    }
+
+    @include for-tablet-portrait {
+      min-height: 300px;
+    }
+
+    @include for-phone-only {
+      min-height: 180px;
+    }
 
     &::after {
       @extend %content;
@@ -135,18 +146,6 @@
         width: 50px;
         height: 50px;
       }
-    }
-
-    @include for-desktop {
-      min-height: 350px;
-    }
-
-    @include for-tablet-portrait {
-      min-height: 300px;
-    }
-
-    @include for-phone-only {
-      min-height: 180px;
     }
   }
 }

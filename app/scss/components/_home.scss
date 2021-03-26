@@ -1,7 +1,7 @@
 .home {
   &__slider {
     background-color: $orange;
-    min-height: 825px;
+    min-height: 820px;
 
     @include for-big-desktop {
       min-height: 640px;
@@ -103,7 +103,7 @@
     }
   }
 
-  &__btn {
+  &__link {
     background-color: $light-blue;
     color: $white;
     @extend %rubik-500;
@@ -203,7 +203,7 @@
   .slick-dots {
     display: flex;
     position: absolute;
-    bottom: 50px;
+    bottom: 45px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -250,16 +250,20 @@
 
     &:not(:last-child) {
       border-right: 1px solid #e8e4df;
+
+      @include for-desktop {
+        border-right: none;
+      }
+
+      @include for-tablet-portrait {
+        border-bottom: 1px solid #e8e4df;
+      }
     }
 
     @include for-desktop {
       min-height: 105px;
       padding: 14px 0;
       width: 50%;
-
-      &:not(:last-child) {
-        border: none;
-      }
     }
 
     @include for-tablet-portrait {

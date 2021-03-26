@@ -1,9 +1,8 @@
 .insights {
-  padding: 120px 0 0;
+  padding-top: 120px;
 
   @include for-desktop {
-    padding: 80px 0 0;
-
+    padding-top: 80px;
   }
 
   &__top {
@@ -18,12 +17,14 @@
 
   &__link {
     @extend %dmsans-700;
-    color: #262626;
+    color: $dark-grey;
     margin-left: auto;
     padding-bottom: 4px;
     @extend %focus;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .4s ease;
+    position: relative;
+    padding-right: 30px;
 
     &:hover {
       border-bottom-color: $default;
@@ -33,16 +34,30 @@
       border-bottom-color: $light-blue;
     }
 
+    @include for-desktop {
+      padding-right: 18px;
+    }
+
     @include for-tablet-portrait {
       display: block;
       text-align: center;
       padding-top: 30px;
       font-size: 14px;
     }
-  }
 
-  svg {
-    margin-left: 10px;
+    &::after {
+      @extend %content;
+      width: 12px;
+      height: 12px;
+      @extend %bg-contain;
+      background-image: url('../images/icons/arrow-sm.svg');
+      top: 3px;
+      right: 0;
+
+      @include for-tablet-portrait {
+        display: none;
+      }
+    }
   }
 }
 
@@ -122,7 +137,7 @@
     }
 
     @include for-tablet-portrait {
-      bottom: 170px;
+      bottom: 150px;
     }
   }
 
@@ -148,12 +163,11 @@
 
     @include for-desktop {
       padding: 0 10px;
-      text-align: center;
     }
   }
 
   &__meta {
-    padding: 18px 0 0 27px;
+    padding: 14px 0 0 34px;
     font-size: 12px;
     line-height: 2.5;
     text-transform: uppercase;
@@ -222,7 +236,7 @@
     }
   }
 
-  &__logo {
+  &__box {
     @extend %focus;
   }
 }

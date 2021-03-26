@@ -2,9 +2,8 @@ $(function () {
   $('.home__slider').slick({
     arrows: false,
     dots: true,
-    fade: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
   })
 
   $('.partners__carousel').slick({
@@ -13,7 +12,7 @@ $(function () {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
 
     responsive: [{
         breakpoint: 749,
@@ -35,11 +34,11 @@ $(function () {
     $('.menu').toggleClass('active')
   })
 
-  if ($('.header__burger').is(':visible')) {
-    $('body').addClass("lock-scroll");
-  } else {
-    $('body').removeClass("lock-scroll");
-  }
+  // if ($('.header__burger').is(':visible')) {
+  //   $('body').addClass("lock-scroll");
+  // } else {
+  //   $('body').removeClass("lock-scroll");
+  // }
 
   mixitup('.products__cards');
   mixitup('.design__items');
