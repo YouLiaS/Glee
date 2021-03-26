@@ -11,7 +11,7 @@
   &__top {
     padding: 100px 0 70px;
     display: grid;
-    grid-template-columns: 25% repeat(2, 1fr) 270px;
+    grid-template-columns: 26% repeat(2, 1fr) 270px;
     border-bottom: 1px solid $footer-color;
 
     @include for-desktop {

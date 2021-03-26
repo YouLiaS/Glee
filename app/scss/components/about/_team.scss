@@ -1,6 +1,6 @@
 .team {
   &__inner {
-    padding: 120px 0 60px;
+    padding: 120px 0 68px;
     display: flex;
 
     @include for-desktop {
@@ -20,7 +20,7 @@
     color: $title;
 
     @include for-desktop {
-      margin-right: 25px;
+      margin-right: 50px;
     }
 
     @include for-tablet-landscape {
@@ -33,7 +33,7 @@
   &__title {
     @extend %dmsans-700;
     font-size: 36px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     @include line-clamp-2;
 
     @include for-tablet-landscape {
@@ -111,7 +111,7 @@
     position: absolute;
     left: -1px;
     right: 0;
-    bottom: -73px;
+    bottom: -70px;
 
     @include for-desktop {
       max-width: 270px;
@@ -141,12 +141,17 @@
     object-fit: cover;
   }
 
+  &__info {
+    max-width: 160px;
+  }
+
   &__name {
     display: inline-block;
     @extend %dmsans-700;
     font-size: 22px;
     line-height: 1.1;
     color: $accent;
+    @include line-clamp-2;
     margin-bottom: 10px;
     border-bottom: 2px solid transparent;
     transition: border-bottom-color .4s ease;
@@ -164,6 +169,7 @@
     color: #565872;
     line-height: 1.8;
     display: block;
+    @include line-clamp-2;
   }
 
   &__socials {
@@ -194,12 +200,20 @@
     }
 
     &:hover::after {
-      background-color: $light-blue;
+      background-color: $accent;
+    }
+
+    svg {
+      fill: #888;
+      width: 26px;
+      height: 17px;
+
+      &:hover {
+        transition: fill .5s ease;
+        fill: $white;
+      }
     }
   }
 
-  svg {
-    width: 26px;
-    height: 17px;
-  }
+
 }

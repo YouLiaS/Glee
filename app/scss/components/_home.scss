@@ -1,7 +1,7 @@
 .home {
   &__slider {
     background-color: $orange;
-    min-height: 820px;
+    min-height: 825px;
 
     @include for-big-desktop {
       min-height: 640px;
@@ -69,6 +69,7 @@
     color: $title;
     text-transform: uppercase;
     margin-bottom: 25px;
+    @extend %rubik-500;
     @include line-clamp-2;
 
     @include for-big-desktop {

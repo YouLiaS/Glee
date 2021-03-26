@@ -48,7 +48,7 @@
           <div class="user">
             <button class="user__link user__link--search" type="button">
               <span class="sr-only">Seach button</span>
-              <svg class="icon">
+              <svg class="icon__search">
                 <use xlink:href="images/icons/sprite.svg#search"></use>
               </svg>
             </button>
@@ -56,13 +56,13 @@
               <a class="user__link user__link--heart" href="#">
                 <span class="sr-only">Favorites link</span>
                 <span class="user__num">0</span>
-                <svg class="icon icon-heart">
+                <svg class="icon__heart">
                   <use xlink:href="images/icons/sprite.svg#heart"></use>
                 </svg>
               </a>
               <a class="user__link user__link--basket" href="#">
                 <span class="sr-only">Basket link</span>
-                <svg class="icon">
+                <svg class="icon__basket">
                   <use xlink:href="images/icons/sprite.svg#basket"></use>
                 </svg>
                 <span class="user__num">0</span>
@@ -480,7 +480,7 @@
           <li class="design__item mix category-furniture">
             <article class="design__card">
               <a class="design__box" href="#">
-                <img class="design__image" src="images/design/sofa.jpg" alt="white sofa">
+                <img class="design__image" src="images/design/sofa.png" alt="white sofa">
                 <div class="design__info">
                   <h3 class="design__caption">
                     <a class="design__heading" href="#">Beat Flat Pendant Black</a>
@@ -494,7 +494,7 @@
           <li class="design__item mix category-furniture">
             <article class="design__card">
               <a class="design__box" href="#">
-                <img class="design__image" src="images/design/bed.jpg" alt="big designer bed">
+                <img class="design__image" src="images/design/bed.png" alt="big designer bed">
                 <div class="design__info">
                   <h3 class="design__caption">
                     <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
@@ -508,7 +508,7 @@
           <li class="design__item mix category-chair">
             <article class="design__card">
               <a class="design__box" href="#">
-                <img class="design__image" src="images/design/chair.jpg" alt="black leather armchair">
+                <img class="design__image" src="images/design/chair.png" alt="black leather armchair">
                 <div class="design__info">
                   <h3 class="design__caption">
                     <a class="design__heading" href="#">Rattan Rocking Chair</a>
@@ -522,7 +522,7 @@
           <li class="design__item mix category-furniture">
             <article class="design__card">
               <a class="design__box" href="#">
-                <img class="design__image" src="images/design/bed-2.jpg" alt="big designer bed">
+                <img class="design__image" src="images/design/bed-2.png" alt="big designer bed">
                 <div class="design__info">
                   <h3 class="design__caption">
                     <a class="design__heading" href="#">Rattan Rocking Chair</a>
@@ -536,7 +536,7 @@
           <li class="design__item mix category-chair">
             <article class="design__card">
               <a class="design__box" href="#">
-                <img class="design__image" src="images/design/white-chair.jpg" alt="white leather armchair">
+                <img class="design__image" src="images/design/chair-2.png" alt="white leather armchair">
                 <div class="design__info">
                   <h3 class="design__caption">
                     <a class="design__heading" href="#">Rattan Rocking Chair</a>
@@ -550,7 +550,7 @@
           <li class="design__item mix category-furniture">
             <article class="design__card">
               <a class="design__box" href="#">
-                <img class="design__image" src="images/design/sofa-2.jpg" alt="beige sofa">
+                <img class="design__image" src="images/design/sofa-2.png" alt="beige sofa">
                 <div class="design__info">
                   <h3 class="design__caption">
                     <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
@@ -573,7 +573,11 @@
         <div class="insights__top">
           <h2 class="title insights__title">Our Insights & Articles</h2>
 
-          <a class="insights__link" href="#">View all</a>
+          <a class="insights__link" href="#">View all
+            <svg class="icon">
+              <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+            </svg>
+          </a>
         </div>
 
         <ul class="news" id="news">

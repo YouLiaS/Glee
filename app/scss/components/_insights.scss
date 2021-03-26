@@ -1,5 +1,5 @@
 .insights {
-  padding-top: 120px;
+  padding-top: 110px;
 
   @include for-desktop {
     padding-top: 80px;
@@ -18,25 +18,13 @@
   &__link {
     @extend %dmsans-700;
     color: $dark-grey;
+    padding-top: 5px;
     margin-left: auto;
-    padding-bottom: 4px;
     @extend %focus;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .4s ease;
-    position: relative;
-    padding-right: 30px;
+    margin-right: 12px;
 
-    &:hover {
-      border-bottom-color: $default;
-    }
-
-    &:active {
-      border-bottom-color: $light-blue;
-    }
-
-    @include for-desktop {
-      padding-right: 18px;
-    }
 
     @include for-tablet-portrait {
       display: block;
@@ -45,18 +33,18 @@
       font-size: 19px;
     }
 
-    &::after {
-      @extend %content;
+    svg {
       width: 12px;
       height: 12px;
-      @extend %bg-contain;
-      background-image: url('../images/icons/arrow-sm.svg');
-      top: 3px;
-      right: 0;
+      padding-left: 5px;
+    }
 
-      @include for-tablet-portrait {
-        display: none;
-      }
+    &:hover {
+      border-bottom-color: $default;
+    }
+
+    &:active {
+      border-bottom-color: $light-blue;
     }
   }
 }

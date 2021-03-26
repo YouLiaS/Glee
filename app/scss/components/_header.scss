@@ -2,7 +2,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    min-height: 145px;
+    min-height: 140px;
     position: relative;
   }
 
@@ -151,6 +151,8 @@
       @extend %top-left-50;
       width: 18px;
       height: 18px;
+      padding: 25px;
+      transition: fill .5s ease;
     }
 
     &--search,
@@ -164,40 +166,65 @@
         width: 35px;
         height: 35px;
       }
-    }
 
-    svg {
-      width: 18px;
-      height: 18px;
+      &:hover {
+        background-color: $default;
+
+        svg {
+          fill: $white;
+          transition: fill .5s ease;
+        }
+      }
     }
 
     &--search {
       background-color: #edf1f4;
-
-      &:hover {
-        background-color: $default;
-      }
     }
 
     &--ellipse {
       background-color: $light-blue;
-
-      &:hover {
-        background-color: $default;
-      }
     }
 
     &--heart {
-      svg {
-        width: 17px;
-        height: 17px;
+      &:hover {
+        svg {
+          fill: $white;
+          transition: fill .5s ease;
+        }
+      }
+    }
+
+    &--basket {
+      &:hover {
+        svg {
+          fill: $white;
+          transition: fill .5s ease;
+        }
       }
     }
   }
 
+  .icon__search {
+    fill: #243f4d;
+    width: 14px;
+    height: 17px;
+  }
+
+  .icon__heart {
+    width: 17px;
+    height: 17px;
+    fill: #243f4d;
+  }
+
+  .icon__basket {
+    width: 17px;
+    height: 17px;
+    fill: #243f4d;
+  }
+
   &__num {
     position: absolute;
-    top: -8px;
+    top: -9px;
     right: -13px;
     padding: 1px 5px;
     height: 15px;

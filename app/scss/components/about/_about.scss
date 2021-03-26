@@ -1,30 +1,4 @@
 .about {
-  &__top {
-    padding: 30px 0;
-    background-color: #edf1f4;
-
-    @include for-phone-only {
-      padding: 20px 0;
-    }
-  }
-
-  &__title {
-    text-align: center;
-    font-size: 36px;
-    @extend %rubik-300;
-    color: #222933;
-    margin-bottom: 11px;
-
-    @include for-tablet-portrait {
-      font-size: 32px;
-    }
-  }
-
-  &__holder {
-    display: flex;
-    justify-content: center;
-  }
-
   &__inner {
     padding: 120px 0;
     display: flex;
@@ -132,7 +106,7 @@
   &__heading {
     font-size: 36px;
     @extend %dmsans-700;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     @include line-clamp-2;
     display: inline-block;
     border-bottom: 2px solid transparent;
@@ -146,6 +120,10 @@
     &:hover {
       border-bottom-color: $title;
     }
+  }
+
+  &__link {
+    @include line-clamp-2;
   }
 
   &__list {
@@ -275,7 +253,7 @@
   color: $title;
 
   &__list {
-    padding: 90px 0 70px;
+    padding: 87px 0 75px;
     display: flex;
     justify-content: space-around;
 

@@ -120,6 +120,32 @@ a {
   }
 }
 
+.caption {
+  padding: 33px 0;
+  background-color: #edf1f4;
+
+  @include for-phone-only {
+    padding: 20px 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    @extend %rubik-300;
+    color: #222933;
+    margin-bottom: 11px;
+
+    @include for-tablet-portrait {
+      font-size: 32px;
+    }
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .breadcrumbs {
   display: flex;
 
