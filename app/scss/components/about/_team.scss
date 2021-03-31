@@ -1,6 +1,6 @@
 .team {
   &__inner {
-    padding: 120px 0 68px;
+    padding: 120px 0 65px;
     display: flex;
 
     @include for-desktop {
@@ -43,7 +43,7 @@
 
   &__text {
     line-height: 1.8;
-    margin-bottom: 57px;
+    margin-bottom: 58px;
 
     @include for-tablet-landscape {
       margin-bottom: 35px;
@@ -71,6 +71,8 @@
   }
 
   &__icon {
+    width: 16px;
+    height: 16px;
     position: absolute;
     right: 26px;
     @extend %top-50;
@@ -133,12 +135,18 @@
 
   &__image {
     height: 320px;
+    overflow: hidden;
   }
 
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .5s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__info {
@@ -153,15 +161,9 @@
     color: $accent;
     @include line-clamp-2;
     margin-bottom: 10px;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color .4s ease;
 
     @include for-tablet-landscape {
       margin-bottom: 0;
-    }
-
-    &:hover {
-      border-bottom-color: $sort-grey;
     }
   }
 
@@ -196,24 +198,23 @@
       right: 0;
       top: -13px;
       z-index: -1;
-      transition: background-color .5s ease;
+      transition: background-color .5s ease, fill .5s ease;
+    }
+
+    &:hover svg {
+      fill: $white;
     }
 
     &:hover::after {
       background-color: $accent;
     }
 
+
     svg {
       fill: #888;
       width: 26px;
       height: 17px;
-
-      &:hover {
-        transition: fill .5s ease;
-        fill: $white;
-      }
     }
   }
-
 
 }

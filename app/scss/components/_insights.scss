@@ -1,5 +1,5 @@
 .insights {
-  padding-top: 110px;
+  padding: 115px 0 10px;
 
   @include for-desktop {
     padding-top: 80px;
@@ -33,10 +33,11 @@
       font-size: 19px;
     }
 
-    svg {
+    &__icon {
       width: 12px;
       height: 12px;
       padding-left: 5px;
+      fill: #262626;
     }
 
     &:hover {
@@ -46,6 +47,11 @@
     &:active {
       border-bottom-color: $light-blue;
     }
+  }
+
+  &__arrow {
+    width: 13px;
+    height: 13px;
   }
 }
 
@@ -202,14 +208,18 @@
 }
 
 .partners {
+  padding: 270px 0 82px;
   background-color: #fef7f0;
-  padding: 270px 0 75px;
   z-index: 1;
   margin-top: -170px;
 
   @include for-tablet-landscape {
     padding: 225px 0 75px;
     margin-top: -174px;
+  }
+
+  &__carousel {
+    background-color: #fef7f0;
   }
 
   &__box {

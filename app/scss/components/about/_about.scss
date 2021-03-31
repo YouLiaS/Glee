@@ -109,21 +109,11 @@
     margin-bottom: 35px;
     @include line-clamp-2;
     display: inline-block;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color .4s ease;
 
     @include for-desktop {
       font-size: 29px;
       margin-bottom: 25px;
     }
-
-    &:hover {
-      border-bottom-color: $title;
-    }
-  }
-
-  &__link {
-    @include line-clamp-2;
   }
 
   &__list {
@@ -136,7 +126,6 @@
 
   &__text {
     line-height: 1.8;
-    @include line-clamp-4;
 
     @include for-desktop {
       line-height: 1.4;

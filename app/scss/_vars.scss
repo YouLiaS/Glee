@@ -9,6 +9,8 @@ $footer-color:#7b7b7b;
 $dark-grey :#262626;
 $about-decorate: #e6eaf0;
 $sort-grey:#565872;
+$dark-grey:#333333;
+$border:#f2f2f2;
 
 /********************************/
 %rubik-300 {
@@ -100,4 +102,13 @@ $sort-grey:#565872;
 
 %ico {
   font-family: 'icomoon' !important;
+}
+
+%checkbox {
+  width: 270px;
+  height: 40px;
+  position: absolute;
+  clip: rect(10px, 100px, 50px, 10px);
+  overflow: hidden;
+  margin: 0;
 }
