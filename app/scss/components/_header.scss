@@ -125,11 +125,17 @@
   }
 }
 
+.icon__menu {
+  width: 22px;
+  height: 22px;
+}
+
 .user {
   display: flex;
   position: absolute;
   align-items: center;
   right: 0;
+  top: 48px;
 
   @include for-desktop {
     top: 15px;
@@ -188,7 +194,7 @@
     &--heart {
       &:hover {
         svg {
-          fill: $white;
+          fill: $light-blue;
           transition: fill .5s ease;
         }
       }
@@ -197,7 +203,7 @@
     &--basket {
       &:hover {
         svg {
-          fill: $white;
+          fill: $light-blue;
           transition: fill .5s ease;
         }
       }
@@ -220,6 +226,12 @@
     width: 17px;
     height: 17px;
     fill: #243f4d;
+  }
+
+  &__ellipse {
+    width: 18px;
+    height: 18px;
+    fill: $white;
   }
 
   &__num {
