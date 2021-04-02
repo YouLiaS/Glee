@@ -1,13 +1,32 @@
 .catalog {
+  position: relative;
+
   &__inner {
-    padding: 57px 0 70px;
+    padding: 57px 0 65px;
     display: flex;
+    position: relative;
   }
 
-  &__filters {
-    max-width: 270px;
-    width: 100%;
-    margin-right: 30px;
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    z-index: 99;
+    display: none;
+    font-size: 21px;
+    color: $light-blue;
+
+    @include for-tablet-landscape {
+      display: flex;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $light-blue;
+    }
   }
 
   &__content {
@@ -23,8 +42,33 @@
     margin: 0 auto;
     width: 100%;
 
+    @include for-desktop {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+    }
+
+    @include for-tablet-portrait {
+      grid-template-columns: 1fr;
+    }
+
+    .product-card {
+      @include for-desktop {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      @include for-tablet-portrait {
+        max-width: 85%;
+      }
+
+      @include for-phone-only {
+        max-width: 100%;
+      }
+
+    }
+
     &--line {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
 
       .catalog__item:nth-child(-n+4) {
         display: block;
@@ -34,18 +78,142 @@
         display: none;
       }
 
-      .pagination {
-        justify-content: end;
+      .product-card {
+        @include for-tablet-portrait {
+          padding: 0;
+          flex-direction: column-reverse;
+        }
+
+        &__image {
+          @include for-desktop {
+            margin-right: 30px;
+          }
+
+          @include for-tablet-portrait {
+            margin: 0;
+          }
+        }
+
+        &__img {
+          @include for-desktop {
+            max-width: 300px;
+            min-height: 350px;
+            object-fit: scale-down;
+          }
+
+          @include for-tablet-portrait {
+            max-width: 100%;
+            margin: 0 auto;
+          }
+        }
+
+        &__info {
+
+          @include for-desktop {
+            padding-top: 20px;
+          }
+
+          @include for-tablet-portrait {
+            max-width: 100%;
+          }
+        }
+
+        &__link {
+          @include for-desktop {
+            font-size: 29px;
+          }
+
+          @include for-tablet-portrait {
+            font-size: 25px;
+          }
+        }
+
+        &__rating {
+          @include for-tablet-portrait {
+            margin-bottom: 15px;
+          }
+        }
+
+        &__pricing {
+          @include for-desktop {
+            margin-bottom: 10px;
+            font-size: 23px;
+          }
+        }
+
+        &__descr {
+          @include for-desktop {
+            max-width: 570px;
+            padding-right: 35px;
+          }
+
+          @include for-tablet-portrait {
+            line-height: 1.5;
+          }
+        }
+
+        &__btn {
+          @include for-desktop {
+            display: none;
+          }
+        }
+
+        .icons {
+          @include for-desktop {
+            bottom: 35px;
+            left: 345px;
+          }
+
+          @include for-tablet-portrait {
+            left: 35px;
+            bottom: 20px;
+          }
+
+          &__icon::after {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
 
   .filters {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
     color: $title;
-    position: relative;
+
+    @include for-desktop {
+      max-width: 250px;
+    }
+
+    @include for-tablet-landscape {
+      position: absolute;
+      padding: 15px;
+      left: -15px;
+      z-index: 88;
+      min-height: 100%;
+      max-width: 45%;
+      padding-top: 100px;
+      top: -61px;
+      transform: translateX(-200%);
+      background-color: #f2f2f2;
+      overflow-y: scroll;
+      transition: transform .25s ease;
+      margin-right: 0;
+    }
+
+    @include for-tablet-portrait {
+      max-width: 55%;
+    }
+
+    @include for-phone-only {
+      max-width: 75%;
+    }
 
     &-item {
       margin-bottom: 53px;
+
     }
 
     &-title {
@@ -70,6 +238,11 @@
     &-label {
       cursor: pointer;
       display: block;
+      transition: color .4s ease;
+
+      &:hover {
+        color: $light-blue;
+      }
     }
 
     &-input {
@@ -78,6 +251,10 @@
 
       &:checked+.filters-checkbox {
         background-color: #edf1f4;
+
+        .filters-info--num {
+          color: $title;
+        }
       }
     }
 
@@ -110,9 +287,14 @@
     }
 
     &-info {
+
       &--num {
         color: #b3b3b3;
       }
+    }
+
+    &__show {
+      transform: translateX(0);
     }
   }
 
@@ -121,6 +303,11 @@
     justify-content: center;
     align-items: center;
     padding-top: 35px;
+
+    @include for-tablet-portrait {
+      justify-content: flex-end;
+      margin-right: 45px;
+    }
 
     &__btn {
       &.layouts__btn--current {
@@ -153,6 +340,7 @@
     }
 
     .irs-handle {
+      cursor: pointer;
       top: 9px;
       width: 15px;
       height: 15px;

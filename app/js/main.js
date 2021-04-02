@@ -44,6 +44,13 @@ $(function () {
     $('.catalog__items').removeClass('catalog__items--line')
     $('.product-card').removeClass('product-card--line')
   })
+
+  $('.catalog__btn').on('click', function () {
+    $('.filters').toggleClass('filters__show')
+  });
+  $('.catalog__btn').on('click', function () {
+    $('body').toggleClass('lock-scroll')
+  })
   //*************************PAGINATION***************************//
   $('.layouts__btn--list').on('click', function () {
     $('.pagination').addClass('pagination--line');
