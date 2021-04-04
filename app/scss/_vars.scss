@@ -11,6 +11,8 @@ $about-decorate: #e6eaf0;
 $sort-grey:#565872;
 $dark-grey:#333333;
 $border:#f2f2f2;
+$extra-light-blue: #edf1f4;
+$date-color:#9a9a9a;
 
 /********************************/
 %rubik-300 {
@@ -105,10 +107,16 @@ $border:#f2f2f2;
 }
 
 %checkbox {
-  width: 270px;
-  height: 40px;
-  position: absolute;
-  clip: rect(10px, 100px, 50px, 10px);
+  width: 1px;
+  height: 1px;
   overflow: hidden;
-  margin: 0;
+  clip: rect(0 0 0 0);
+  position: absolute
+}
+
+%line-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }

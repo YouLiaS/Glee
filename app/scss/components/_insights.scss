@@ -160,20 +160,22 @@
       padding: 0 10px;
     }
   }
+}
 
-  &__meta {
-    padding: 14px 0 0 34px;
-    font-size: 12px;
-    line-height: 2.5;
-    text-transform: uppercase;
+.meta-box {
+  padding: 14px 0 0 34px;
+  font-size: 12px;
+  line-height: 2.5;
+  text-transform: uppercase;
 
-    @include for-desktop {
-      padding: 18px 10px 10px 25px;
-    }
+  @include for-desktop {
+    padding: 18px 10px 10px 25px;
+  }
 
-    svg {
-      margin: 0 10px;
-    }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
   }
 
   &__date {
@@ -182,28 +184,8 @@
 
   &__date,
   &__author {
-    position: relative;
-    padding-left: 18px;
-
-    &::before {
-      @extend %content;
-      width: 13px;
-      height: 13px;
-      top: 0;
-      left: 0;
-    }
-  }
-
-  &__date {
-    &::before {
-      background-image: url('../images/icons/calendar.svg');
-    }
-  }
-
-  &__author {
-    &::before {
-      background-image: url('../images/icons/user.svg');
-    }
+    display: inline-flex;
+    align-items: center;
   }
 }
 
@@ -218,24 +200,21 @@
     margin-top: -174px;
   }
 
-  &__carousel {
+  &-carousel {
     background-color: #fef7f0;
   }
 
-  &__box {
+  &-carousel__box {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 260px;
     min-height: 75px;
     padding: 0 33px 0 16px;
+    outline-color: transparent;
 
     @include for-tablet-portrait {
       max-width: 100%
     }
-  }
-
-  &__box {
-    @extend %focus;
   }
 }

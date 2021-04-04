@@ -69,7 +69,7 @@ function fileInclude() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('app'))
+    .pipe(dest('app/'))
     .pipe(browserSync.stream());
 }
 // ***********IMAGES************** //

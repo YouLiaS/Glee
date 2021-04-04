@@ -30,27 +30,18 @@
 
 //********************************//
 @mixin line-clamp-2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
+  @extend %line-clamp;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 @mixin line-clamp-3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
+  @extend %line-clamp;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 @mixin line-clamp-4 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
+  @extend %line-clamp;
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
 }
 
 /***************************************/

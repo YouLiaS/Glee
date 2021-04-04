@@ -4,9 +4,6 @@ body {
 
   &.lock-scroll {
     overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
   }
 }
 
@@ -144,6 +141,8 @@ a {
   }
 
   &__holder {
+    max-width: 1500px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
   }
@@ -211,7 +210,6 @@ a {
     text-align: left;
     position: relative;
 
-
     &:hover .product-card__btn {
       opacity: 1;
     }
@@ -247,14 +245,10 @@ a {
     }
 
     .product-card__price {
-      display: none;
-    }
-
-    .product-card__pricing {
       display: block;
       font-size: 30px;
       line-height: 1.5;
-      color: $dark-grey;
+      color: $light-blue;
       margin-bottom: 23px;
     }
 
@@ -344,6 +338,8 @@ a {
   }
 
   &__link {
+    max-width: 250px;
+    @include line-clamp-2;
     line-height: 2.5;
     @extend %rubik-500;
     font-size: 16px;
@@ -467,7 +463,7 @@ a {
       padding: 10px 15px;
     }
 
-    &--current {
+    &.active {
       background-color: $light-blue;
       color: $white;
     }
@@ -524,7 +520,6 @@ a {
     }
   }
 }
-
 
 
 
