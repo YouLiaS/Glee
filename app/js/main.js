@@ -7,7 +7,7 @@ $(function () {
     autoplaySpeed: 3000,
   })
 
-  $('.partners__carousel').slick({
+  $('.partners-carousel').slick({
     arrows: false,
     dots: false,
     slidesToShow: 5,
@@ -48,9 +48,9 @@ $(function () {
   $('.catalog__btn').on('click', function () {
     $('.filters').toggleClass('filters__show')
   });
-  $('.catalog__btn').on('click', function () {
-    $('body').toggleClass('lock-scroll')
-  })
+  $('.control').on('click', function () {
+    $('.sidebar').toggleClass('sidebar__show')
+  });
   //*************************PAGINATION***************************//
   $('.layouts__btn--list').on('click', function () {
     $('.pagination').addClass('pagination--line');
@@ -68,21 +68,21 @@ $(function () {
     $('body').toggleClass('lock-scroll')
   })
   //*************************FILTER***************************//
-  $('.filters-price__input').ionRangeSlider({
+  $('.filters__price-input').ionRangeSlider({
     type: 'double',
     prefix: "$",
     postfix: "00",
     onStart: function (data) {
-      $('.filters-price--from').text(data.from);
-      $('.filters-price--to').text(data.to);
+      $('.filters__price--from').text(data.from);
+      $('.filters__price--to').text(data.to);
     },
     onChange: function (data) {
-      $('.filters-price--from').text(data.from);
-      $('.filters-price--to').text(data.to);
+      $('.filters__price--from').text(data.from);
+      $('.filters__price--to').text(data.to);
     },
   });
 
-  $('.filters-price').append(' .00');
+  $('.filters__price').append(' .00');
   //*************************RATEYO***************************//
   $(".resent__rating").rateYo({
     starWidth: "11px",

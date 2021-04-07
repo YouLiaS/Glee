@@ -4,14 +4,16 @@
 @import 'vars';
 @import 'normalize';
 @import 'global';
-@import './components/header';
-@import './components/home';
-@import './components/products';
-@import './components/design';
-@import './components/insights';
-@import './components/footer';
-@import './components/about/about';
-@import './components/about/team';
-@import './components/products/catalog';
+@import 'components/header';
+@import 'components/home';
+@import 'components/products';
+@import 'components/design';
+@import 'components/insights';
+@import 'components/footer';
+@import 'components/about/about';
+@import 'components/about/team';
+@import 'components/products/catalog';
+@import 'components/blog/blog';
+@import 'components/blog/blog-details';
 
 // ****************** IMPORT ***************//

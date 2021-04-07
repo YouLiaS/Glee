@@ -13,80 +13,80 @@
 
 <body>
   <!-- HEADER -->
-   <header class="header" id="header">
-   <div class="container">
-     <div class="header__inner">
-       <nav class="header__nav">
-         <a class="logo" href="#">
-           <img class="logo__img" src="images/logo.png" alt="Glee logo">
-         </a>
-         <button class="header__burger" type="button">
-           <span class="sr-only">Mobile menu button</span>
-           <svg class="icon__menu">
-             <use xlink:href="images/icons/sprite.svg#burger-menu"></use>
-           </svg>
-         </button>
-         <ul class="menu">
-           <li class="menu__item">
-             <a class="menu__link menu__link--plus" href="#">Home</a>
-           </li>
-           <li class="menu__item">
-             <a class="menu__link" href="#">About</a>
-           </li>
-           <li class="menu__item">
-             <a class="menu__link" href="#">Services</a>
-           </li>
-           <li class="menu__item">
-             <a class="menu__link menu__link--plus" href="#">Pages</a>
-           </li>
-           <li class="menu__item">
-             <a class="menu__link" href="#">News</a>
-           </li>
-           <li class="menu__item">
-             <a class="menu__link" href="#">Contact</a>
-           </li>
-         </ul>
-         <div class="user">
-           <button class="user__link user__link--search" type="button">
-             <span class="sr-only">Seach button</span>
-             <svg class="icon__search">
-               <use xlink:href="images/icons/sprite.svg#search"></use>
-             </svg>
-           </button>
-           <div class="user__box">
-             <a class="user__link user__link--heart" href="#">
-               <span class="sr-only">Favorites link</span>
-               <span class="user__num">0</span>
-               <svg class="icon__heart">
-                 <use xlink:href="images/icons/sprite.svg#heart"></use>
-               </svg>
-             </a>
-             <a class="user__link user__link--basket" href="#">
-               <span class="sr-only">Basket link</span>
-               <svg class="icon__basket">
-                 <use xlink:href="images/icons/sprite.svg#basket"></use>
-               </svg>
-               <span class="user__num">0</span>
-             </a>
-           </div>
-           <button class="user__link user__link--ellipse" type="button">
-             <span class="sr-only">Menu button</span>
-             <svg class="user__ellipse">
-               <use xlink:href="images/icons/sprite.svg#ellipse"></use>
-             </svg>
-           </button>
-         </div>
-       </nav>
-     </div>
-   </div>
- </header>
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <nav class="header__nav">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.png" alt="Glee logo">
+          </a>
+          <button class="header__burger" type="button">
+            <span class="sr-only">Mobile menu button</span>
+            <svg class="icon__menu">
+              <use xlink:href="images/icons/sprite.svg#burger-menu"></use>
+            </svg>
+          </button>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link--plus" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Services</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--plus" href="#">Pages</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">News</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="user">
+            <button class="user__link user__link--search" type="button">
+              <span class="sr-only">Seach button</span>
+              <svg class="icon__search">
+                <use xlink:href="images/icons/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <div class="user__box">
+              <a class="user__link user__link--heart" href="#">
+                <span class="sr-only">Favorites link</span>
+                <span class="user__num">0</span>
+                <svg class="icon__heart">
+                  <use xlink:href="images/icons/sprite.svg#heart"></use>
+                </svg>
+              </a>
+              <a class="user__link user__link--basket" href="#">
+                <span class="sr-only">Basket link</span>
+                <svg class="icon__basket">
+                  <use xlink:href="images/icons/sprite.svg#basket"></use>
+                </svg>
+                <span class="user__num">0</span>
+              </a>
+            </div>
+            <button class="user__link user__link--ellipse" type="button">
+              <span class="sr-only">Menu button</span>
+              <svg class="user__ellipse">
+                <use xlink:href="images/icons/sprite.svg#ellipse"></use>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
 
   <main>
     <!-- CATALOG -->
     <section class="catalog">
       <div class="caption">
-        <h1 class="sr-only">Page with product categories and products</h1>
-        <h2 class="caption__title">Product list 1</h2>
+        <h1 class="caption__title">Product list 1</h1>
+        <h2 class="sr-only">Products categories and shop products</h2>
 
         <div class="caption__holder">
           <ul class="breadcrumbs">
@@ -126,137 +126,151 @@
             </svg>
             <span class="catalog__text">Filter</span>
           </button>
+          <!--  -->
+          <div class="filters catalog__filters">
+            <div class="filters__item">
+              <h3 class="filters__title">Category</h3>
 
-          <ul class="filters catalog__filters">
-            <li class="filters-item">
-              <h3 class="filters-title">Category</h3>
-
-              <form class="filters-form" action="#">
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Chair</span>
-                    <span class="filters-info">
-                      <svg class="filters-icon">
-                        <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Table</span>
-                    <span class="filters-info">
-                      <svg class="filters-icon">
-                        <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Lamp</span>
-                    <span class="filters-info">
-                      <svg class="filters-icon">
-                        <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Watch</span>
-                    <span class="filters-info">
-                      <svg class="filters-icon">
-                        <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Clock</span>
-                    <span class="filters-info">
-                      <svg class="filters-icon">
-                        <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </label>
-
+              <form class="filters__form" action="#">
+                <ul class="filters__list">
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Chair</span>
+                        <span class="filters__info">
+                          <svg class="filters__icon">
+                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Table</span>
+                        <span class="filters__info">
+                          <svg class="filters__icon">
+                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Lamp</span>
+                        <span class="filters__info">
+                          <svg class="filters__icon">
+                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Watch</span>
+                        <span class="filters__info">
+                          <svg class="filters__icon">
+                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Clock</span>
+                        <span class="filters__info">
+                          <svg class="filters__icon">
+                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
               </form>
-            </li>
+            </div>
 
-            <li class="filters-item">
-              <h3 class="filters-title">Priсe</h3>
-              <form class="filters-form" action="#">
-                <input class="filters-price__input" type="text" data-min="0" data-max="850" data-from="100"
+            <div class="filters__item">
+              <h3 class="filters__title">Priсe</h3>
+              <form class="filters__form" action="#">
+                <input class="filters__price-input" type="text" data-min="0" data-max="850" data-from="100"
                   data-to="500" name="price" data-postfix=".00">
-                <label for="price" class="filters-price__label">
-                  $<span class="filters-price filters-price--from"></span>
-                  $<span class="filters-price filters-price--to"></span>
+                <label for="price" class="filters__price-label">
+                  $<span class="filters__price filters__price--from"></span>
+                  $<span class="filters__price filters__price--to"></span>
                 </label>
               </form>
-            </li>
+            </div>
 
-            <li class="filters-item">
-              <h3 class="filters-title">Brand</h3>
-              <form class="filters-form" action="#">
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">RFL</span>
-                    <span class="filters-info filters-info--num">(10)</span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Brothers</span>
-                    <span class="filters-info filters-info--num">(21)</span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Regal</span>
-                    <span class="filters-info filters-info--num">(3)</span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Nadia</span>
-                    <span class="filters-info filters-info--num">(14)</span>
-                  </div>
-                </label>
-
-                <label class="filters-label" for="category-input">
-                  <input class="filters-input" type="checkbox" name="category-input">
-                  <div class="filters-checkbox">
-                    <span class="filters-info">Otobi</span>
-                    <span class="filters-info filters-info--num">(6)</span>
-                  </div>
-                </label>
+            <div class="filters__item">
+              <h3 class="filters__title">Brand</h3>
+              <form class="filters__form" action="#">
+                <ul class="filters__list">
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">RFL</span>
+                        <span class="filters__info filters__info--num">(10)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Brothers</span>
+                        <span class="filters__info filters__info--num">(21)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Regal</span>
+                        <span class="filters__info filters__info--num">(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Nadia</span>
+                        <span class="filters__info filters__info--num">(14)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filters__term">
+                    <label class="filters__label" for="category-input">
+                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
+                      <div class="filters__checkbox">
+                        <span class="filters__info">Otobi</span>
+                        <span class="filters__info filters__info--num">(6)</span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
               </form>
-            </li>
+            </div>
 
-            <li class="filters-item">
-              <h3 class="filters-title">Recent products</h3>
-              <ul class="resent">
-                <li class="resent__item">
+            <div class="filters__item">
+              <h3 class="filters__title">Recent products</h3>
+              <div class="resent">
+                <div class="resent__item">
                   <a class="resent__picture" href="#">
                     <img class="resent__pic" src="images/catalog/resent/lamp.png" alt="">
                   </a>
@@ -267,9 +281,9 @@
                     <div class="resent__rating" data-rateyo-rating="4"></div>
                     <span class="resent__price">23$</span>
                   </div>
-                </li>
+                </div>
 
-                <li class="resent__item">
+                <div class="resent__item">
                   <a class="resent__picture" href="#">
                     <img class="resent__pic" src="images/catalog/resent/lamp-cat.png" alt="">
                   </a>
@@ -280,9 +294,9 @@
                     <div class="resent__rating" data-rateyo-rating="4"></div>
                     <span class="resent__price">23$</span>
                   </div>
-                </li>
+                </div>
 
-                <li class="resent__item">
+                <div class="resent__item">
                   <a class="resent__picture" href="#">
                     <img class="resent__pic" src="images/catalog/resent/lamp-long.png" alt="">
                   </a>
@@ -293,12 +307,13 @@
                     <div class="resent__rating" data-rateyo-rating="4"></div>
                     <span class="resent__price">23$</span>
                   </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- FILTERS BAR ENDS -->
           <div class="catalog__content">
+
             <ul class="catalog__items">
               <li class="catalog__item">
                 <div class="catalog__box">
@@ -312,7 +327,7 @@
                         <a class="product-card__link" href="#">Wooden chair</a>
                       </h3>
                       <div class="product-card__rating" data-rateyo-rating="4"></div>
-                      <span class="product-card__pricing">23$</span>
+                      <!-- <span class="product-card__pricing">23$</span> -->
                       <span class="product-card__price">$29.00</span>
                       <div class="product-card__add">
                         <div class="product-card__descr">
@@ -354,7 +369,6 @@
                         <a class="product-card__link" href="#">White chair</a>
                       </h3>
                       <div class="product-card__rating" data-rateyo-rating="4"></div>
-                      <span class="product-card__pricing">23$</span>
                       <span class="product-card__price">$29.00</span>
                       <div class="product-card__add">
                         <div class="product-card__descr">
@@ -395,7 +409,6 @@
                         <a class="product-card__link" href="#">Retro table</a>
                       </h3>
                       <div class="product-card__rating" data-rateyo-rating="4"></div>
-                      <span class="product-card__pricing">23$</span>
                       <span class="product-card__price">$29.00</span>
                       <div class="product-card__add">
                         <div class="product-card__descr">
@@ -434,7 +447,6 @@
                         <a class="product-card__link" href="#">Wooden chair</a>
                       </h3>
                       <div class="product-card__rating" data-rateyo-rating="4"></div>
-                      <span class="product-card__pricing">23$</span>
                       <span class="product-card__price">$29.00</span>
                       <div class="product-card__add">
                         <div class="product-card__descr">
@@ -474,7 +486,6 @@
                         <a class="product-card__link" href="#">White shair</a>
                       </h3>
                       <div class="product-card__rating" data-rateyo-rating="4"></div>
-                      <span class="product-card__pricing">23$</span>
                       <span class="product-card__price">$29.00</span>
                       <div class="product-card__add">
                         <div class="product-card__descr">
@@ -513,7 +524,6 @@
                         <a class="product-card__link" href="#">Retro table</a>
                       </h3>
                       <div class="product-card__rating" data-rateyo-rating="4"></div>
-                      <span class="product-card__pricing">23$</span>
                       <span class="product-card__price">$29.00</span>
                       <div class="product-card__add">
                         <div class="product-card__descr">
@@ -703,11 +713,11 @@
             <!-- PAGINATION -->
             <div class="pagination">
               <ul class="pagination__list">
-                <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
+                <li class="pagination__item"><a class="pagination__link active" href="#">1</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">Next</a></li>
               </ul>
-              <a class="pagination__next" href="#">Next</a>
             </div>
             <!-- PAGINATION -->
           </div>
@@ -715,55 +725,54 @@
       </div>
       <div class="catalog__slider">
         <div class="container container--sm">
-          <ul class="partners__carousel">
+          <ul class="partners-carousel">
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/peterson.png" alt="peterson logo">
+              </div>
+            </li>
 
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/peterson.png" alt="peterson logo">
-    </div>
-  </li>
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/kmn.png" alt="KMN logo">
+              </div>
+            </li>
 
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/kmn.png" alt="KMN logo">
-    </div>
-  </li>
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/chainforce.png" alt="chainforce logo">
+              </div>
+            </li>
 
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/chainforce.png" alt="chainforce logo">
-    </div>
-  </li>
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/nextg3n.png" alt="nextg3n logo">
+              </div>
+            </li>
 
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/nextg3n.png" alt="nextg3n logo">
-    </div>
-  </li>
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/vintage.png" alt="vintage logo">
+              </div>
+            </li>
 
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/vintage.png" alt="vintage logo">
-    </div>
-  </li>
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/peterson.png" alt="peterson logo">
+              </div>
+            </li>
 
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/peterson.png" alt="peterson logo">
-    </div>
-  </li>
-
-  <li class="partners__item">
-    <div class="partners__box">
-      <img class="partners__logo" src="images/partners/kmn.png" alt="kmn logo">
-    </div>
-  </li>
-</ul>
+            <li class="partners-carousel__item">
+              <div class="partners-carousel__box">
+                <img class="partners-carousel__logo" src="images/partners/kmn.png" alt="kmn logo">
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
-    <footer class="footer" id="contact">
+  <footer class="footer" id="contact">
     <h2 class="sr-only">Lower section of the site with contact information</h2>
     <div class="container">
       <div class="footer__inner">
