@@ -29,6 +29,11 @@
 }
 
 //********************************//
+@mixin line-clamp-1 {
+  @extend %line-clamp;
+  -webkit-line-clamp: 1;
+}
+
 @mixin line-clamp-2 {
   @extend %line-clamp;
   -webkit-line-clamp: 2;

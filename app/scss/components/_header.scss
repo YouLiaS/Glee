@@ -147,6 +147,8 @@
 
   &__link {
     position: relative;
+    width: 88px;
+    height: 50px;
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -157,7 +159,7 @@
       @extend %top-left-50;
       width: 18px;
       height: 18px;
-      padding: 25px;
+
       transition: fill .5s ease;
     }
 
@@ -184,7 +186,7 @@
     }
 
     &--search {
-      background-color: #edf1f4;
+      background-color: $extra-light-blue;
     }
 
     &--ellipse {
@@ -194,7 +196,7 @@
     &--heart {
       &:hover {
         svg {
-          fill: $light-blue;
+          fill: $light-orange;
           transition: fill .5s ease;
         }
       }
@@ -203,7 +205,7 @@
     &--basket {
       &:hover {
         svg {
-          fill: $light-blue;
+          fill: $light-orange;
           transition: fill .5s ease;
         }
       }
@@ -217,12 +219,20 @@
   }
 
   .icon__heart {
-    width: 15px;
-    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
     fill: #243f4d;
   }
 
   .icon__basket {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 17px;
     height: 17px;
     fill: #243f4d;
@@ -236,8 +246,8 @@
 
   &__num {
     position: absolute;
-    top: -9px;
-    right: -13px;
+    top: 7px;
+    right: 14px;
     padding: 1px 5px;
     height: 15px;
     background-color: $white;
@@ -259,6 +269,7 @@
   border-radius: 35px;
   margin-right: 20px;
   position: relative;
+  transition: background-color .5s ease;
 
   @include for-big-desktop {
     width: 140px;
@@ -275,6 +286,10 @@
     @extend %top-left-50;
     width: 1px;
     height: 30px;
-    background-color: #fde7d3;
+    background-color: $light-orange;
+  }
+
+  &:hover {
+    background-color: $light-blue;
   }
 }

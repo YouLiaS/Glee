@@ -31,7 +31,12 @@
           </ul>
         </div>
       </div>
-
+      <button class="control">
+        <span class="sr-only">Filters button</span>
+        <svg class="control__icon">
+          <use xlink:href="images/icons/sprite.svg#equalizer"></use>
+        </svg>
+      </button>
       <div class="container container--sm">
         <div class="blog__inner">
           <div class="blog__content">
@@ -313,9 +318,9 @@
                     <img class="resent__picture" src="images/blog/resent-pic-1.jpg" alt="">
                   </a>
                   <div class="resent__info">
-                    <h4 class="resent__title">
+                    <h5 class="resent__title">
                       <a class="resent__heading" href="#">Corem ipsum dolor tetur adipisicing elit</a>
-                    </h4>
+                    </h5>
                     <div class="meta-box">
                       <a href="#" class="meta-box__date">
                         <svg class="meta-box__icon">
@@ -333,9 +338,9 @@
                     <img class="resent__pic" src="images/blog/resent-pic-2.jpg" alt="">
                   </a>
                   <div class="resent__info">
-                    <h4 class="resent__title">
+                    <h5 class="resent__title">
                       <a class="resent__heading" href="#">Fdipisicing elit, sed do eiusmod tempor</a>
-                    </h4>
+                    </h5>
                     <div class="meta-box">
                       <a href="#" class="meta-box__date">
                         <svg class="meta-box__icon">
@@ -352,9 +357,9 @@
                     <img class="resent__pic" src="images/blog/resent-pic-3.jpg" alt="">
                   </a>
                   <div class="resent__info">
-                    <h4 class="resent__title">
+                    <h5 class="resent__title">
                       <a class="resent__heading" href="#">Eonsectetur adipisicing elit, sed do eiusmod</a>
-                    </h4>
+                    </h5>
                     <div class="meta-box">
                       <a href="#" class="meta-box__date">
                         <svg class="meta-box__icon">
@@ -371,9 +376,9 @@
                     <img class="resent__pic" src="images/blog/resent-pic-4.jpg" alt="">
                   </a>
                   <div class="resent__info">
-                    <h4 class="resent__title">
+                    <h5 class="resent__title">
                       <a class="resent__heading" href="#">gnim ad minim veniam, quis nostrud </a>
-                    </h4>
+                    </h5>
                     <div class="meta-box">
                       <a href="#" class="meta-box__date">
                         <svg class="meta-box__icon">
@@ -389,8 +394,11 @@
           </div>
         </div>
       </div>
+      <!-- SLIDER -->
       <div class="blog-slider">
-        @@include('parts/_partners.html')
+        <div class="container container--sm">
+          @@include('parts/_partners.html')
+        </div>
       </div>
     </section>
 

@@ -48,7 +48,9 @@ $(function () {
   $('.catalog__btn').on('click', function () {
     $('.filters').toggleClass('filters__show')
   });
-
+  $('.control').on('click', function () {
+    $('.sidebar').toggleClass('sidebar__show')
+  });
   //*************************PAGINATION***************************//
   $('.layouts__btn--list').on('click', function () {
     $('.pagination').addClass('pagination--line');
