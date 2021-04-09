@@ -24,7 +24,7 @@
     @extend %rubik-400;
 
     @include for-tablet-portrait {
-      margin-bottom: 25px;
+      font-size: 25px;
     }
   }
 
@@ -71,14 +71,14 @@
   }
 
   .meta__blog {
-    bottom: 380px;
+    bottom: 190px;
 
     @include for-tablet-landscape {
-      bottom: 530px;
+      bottom: 339px;
     }
 
     @include for-tablet-portrait {
-      bottom: 535px;
+      bottom: 393px;
       right: 0;
       margin: 0 auto;
       left: 0;
@@ -86,7 +86,7 @@
     }
 
     @include for-phone-only {
-      bottom: 563px;
+      bottom: 419px;
       max-width: 270px;
 
       .meta-box__date {
@@ -97,10 +97,6 @@
 
   .blog-item__info {
     padding-top: 35px;
-
-    @include for-tablet-portrait {
-      padding-top: 70px;
-    }
   }
 
   blockquote {
