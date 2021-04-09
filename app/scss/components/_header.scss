@@ -159,7 +159,6 @@
       @extend %top-left-50;
       width: 18px;
       height: 18px;
-
       transition: fill .5s ease;
     }
 
@@ -196,8 +195,12 @@
     &--heart {
       &:hover {
         svg {
-          fill: $light-orange;
-          transition: fill .5s ease;
+          fill: $light-blue;
+        }
+
+        .user__num {
+          background-color: $light-blue;
+          color: $white;
         }
       }
     }
@@ -205,8 +208,14 @@
     &--basket {
       &:hover {
         svg {
-          fill: $light-orange;
+          fill: $light-blue;
           transition: fill .5s ease;
+
+        }
+
+        .user__num {
+          background-color: $light-blue;
+          color: $white;
         }
       }
     }
@@ -220,9 +229,7 @@
 
   .icon__heart {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    @extend %top-left-50;
     width: 18px;
     height: 18px;
     fill: #243f4d;
@@ -230,9 +237,7 @@
 
   .icon__basket {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    @extend %top-left-50;
     width: 17px;
     height: 17px;
     fill: #243f4d;
@@ -246,8 +251,8 @@
 
   &__num {
     position: absolute;
-    top: 7px;
-    right: 14px;
+    top: 11px;
+    right: 16px;
     padding: 1px 5px;
     height: 15px;
     background-color: $white;
@@ -256,6 +261,7 @@
     font-size: 10px;
     text-align: center;
     line-height: 1.5;
+    transition: background-color .5s ease, color .5s ease;
   }
 }
 
@@ -289,7 +295,4 @@
     background-color: $light-orange;
   }
 
-  &:hover {
-    background-color: $light-blue;
-  }
 }

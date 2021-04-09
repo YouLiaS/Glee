@@ -1,6 +1,6 @@
 .blog {
   &__inner {
-    padding: 105px 0 80px;
+    padding: 100px 0 80px;
     display: flex;
     justify-content: space-between;
 
@@ -8,6 +8,14 @@
       padding: 100px 0 40px;
       justify-content: center;
     }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__list {
+    margin-bottom: 107px;
   }
 
   &__content {
@@ -33,7 +41,6 @@
     }
 
     .pagination {
-      padding-top: 112px;
       justify-content: start;
 
       @include for-tablet-landscape {
@@ -44,12 +51,13 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: 77px;
+      margin-bottom: 69px;
     }
   }
 
   .resent__item {
     justify-content: space-between;
+    margin-bottom: 19px;
   }
 }
 
@@ -81,15 +89,14 @@
   }
 
   &__info {
-    position: relative;
-    padding-top: 37px;
+    padding-top: 39px;
   }
 
   .meta__blog {
     position: absolute;
-    bottom: 256px;
+    bottom: 265px;
     color: $white;
-    padding: 20px 29px 20px 24px;
+    padding: 20px 20px 20px 24px;
     background-color: $light-blue;
     display: flex;
     justify-content: center;
@@ -134,7 +141,7 @@
     @extend %rubik-400;
     color: $dark-grey;
     font-size: 36px;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
     transition: color .5s ease;
 
     @include for-tablet-landscape {
@@ -148,7 +155,7 @@
 
   &__descr {
     color: $title;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 55px;
     @include line-clamp-3;
 
@@ -279,6 +286,7 @@
 .filters {
   max-width: 270px;
   width: 100%;
+  overflow: hidden;
   color: $title;
 
   &__item {
@@ -293,6 +301,9 @@
     position: relative;
     margin-bottom: 25px;
     padding-right: 55px;
+    max-width: 190px;
+    width: 100%;
+    @include line-clamp-1;
 
     &::after {
       @extend %content;
@@ -335,6 +346,13 @@
     padding: 14px 23px 14px 15px;
   }
 
+  &__info:nth-child(1) {
+    max-width: 150px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
   &__icon {
     width: 6px;
     height: 10px;
@@ -344,7 +362,7 @@
 }
 
 .resent {
-  padding-top: 10px;
+  padding-top: 7px;
 
   &__item {
     display: flex;
@@ -408,6 +426,6 @@
   background-color: $slider-bg;
 
   .partners-carousel {
-    padding: 80px 0;
+    padding: 55px 0;
   }
 }

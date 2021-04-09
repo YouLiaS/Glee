@@ -74,7 +74,7 @@ a {
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
   @include for-phone-only {
     display: block;
@@ -120,7 +120,7 @@ a {
   }
 }
 
-.caption {
+.breadcrumbs {
   padding: 33px 0;
   background-color: #edf1f4;
 
@@ -146,10 +146,10 @@ a {
     display: flex;
     justify-content: center;
   }
-}
 
-.breadcrumbs {
-  display: flex;
+  &__list {
+    display: flex;
+  }
 
   &__item {
     position: relative;
@@ -184,10 +184,13 @@ a {
   }
 }
 
+
 // ****************************************//
 .product-card {
   max-width: 270px;
   width: 100%;
+  min-height: 380px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -196,7 +199,7 @@ a {
   border-radius: 10px;
   background-color: $white;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-  padding: 40px 0px;
+  padding: 33px 0px;
   position: relative;
 
 
@@ -216,7 +219,7 @@ a {
 
     .product-card__image {
       border: 1px solid $border;
-      margin-right: 60px;
+      margin-right: 58px;
     }
 
     .product-card__img {
@@ -231,17 +234,19 @@ a {
     }
 
     .product-card__heading {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .product-card__link {
       font-size: 40px;
       line-height: inherit;
       @extend %rubik-400;
+      max-width: 420px;
+      @include line-clamp-1;
     }
 
     .product-card__rating {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
     .product-card__price {
@@ -249,13 +254,13 @@ a {
       font-size: 30px;
       line-height: 1.5;
       color: $light-blue;
-      margin-bottom: 23px;
+      margin-bottom: 18px;
     }
 
     .product-card__descr {
       @include line-clamp-4;
       color: $title;
-      line-height: 1.8;
+      line-height: 1.9;
       margin-bottom: 30px;
     }
 
@@ -311,11 +316,11 @@ a {
 
   @include for-desktop {
     padding: 25px 0;
+    margin: 0 auto;
   }
 
   @include for-tablet-portrait {
     max-width: 350px;
-    margin: 0 auto;
   }
 
   @include for-phone-only {
@@ -324,8 +329,8 @@ a {
 
   &__img {
     max-width: 240px;
-    min-height: 200px;
-    object-fit: contain;
+    min-height: 210px;
+    object-fit: scale-down;
     margin-bottom: 45px;
 
     @include for-desktop {
@@ -338,19 +343,19 @@ a {
   }
 
   &__link {
-    max-width: 250px;
-    @include line-clamp-2;
+    max-width: 260px;
+    @include line-clamp-1;
     line-height: 2.5;
     @extend %rubik-500;
     font-size: 16px;
     color: $title;
     border-bottom: 2px solid transparent;
-    transition: border-bottom-color .5s ease;
+    transition: color .5s ease;
     @extend %focus;
     @extend %active;
 
     &:hover {
-      border-bottom-color: $light-blue;
+      color: $light-blue;
     }
   }
 
@@ -430,7 +435,7 @@ a {
 }
 
 .pagination {
-  padding: 100px 0 50px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -446,7 +451,9 @@ a {
   }
 
   &__item {
-    margin-right: 11px;
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
   }
 
   &__link {
