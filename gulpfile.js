@@ -117,6 +117,7 @@ function cleanDist() {
 // **************WATCHING******************* //
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
+  watch(['app/html/**/*.html'], fileInclude);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }

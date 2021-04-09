@@ -1,104 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/images/icons/favicon.png" type="image/png">
-  <title>Glee | About us</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('parts/_head.html', {
+"title":"Glee | About us"
+})
 
 <body>
   <!-- HEADER -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="header__inner">
-        <nav class="header__nav">
-          <a class="logo" href="#">
-            <img class="logo__img" src="images/logo.png" alt="Glee logo">
-          </a>
-          <button class="header__burger" type="button">
-            <span class="sr-only">Mobile menu button</span>
-            <svg class="icon__menu">
-              <use xlink:href="images/icons/sprite.svg#burger-menu"></use>
-            </svg>
-          </button>
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link menu__link--plus" href="#">Home</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link menu__link--plus" href="#">Pages</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-          <div class="user">
-            <button class="user__link user__link--search" type="button">
-              <span class="sr-only">Seach button</span>
-              <svg class="icon__search">
-                <use xlink:href="images/icons/sprite.svg#search"></use>
-              </svg>
-            </button>
-            <div class="user__box">
-              <a class="user__link user__link--heart" href="#">
-                <span class="sr-only">Favorites link</span>
-                <span class="user__num">0</span>
-                <svg class="icon__heart">
-                  <use xlink:href="images/icons/sprite.svg#heart"></use>
-                </svg>
-              </a>
-              <a class="user__link user__link--basket" href="#">
-                <span class="sr-only">Basket link</span>
-                <svg class="icon__basket">
-                  <use xlink:href="images/icons/sprite.svg#basket"></use>
-                </svg>
-                <span class="user__num">0</span>
-              </a>
-            </div>
-            <button class="user__link user__link--ellipse" type="button">
-              <span class="sr-only">Menu button</span>
-              <svg class="user__ellipse">
-                <use xlink:href="images/icons/sprite.svg#ellipse"></use>
-              </svg>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+  @@include('parts/_header.html')
 
   <main class="main">
     <!-- ABOUT US -->
     <section class="about">
-      <div class="caption">
-        <h1 class="caption__title">About Us</h1>
-        <h2 class="sr-only">Glee. About us page</h2>
-
-        <div class="caption__holder">
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Home</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <span class="breadcrumbs__span">About us</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      @@include('parts/_breadcrumbs.html', {
+      "title":"About Us",
+      "title2":"About us page",
+      "current": "About us"
+      })
 
       <div class="container container--sm">
         <div class="about__inner">
@@ -116,7 +31,7 @@
                 </ul>
               </div>
               <h3 class="about__heading">
-                <a class="about__link" href="#">Mission of our creative house</a>
+                Mission of our creative house
               </h3>
               <div class="about__text">
                 <p>
@@ -147,38 +62,26 @@
       <div class="benefits">
         <div class="container container--sm">
           <ul class="benefits__list">
-
-            <li class="benefits__item">
-              <svg class="icon benefits__icon">
-                <use xlink:href="images/icons/sprite.svg#laptop"></use>
-              </svg>
-              <span class="benefits__num">99%</span>
-              <span class="benefits__text">Satisﬁed Clients Rate</span>
-            </li>
-
-            <li class="benefits__item">
-              <svg class="icon benefits__icon">
-                <use xlink:href="images/icons/sprite.svg#track"></use>
-              </svg>
-              <span class="benefits__num">5020+</span>
-              <span class="benefits__text">Products Delivered</span>
-            </li>
-
-            <li class="benefits__item">
-              <svg class="icon benefits__icon">
-                <use xlink:href="images/icons/sprite.svg#24hour"></use>
-              </svg>
-              <span class="benefits__num">23hr</span>
-              <span class="benefits__text">Daily Working Time</span>
-            </li>
-
-            <li class="benefits__item">
-              <svg class="icon benefits__icon">
-                <use xlink:href="images/icons/sprite.svg#medal"></use>
-              </svg>
-              <span class="benefits__num">140+</span>
-              <span class="benefits__text">Brands in Store</span>
-            </li>
+            @@include('parts/_benefits-item.html',{
+            "icon":"images/icons/sprite.svg#laptop",
+            "num":"99%",
+            "text":"Satisﬁed Clients Rate"
+            })
+            @@include('parts/_benefits-item.html',{
+            "icon":"images/icons/sprite.svg#track",
+            "num":"5020+",
+            "text":"Products Delivered"
+            })
+            @@include('parts/_benefits-item.html',{
+            "icon":"images/icons/sprite.svg#24hour",
+            "num":"23hr",
+            "text":"Daily Working Time"
+            })
+            @@include('parts/_benefits-item.html',{
+            "icon":"images/icons/sprite.svg#medal",
+            "num":"140+",
+            "text":"Brands in Store"
+            })
           </ul>
         </div>
       </div>
@@ -205,111 +108,31 @@
               </svg>
             </a>
           </div>
-
           <ul class="team__list">
-            <li class="team__item">
-              <div class="team__image">
-                <img class="team__img" src="images/about/team-eliza.jpg" alt="Team - Eliza Elliot">
-              </div>
-              <div class="team__box">
-                <div class="team__info">
-                  <span class="team__name" href="#">Eliza Elliot</span>
-                  <span class="team__proff">Commodo tempor</span>
-                </div>
-                <div class="team__socials">
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Instagram link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Google plus link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#google+"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="team__item">
-              <div class="team__image">
-                <img class="team__img" src="images/about/team-roscoe.jpg" alt="Team - Roscoe A">
-              </div>
-              <div class="team__box">
-                <div class="team__info">
-                  <span class="team__name" href="#">Roscoe A.</span>
-                  <span class="team__proff">Commodo tempor</span>
-                </div>
-                <div class="team__socials">
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Instagram link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Google plus link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#google+"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="team__item">
-              <div class="team__image">
-                <img class="team__img" src="images/about/team-ruby.jpg" alt="Team - Roscoe A. ">
-              </div>
-              <div class="team__box">
-                <div class="team__info">
-                  <span class="team__name" href="#">Ruby M. </span>
-                  <span class="team__proff">Commodo tempor</span>
-                </div>
-                <div class="team__socials">
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Instagram link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Google plus link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#google+"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="team__item">
-              <div class="team__image">
-                <img class="team__img" src="images/about/team-marie.jpg" alt="Team - Marie F. Bloss">
-              </div>
-              <div class="team__box">
-                <div class="team__info">
-                  <span class="team__name" href="#">Marie F. Bloss</span>
-                  <span class="team__proff">Commodo tempor</span>
-                </div>
-                <div class="team__socials">
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Instagram link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                  <a class="team__thumb" href="#">
-                    <span class="sr-only">Google plus link</span>
-                    <svg class="icon">
-                      <use xlink:href="images/icons/sprite.svg#google+"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </li>
+            @@include('parts/_team-item.htm', {
+            "img":"images/about/team-eliza.jpg",
+            "alt":"Team - Eliza Elliot",
+            "name":"Eliza Elliot",
+            "proff":"Commodo tempor"
+            })
+            @@include('parts/_team-item.htm', {
+            "img":"images/about/team-roscoe.jpg" ,
+            "alt":"Team - Roscoe A",
+            "name":"Roscoe A.",
+            "proff":"Commodo tempor"
+            })
+            @@include('parts/_team-item.htm', {
+            "img":"images/about/team-ruby.jpg",
+            "alt" :"Team - Ruby M.",
+            "name":"Ruby M.",
+            "proff":"Commodo tempor"
+            })
+            @@include('parts/_team-item.htm', {
+            "img":"images/about/team-marie.jpg",
+            "alt":"Team - Marie F. Bloss",
+            "name":"Marie F. Bloss",
+            "proff":"Commodo tempor"
+            })
           </ul>
         </div>
       </div>
@@ -322,63 +145,7 @@
 
           <a class="insights__link" href="#">View all</a>
         </div>
-
-        <ul class="news" id="news">
-          <li class="news__box">
-            <div class="news__image">
-              <a class="news__holder" href="#">
-                <img class="news__img" src="images/insights/interier-bedroom.jpg" alt="bedroom interier">
-              </a>
-            </div>
-            <a class="news__link" href="#">News</a>
-            <h3 class="news__title">
-              <a class="news__descr" href="#">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad
-                minim veniam
-              </a>
-            </h3>
-            <div class="news__meta">
-              <span class="news__date">28 January, 2020</span>
-              <span class="news__author">By admin</span>
-            </div>
-          </li>
-
-          <li class="news__box">
-            <div class="news__image">
-              <a class="news__holder" href="#">
-                <img class="news__img" src="images/insights/interier-room.jpg" alt="room interier">
-              </a>
-            </div>
-            <a class="news__link" href="#">News</a>
-            <h3 class="news__title">
-              <a class="news__descr" href="#">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                labore
-                et
-                dolore
-              </a>
-            </h3>
-            <div class="news__meta">
-              <span class="news__date">28 January, 2020</span>
-              <span class="news__author">By admin</span>
-            </div>
-          </li>
-
-          <li class="news__box">
-            <div class="news__image">
-              <a class="news__holder" href="#">
-                <img class="news__img" src="images/insights/interier-salon.jpg" alt="salon room interier">
-              </a>
-            </div>
-            <a class="news__link" href="#">News</a>
-            <h3 class="news__title">
-              <a class="news__descr" href="#">Rncididunt ut labore et dolore magna aliqua. Ut enim</a>
-            </h3>
-            <div class="news__meta">
-              <span class="news__date">28 January, 2020</span>
-              <span class="news__author">By admin</span>
-            </div>
-          </li>
-        </ul>
+        @@include('parts/_news.html')
       </div>
 
       <div class="partners" id="partners">
@@ -389,118 +156,7 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <h2 class="sr-only">Lower section of the site with contact information</h2>
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__top">
-
-          <div class="footer__box footer__box--connect">
-            <address class="connect">
-              <a class="footer__logo" href="#">
-                <img class="footer__img" src="images/logo.png" alt="Glee logo">
-              </a>
-              <ul class="connect__list">
-                <li class="connect__item">
-                  <span>Address:</span>
-                  <a class="connect__link" href="#">
-                    4772 Wines Lane
-                    Houston, TX 77032
-                  </a>
-                </li>
-
-                <li class="connect__item">
-                  <span>Telephone:</span>
-                  <a class="connect__link" href="tel:8323475843">+832-347-5843</a>
-                </li>
-
-                <li class="connect__item">
-                  <span>Email:</span>
-                  <a class="connect__link" href="mailto:contact@Glee.com">contact@Glee.com</a>
-                </li>
-              </ul>
-            </address>
-          </div>
-
-          <div class="footer__box footer__box--service">
-            <h3 class="footer__title">Services</h3>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">About us</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Return Policy</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Our Blog</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Contact Us</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Terms & Condition</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__box footer__box--account">
-            <h3 class="footer__title">Account</h3>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">Your Account</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Checkout</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Login</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Register</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__box footer__box--newsletter">
-            <h3 class="footer__title">Newsletter</h3>
-            <div class="footer__text">
-              <p>
-                Subscribe by our newsletter and get
-                update protidin.
-              </p>
-            </div>
-            <form class="form" action="#">
-              <input class="form__input" id="email" type="email" name="email" required>
-              <label class="form__label" for="email">Email address</label>
-              <button class="form__btn" type="submit">Subscribe</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="footer__bottom">
-          <div class="footer__copy">
-            <p>©2020 CopyRight Example. All rights reserved.</p>
-          </div>
-          <nav class="footer-nav">
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">Home</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">About</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">Blog</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer>
+  @@include('parts/_footer.html')
   <!-- JS -->
   <script src="js/main.min.js"></script>
 </body>

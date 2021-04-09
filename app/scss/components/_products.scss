@@ -32,7 +32,7 @@
 
 
 .goods {
-  padding-top: 100px;
+  padding-top: 107px;
 
   @include for-tablet-portrait {
     padding-top: 20px;
@@ -91,7 +91,7 @@
   &__img {
     max-width: 235px;
     min-height: 400px;
-    object-fit: contain;
+    object-fit: cover;
 
     @include for-desktop {
       max-width: 80%;

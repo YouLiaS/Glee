@@ -1,85 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/images/icons/favicon.png" type="image/png">
-  <title>Glee | Online shopping</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('parts/_head.html', {
+"title": "Glee | Online shopping"
+})
 
 <body>
   <!-- HEADER -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="header__inner">
-        <nav class="header__nav">
-          <a class="logo" href="#">
-            <img class="logo__img" src="images/logo.png" alt="Glee logo">
-          </a>
-          <button class="header__burger" type="button">
-            <span class="sr-only">Mobile menu button</span>
-            <svg class="icon__menu">
-              <use xlink:href="images/icons/sprite.svg#burger-menu"></use>
-            </svg>
-          </button>
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link menu__link--plus" href="#">Home</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link menu__link--plus" href="#">Pages</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-          <div class="user">
-            <button class="user__link user__link--search" type="button">
-              <span class="sr-only">Seach button</span>
-              <svg class="icon__search">
-                <use xlink:href="images/icons/sprite.svg#search"></use>
-              </svg>
-            </button>
-            <div class="user__box">
-              <a class="user__link user__link--heart" href="#">
-                <span class="sr-only">Favorites link</span>
-                <span class="user__num">0</span>
-                <svg class="icon__heart">
-                  <use xlink:href="images/icons/sprite.svg#heart"></use>
-                </svg>
-              </a>
-              <a class="user__link user__link--basket" href="#">
-                <span class="sr-only">Basket link</span>
-                <svg class="icon__basket">
-                  <use xlink:href="images/icons/sprite.svg#basket"></use>
-                </svg>
-                <span class="user__num">0</span>
-              </a>
-            </div>
-            <button class="user__link user__link--ellipse" type="button">
-              <span class="sr-only">Menu button</span>
-              <svg class="user__ellipse">
-                <use xlink:href="images/icons/sprite.svg#ellipse"></use>
-              </svg>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+  @@include('parts/_header.html')
 
   <main class="main">
     <!-- HOME -->
@@ -88,57 +13,9 @@
       <h2 class="sr-only">Trendy design furnitures</h2>
       <div class="container">
         <ul class="home__slider">
-
-          <li class="home__item">
-            <div class="home__content">
-              <div class="home__descr">
-                <h3 class="home__title">Smart and trendy</h3>
-                <div class="home__text">
-                  <p>
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
-                </div>
-                <a class="home__link" href="#">Shop now</a>
-              </div>
-              <div class="home__product">
-                <img class="home__img" src="images/home/sofa.png" alt="beige sofa">
-              </div>
-            </div>
-          </li>
-
-          <li class="home__item">
-            <div class="home__content">
-              <div class="home__descr">
-                <h3 class="home__title">Smart and trendy</h3>
-                <div class="home__text">
-                  <p>
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
-                </div>
-                <a class="home__link" href="#">Shop now</a>
-              </div>
-              <div class="home__product">
-                <img class="home__img" src="images/home/sofa.png" alt="beige sofa">
-              </div>
-            </div>
-          </li>
-
-          <li class="home__item">
-            <div class="home__content">
-              <div class="home__descr">
-                <h3 class="home__title">Smart and trendy</h3>
-                <div class="home__text">
-                  <p>
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
-                </div>
-                <a class="home__link" href="#">Shop now</a>
-              </div>
-              <div class="home__product">
-                <img class="home__img" src="images/home/sofa.png" alt="beige sofa">
-              </div>
-            </div>
-          </li>
+          @@include('parts/_home-item.html')
+          @@include('parts/_home-item.html')
+          @@include('parts/_home-item.html')
         </ul>
 
         <ul class="features">
@@ -185,230 +62,78 @@
         <h2 class="title products__title">Products of the week</h2>
 
         <ul class="filter">
-          <li class="filter__item">
-            <button class="filter__btn" data-filter="all">All</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-furnitures">Furnitures</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-chairs">Chairs</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-lighting">Lighting</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-decor">Decor</button>
-          </li>
+          @@loop('parts/_filter.html',[
+          {"sort":"all","text":"All"},
+          {"sort":"category-furniture","text":"Furnitures"},
+          {"sort":"category-chair","text":"Chairs"},
+          {"sort":"category-light","text":"Lighting"},
+          {"sort":"category-decoration","text":"Decor"},
+          ])
         </ul>
 
         <ul class="products__cards">
           <li class="products__card mix category-chairs">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/wooden-radio.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden radio",
+            "img":"images/products/wooden-radio.png",
+            "alt": "White wooden radio chair"
+            })
           </li>
 
           <li class="products__card mix category-chairs">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/wooden-chair.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden chair",
+            "img" : "images/products/wooden-chair.png",
+            "alt": "White woodenchair"
+            })
           </li>
 
           <li class="products__card mix category-chairs">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/white-chair.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden chair",
+            "img": "images/products/white-chair.png",
+            "alt": "White wooden radio chair"
+            })
           </li>
 
           <li class="products__card mix category-furnitures">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/retro-chair.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden table",
+            "img":"images/products/retro-chair.png",
+            "alt": "White wooden retro chair"
+            })
           </li>
 
           <li class="products__card mix category-furnitures">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/wooden-radio-2.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden radio",
+            "img": "images/products/wooden-radio-2.png",
+            "alt": "White wooden radio chair"
+            })
           </li>
 
           <li class="products__card mix category-chairs">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/wooden-chair-2.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden chair</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden chair",
+            "img": "images/products/wooden-chair-2.png",
+            "alt": "White wooden radio chair"
+            })
           </li>
 
           <li class="products__card mix category-decor">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/white-chair-2.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden chair",
+            "img": "images/products/white-chair-2.png",
+            "alt": "White wooden radio chair"
+            })
           </li>
 
           <li class="products__card  mix category-decor">
-            <article class="product-card">
-              <a class="product-card__image" href="#">
-                <img class="product-card__img" src="images/products/retro-chair-2.png" alt="White wooden radio chair">
-              </a>
-              <div class="product-card__info">
-                <h3 class="product-card__heading">
-                  <a class="product-card__link" href="#">Wooden radio</a>
-                </h3>
-                <span class="product-card__price">$29.00</span>
-              </div>
-
-              <div class="icons">
-                <a class="icons__icon icons__icon--search" href="#">
-                  <span class="sr-only">Search</span>
-                </a>
-                <button class="icons__icon icons__icon--basket" type="button">
-                  <span class="sr-only">Basket</span>
-                </button>
-                <button class="icons__icon icons__icon--heart" type="button">
-                  <span class="sr-only">Favorites</span>
-                </button>
-              </div>
-            </article>
+            @@include('parts/_product-card.html', {
+            "title": "Wooden table",
+            "img": "images/products/retro-chair-2.png",
+            "alt": "White radio chair"
+            })
           </li>
         </ul>
       </div>
@@ -417,40 +142,19 @@
         <div class="container">
           <ul class="goods__inner">
 
-            <li class="goods__item">
-              <a class="goods__image" href="#">
-                <img class="goods__img" src="images/goods/lаmp.png" alt="Black lamp with cats">
-              </a>
-              <div class="goods__info">
-                <h3 class="goods__title">
-                  <a class="goods__caption" href="#">Mirum Notare Tellus</a>
-                </h3>
-                <div class="goods__descr">
-                  <p>
-                    LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-                  </p>
-                </div>
-                <a class="goods__more" href="#">View More</a>
-              </div>
-            </li>
+            @@include('parts/_goods-item.html', {
+            "text": "LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight",
+            "goods-title": "Mirum Notare Tellus",
+            "src": "images/goods/lamp-cat.png",
+            "alt": "Black lamp with cats"
+            })
 
-            <li class="goods__item">
-              <a class="goods__image goods__image--order" href="#">
-                <img class="goods__img" src="images/goods/lamp-big.png" alt="Black long lamp">
-              </a>
-              <div class="goods__info">
-                <h3 class="goods__title">
-                  <a class="goods__caption" href="#">Malesuada Tempor Euismod</a>
-                </h3>
-                <div class="goods__descr">
-                  <p>
-                    50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-                  </p>
-                </div>
-                <a class="goods__more" href="#">View More</a>
-              </div>
-            </li>
-            </г>
+            @@include('parts/_goods-item.html', {
+            "text": "50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight",
+            "goods-title": "Malesuada Tempor Euismod",
+            "src": "images/goods/lamp-big.png",
+            "alt": "Black long lamp"
+            })
         </div>
       </div>
     </section>
@@ -460,112 +164,69 @@
         <h2 class="title design__title">New Design</h2>
 
         <ul class="filter">
-          <li class="filter__item">
-            <button class="filter__btn" data-filter="all">All</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-furniture">Furnitures</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-chair">Chairs</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-light">Lighting</button>
-          </li>
-          <li class="filter__item">
-            <button class="filter__btn" data-filter=".category-decoration">Decor</button>
-          </li>
+          @@loop('parts/_filter-2.html',[
+          {"sort":"all","text":"All"},
+          {"sort":"category-furniture","text":"Furnitures"},
+          {"sort":"category-chair","text":"Chairs"},
+          {"sort":"category-light","text":"Lighting"},
+          {"sort":"category-decoration","text":"Decor"},
+          ])
         </ul>
 
         <ul class="design__items">
           <li class="design__item mix category-furniture">
-            <article class="design__card">
-              <a class="design__box" href="#">
-                <img class="design__image" src="images/design/sofa.png" alt="white sofa">
-                <div class="design__info">
-                  <h3 class="design__caption">
-                    <a class="design__heading" href="#">Beat Flat Pendant Black</a>
-                  </h3>
-                  <span class="design__text">Classic</span>
-                </div>
-              </a>
-            </article>
+            @@include('parts/_design-card.html', {
+            "img":"images/design/sofa.png",
+            "alt": "white sofa",
+            "title" : "Beat Flat Pendant Black"
+            })
           </li>
 
           <li class="design__item mix category-furniture">
-            <article class="design__card">
-              <a class="design__box" href="#">
-                <img class="design__image" src="images/design/bed.png" alt="big designer bed">
-                <div class="design__info">
-                  <h3 class="design__caption">
-                    <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
-                  </h3>
-                  <span class="design__text">Classic</span>
-                </div>
-              </a>
-            </article>
+            @@include('parts/_design-card.html', {
+            "img":"images/design/bed.png",
+            "alt": "big designer bed",
+            "title" : "Lampe Sur Pieds Bamboo"
+            })
           </li>
 
           <li class="design__item mix category-chair">
-            <article class="design__card">
-              <a class="design__box" href="#">
-                <img class="design__image" src="images/design/chair.png" alt="black leather armchair">
-                <div class="design__info">
-                  <h3 class="design__caption">
-                    <a class="design__heading" href="#">Rattan Rocking Chair</a>
-                  </h3>
-                  <span class="design__text">Classic</span>
-                </div>
-              </a>
-            </article>
+            @@include('parts/_design-card.html', {
+            "img":"images/design/chair.png",
+            "alt": "black leather armchair",
+            "title" : "Rattan Rocking Chair"
+            })
           </li>
 
           <li class="design__item mix category-furniture">
-            <article class="design__card">
-              <a class="design__box" href="#">
-                <img class="design__image" src="images/design/bed-2.png" alt="big designer bed">
-                <div class="design__info">
-                  <h3 class="design__caption">
-                    <a class="design__heading" href="#">Rattan Rocking Chair</a>
-                  </h3>
-                  <span class="design__text">Classic</span>
-                </div>
-              </a>
-            </article>
+            @@include('parts/_design-card.html', {
+            "img":"images/design/bed-2.png",
+            "alt": "big designer bed",
+            "title" : "Rattan Rocking Chair"
+            })
           </li>
 
           <li class="design__item mix category-chair">
-            <article class="design__card">
-              <a class="design__box" href="#">
-                <img class="design__image" src="images/design/chair-2.png" alt="white leather armchair">
-                <div class="design__info">
-                  <h3 class="design__caption">
-                    <a class="design__heading" href="#">Rattan Rocking Chair</a>
-                  </h3>
-                  <span class="design__text">Classic</span>
-                </div>
-              </a>
-            </article>
+            @@include('parts/_design-card.html', {
+            "img":"images/design/chair-2.png",
+            "alt": "white leather armchair",
+            "title" : "Rattan Rocking Chair"
+            })
           </li>
 
           <li class="design__item mix category-furniture">
-            <article class="design__card">
-              <a class="design__box" href="#">
-                <img class="design__image" src="images/design/sofa-2.png" alt="beige sofa">
-                <div class="design__info">
-                  <h3 class="design__caption">
-                    <a class="design__heading" href="#">Lampe Sur Pieds Bamboo</a>
-                  </h3>
-                  <span class="design__text">Classic</span>
-                </div>
-              </a>
-            </article>
+            @@include('parts/_design-card.html', {
+            "img":"images/design/sofa-2.png",
+            "alt": "beige sofa",
+            "title" : "Lampe Sur Pieds Bamboo"
+            })
           </li>
         </ul>
       </div>
 
       <a class="design__popup" data-fancybox href="https://www.youtube.com/watch?v=_Ecl_XEETEA"
         style="background-image: url(images/design/video-bg.jpg)">
+        <span class="sr-only">Interier video</span>
       </a>
     </section>
     <!-- INSIGHTS -->
@@ -581,87 +242,7 @@
           </a>
         </div>
 
-        <ul class="news" id="news">
-          <li class="news__box">
-            <div class="news__image">
-              <a class="news__holder" href="#">
-                <img class="news__img" src="images/insights/interier-bedroom.jpg" alt="bedroom interier">
-              </a>
-            </div>
-            <a class="news__link" href="#">News</a>
-            <h3 class="news__title">
-              <a class="news__descr" href="#">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam
-              </a>
-            </h3>
-            <div class="meta-box">
-              <a href="#" class="meta-box__date">
-                <svg class="meta-box__icon">
-                  <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                </svg>
-                <time datetime="2020-01-28">28 January, 2020</time>
-              </a>
-              <a href="#" class="meta-box__author">
-                <svg class="meta-box__icon">
-                  <use xlink:href="images/icons/sprite.svg#user"></use>
-                </svg>
-                By admin</a>
-            </div>
-          </li>
-
-          <li class="news__box">
-            <div class="news__image">
-              <a class="news__holder" href="#">
-                <img class="news__img" src="images/insights/interier-room.jpg" alt="room interier">
-              </a>
-            </div>
-            <a class="news__link" href="#">News</a>
-            <h3 class="news__title">
-              <a class="news__descr" href="#">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore
-              </a>
-            </h3>
-            <div class="meta-box">
-              <a href="#" class="meta-box__date">
-                <svg class="meta-box__icon">
-                  <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                </svg>
-                <time datetime="2020-01-28">28 January, 2020</time>
-              </a>
-              <a href="#" class="meta-box__author">
-                <svg class="meta-box__icon">
-                  <use xlink:href="images/icons/sprite.svg#user"></use>
-                </svg>
-                By admin</a>
-            </div>
-          </li>
-
-          <li class="news__box">
-            <div class="news__image">
-              <a class="news__holder" href="#">
-                <img class="news__img" src="images/insights/interier-salon.jpg" alt="salon room interier">
-              </a>
-            </div>
-            <a class="news__link" href="#">News</a>
-            <h3 class="news__title">
-              <a class="news__descr" href="#">Rncididunt ut labore et dolore magna aliqua. Ut enim</a>
-            </h3>
-            <div class="meta-box">
-              <a href="#" class="meta-box__date">
-                <svg class="meta-box__icon">
-                  <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                </svg>
-                <time datetime="2020-01-28">28 January, 2020</time>
-              </a>
-              <a href="#" class="meta-box__author">
-                <svg class="meta-box__icon">
-                  <use xlink:href="images/icons/sprite.svg#user"></use>
-                </svg>
-                By admin</a>
-            </div>
-          </li>
-        </ul>
+        @@include('parts/_news.html')
       </div>
 
       <div class="partners" id="partners">
@@ -672,118 +253,7 @@
     </section>
   </main>
   <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <h2 class="sr-only">Lower section of the site with contact information</h2>
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__top">
-
-          <div class="footer__box footer__box--connect">
-            <address class="connect">
-              <a class="footer__logo" href="#">
-                <img class="footer__img" src="images/logo.png" alt="Glee logo">
-              </a>
-              <ul class="connect__list">
-                <li class="connect__item">
-                  <span>Address:</span>
-                  <a class="connect__link" href="#">
-                    4772 Wines Lane
-                    Houston, TX 77032
-                  </a>
-                </li>
-
-                <li class="connect__item">
-                  <span>Telephone:</span>
-                  <a class="connect__link" href="tel:8323475843">+832-347-5843</a>
-                </li>
-
-                <li class="connect__item">
-                  <span>Email:</span>
-                  <a class="connect__link" href="mailto:contact@Glee.com">contact@Glee.com</a>
-                </li>
-              </ul>
-            </address>
-          </div>
-
-          <div class="footer__box footer__box--service">
-            <h3 class="footer__title">Services</h3>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">About us</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Return Policy</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Our Blog</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Contact Us</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Terms & Condition</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__box footer__box--account">
-            <h3 class="footer__title">Account</h3>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">Your Account</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Checkout</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Login</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">Register</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer__box footer__box--newsletter">
-            <h3 class="footer__title">Newsletter</h3>
-            <div class="footer__text">
-              <p>
-                Subscribe by our newsletter and get
-                update protidin.
-              </p>
-            </div>
-            <form class="form" action="#">
-              <input class="form__input" id="email" type="email" name="email" required>
-              <label class="form__label" for="email">Email address</label>
-              <button class="form__btn" type="submit">Subscribe</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="footer__bottom">
-          <div class="footer__copy">
-            <p>©2020 CopyRight Example. All rights reserved.</p>
-          </div>
-          <nav class="footer-nav">
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">Home</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">About</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">Blog</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer>
+  @@include('parts/_footer.html')
   <!-- JS -->
   <script src="js/main.min.js"></script>
 </body>

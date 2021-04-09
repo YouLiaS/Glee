@@ -104,10 +104,18 @@ $(function () {
   const container2 = document.querySelector('.design__items');
 
   if (container1) {
-    mixitup(container1);
+    mixitup('.products__cards', {
+      selectors: {
+        control: '.filter'
+      }
+    })
   }
 
   if (container2) {
-    mixitup(container2);
+    mixitup('.design__items', {
+      selectors: {
+        control: '.filter2'
+      }
+    })
   }
 });

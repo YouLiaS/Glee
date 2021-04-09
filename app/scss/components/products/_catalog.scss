@@ -2,7 +2,7 @@
   position: relative;
 
   &__inner {
-    padding: 57px 0 65px;
+    padding: 57px 0 80px;
     display: flex;
     position: relative;
   }
@@ -26,6 +26,7 @@
       width: 30px;
       height: 30px;
       fill: $light-blue;
+      margin-right: 8px;
     }
   }
 
@@ -40,6 +41,7 @@
     row-gap: 40px;
     margin: 0 auto;
     width: 100%;
+    margin-bottom: 125px;
 
     @include for-desktop {
       grid-template-columns: repeat(2, 1fr);
@@ -69,12 +71,8 @@
     &--line {
       grid-template-columns: 1fr;
 
-      .catalog__item:nth-child(-n+4) {
-        display: block;
-      }
-
       .catalog__item {
-        display: none;
+        display: block;
       }
 
       .product-card {
@@ -94,10 +92,11 @@
         }
 
         &__img {
+          object-fit: contain;
+
           @include for-desktop {
             max-width: 300px;
             min-height: 350px;
-            object-fit: scale-down;
           }
 
           @include for-tablet-portrait {
@@ -157,7 +156,7 @@
         }
 
         .icons {
-          bottom: 60px;
+          bottom: 75px;
 
           @include for-desktop {
             left: 345px;
@@ -181,6 +180,7 @@
     width: 100%;
     margin-right: 30px;
     color: $title;
+    overflow: hidden;
 
     @include for-desktop {
       max-width: 250px;
@@ -220,8 +220,9 @@
       font-size: 18px;
       display: inline-block;
       position: relative;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       padding-right: 55px;
+      max-width: 225px;
 
       &::after {
         @extend %content;
@@ -235,14 +236,20 @@
 
     &__term {
       position: relative;
+      overflow: hidden;
     }
 
     &__label {
       cursor: pointer;
       display: block;
-      transition: color .4s ease;
+      transition: background-color .4s ease;
 
       &:hover {
+        background-color: $extra-light-blue;
+        color: #b3b3b3;
+      }
+
+      &:active {
         color: $light-blue;
       }
     }
@@ -252,7 +259,8 @@
       @extend %checkbox;
 
       &:checked+.filters__checkbox {
-        background-color: #edf1f4;
+        background-color: $extra-light-blue;
+        color: $icon-color;
 
         .filters__info--num {
           color: $title;
@@ -265,6 +273,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 23px 14px 15px;
+      overflow: hidden;
     }
 
     &__price-label {
@@ -288,7 +297,6 @@
     }
 
     &__info {
-
       &--num {
         color: #b3b3b3;
       }
@@ -376,7 +384,7 @@
       display: flex;
 
       &:not(:last-child) {
-        margin-bottom: 29px;
+        margin-bottom: 23px;
       }
     }
 
@@ -413,11 +421,6 @@
       @include line-clamp-2;
       max-width: 100px;
       padding-bottom: 2px;
-      transition: border-bottom .5s ease;
-
-      &:hover {
-        border-bottom: 1px solid $title;
-      }
     }
 
     &__rating {
@@ -431,6 +434,6 @@
 
   &__slider {
     background-color: #fef7f0;
-    padding: 83px 0;
+    padding: 55px 0;
   }
 }

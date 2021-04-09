@@ -1,6 +1,6 @@
 .team {
   &__inner {
-    padding: 120px 0 65px;
+    padding: 120px 0 60px;
     display: flex;
 
     @include for-desktop {
@@ -14,6 +14,7 @@
   }
 
   &__content {
+    position: relative;
     max-width: 300px;
     width: 100%;
     margin-right: 100px;
@@ -33,7 +34,7 @@
   &__title {
     @extend %dmsans-700;
     font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     @include line-clamp-2;
 
     @include for-tablet-landscape {
@@ -42,8 +43,8 @@
   }
 
   &__text {
-    line-height: 1.8;
-    margin-bottom: 58px;
+    line-height: 1.9;
+    margin-bottom: 50px;
 
     @include for-tablet-landscape {
       margin-bottom: 35px;
@@ -83,6 +84,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 100px;
+    height: 100%;
 
     @include for-tablet-portrait {
       grid-template-columns: 1fr;
@@ -93,6 +95,8 @@
   &__item {
     max-width: 370px;
     position: relative;
+    max-height: 320px;
+    height: 100%;
 
     @include for-tablet-landscape {
       max-width: 95%;
@@ -169,7 +173,7 @@
 
   &__proff {
     color: #565872;
-    line-height: 1.8;
+    line-height: 1.9;
     display: block;
     @include line-clamp-2;
   }

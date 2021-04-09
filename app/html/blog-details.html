@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/images/icons/favicon.png" type="image/png">
-  <title>Glee | Blog Details</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('parts/_head.html',{
+"title":"Glee | Blog details"
+})
 
 <body>
   <!-- HEADER -->
   @@include('parts/_header.html')
   <main>
     <section class="blog blog-common">
-      <div class="caption">
-        <h1 class="caption__title">Blog Details</h1>
-        <h2 class="sr-only">Blog page</h2>
+      <div class="breadcrumbs">
+        <h1 class="breadcrumbs__title">Blog Details</h1>
+        <h2 class="sr-only">Blog details page</h2>
 
-        <div class="caption__holder">
-          <ul class="breadcrumbs">
+        <div class="breadcrumbs__holder">
+          <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link" href="#">Home</a>
             </li>
@@ -43,13 +34,14 @@
       <div class="container container--sm">
         <div class="blog__inner">
           <div class="blog__content">
+
             <article class="blog-item">
               <a class="blog-item__mention" href="#">
                 <img class="blog-item__img" src="images/blog/bedroom-bg.jpg" alt="Big bedroom interier">
               </a>
               <div class="blog-item__info">
                 <div class="meta-box meta__blog">
-                  <a href="#" class="meta-box__date">
+                  <a class="meta-box__date" href="#">
                     <svg class="meta-box__icon">
                       <use xlink:href="images/icons/sprite.svg#calendar"></use>
                     </svg>
@@ -61,119 +53,87 @@
                     </svg>
                     By admin</a>
                 </div>
-                <h3 class="blog-item__title">
-                  <span class="blog-item__heading" href="#">
-                    Fonsectetur adipisicing eiusmod
-                  </span>
+                <h3>
+                  Fonsectetur adipisicing eiusmod
                 </h3>
-
-                <div class="blog-item__text">
-                  <p>
+                <p>
+                  <strong>
                     Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                     minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  </p>
+                  </strong>
+                </p>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat nulla pariatur.
+                </p>
+
+                <blockquote>
+                  Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  veniam, quis nostrud exercitation ullamco laboris
+                  <cite>
+                    Wiusmod tempor
+                  </cite>
+                </blockquote>
+
+                <div class="blog-common__post">
+                  <img class="blog-common__pic--left" src="images/blog/salon-bg.jpg" alt="Room interier with blue sofa">
+                  <h4>
+                    Riusmod tempor incididunt
+                  </h4>
                   <p>
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
-                    amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                   </p>
-                </div>
-              </div>
-            </article>
-
-            <blockquote class="blog-common__blockquote">
-              Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris
-              <cite class="blog-common__author">
-                Wiusmod tempor
-              </cite>
-            </blockquote>
-
-            <div class="blog-common__post">
-              <div class="blog-common__holder">
-                <img class="blog-common__pic" src="images/blog/salon-bg.jpg" alt="Room interier with blue sofa">
-                <div class="blog-common__text">
-                  <h4 class="blog-common__heading">
-                    Riusmod tempor incididunt
-                  </h4>
-                  <div class="blog-common__text">
+                  <div class="blog-common__box">
+                    <h4>
+                      Kajtsal jervcm eoaspckred
+                    </h4>
                     <p>
                       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       Ut
                       enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     </p>
                   </div>
-                </div>
-              </div>
-              <div class="blog-common__box">
-                <h4 class="blog-common__heading">
-                  Kajtsal jervcm eoaspckred
-                </h4>
-                <div class="blog-common__text">
-                  <p>
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  </p>
-                </div>
-              </div>
-              <div class="blog-common__user">
-                <div class="blog-common__person">
-                  <img class="blog-common__thumb" src="images/blog/designer.jpg" alt="Designer avatar">
-                  <div class="blog-common__descr">
-                    <span class="blog-common__name">Mark N. Hernandez</span>
-                    <span class="blog-common__proffecion">Designer</span>
+                  <div class="blog-common__user">
+                    <div class="blog-common__person">
+                      <img class="blog-common__thumb" src="images/blog/designer.jpg" alt="Designer avatar">
+                      <div class="blog-common__descr">
+                        <a class="blog-common__name" href="#">Mark N. Hernandez</a>
+                        <span class="blog-common__proffecion">Designer</span>
+                      </div>
+                    </div>
+                    <div class="blog-info">
+                      <ul class="blog-info__list">
+                        <li class="blog-info__item">
+                          <span class="blog-info__subject">Tags:</span>
+                          <ul class="blog-info__descr">
+                            <li class="blog-info__term"><a class="blog-info__link" href="#">All,</a></li>
+                            <li class="blog-info__term"><a class="blog-info__link" href="#">Trending</a> </li>
+                          </ul>
+                        </li>
+                        <li class="blog-info__item">
+                          <span class="blog-info__subject">Share:</span>
+                          <ul class="blog-info__descr">
+                            @@loop('parts/_blog-social.html', [
+                            {"icon": "images/icons/sprite.svg#facebook", "sr-only": "facebook link"},
+                            {"icon": "images/icons/sprite.svg#twitter", "sr-only": "twitter link"},
+                            {"icon": "images/icons/sprite.svg#instagram", "sr-only": "instagram link"},
+                            {"icon": "images/icons/sprite.svg#google-plus", "sr-only": "google plus link"},
+                            ])
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                <div class="blog-info">
-                  <ul class="blog-info__list">
-                    <li class="blog-info__item">
-                      <span class="blog-info__subject">Tags:</span>
-                      <ul class="blog-info__descr">
-                        <li class="blog-info__term"><a class="blog-info__link" href="#">All,</a></li>
-                        <li class="blog-info__term"><a class="blog-info__link" href="#">Trending</a> </li>
-                      </ul>
-                    </li>
-                    <li class="blog-info__item">
-                      <span class="blog-info__subject">Share:</span>
-                      <ul class="blog-info__descr">
-                        <li class="blog-info__soc">
-                          <a class="blog-info__link" href="#">
-                            <svg class="blog-info__social">
-                              <use xlink:href="images/icons/sprite.svg#facebook"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="blog-info__soc">
-                          <a class="blog-info__link" href="#">
-                            <svg class="blog-info__social">
-                              <use xlink:href="images/icons/sprite.svg#twitter"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="blog-info__soc">
-                          <a class="blog-info__link" href="#">
-                            <svg class="blog-info__social">
-                              <use xlink:href="images/icons/sprite.svg#instagram"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="blog-info__soc">
-                          <a class="blog-info__link" href="#">
-                            <svg class="blog-info__social">
-                              <use xlink:href="images/icons/sprite.svg#google-plus"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
               </div>
-            </div>
+            </article>
             <!-- COMMENTS -->
             <div class="comments">
               <h4 class="comments__title">3 Comments</h4>
@@ -182,11 +142,9 @@
                   <img class="comments__thumb" src="images/blog/comment-1.jpg" alt="Сommentator's avatar">
                   <div class="comments__content">
                     <div class="comments__top">
-                      <div class="comments__name">
-                        <p>
-                          Delores G. Roberts
-                        </p>
-                      </div>
+                      <a class="comments__name" href="#">
+                        Delores G. Robert
+                      </a>
                       <span class="comments__date">Add 11 Oct 2020</span>
                     </div>
                     <div class="comments__text">
@@ -204,15 +162,13 @@
                   </div>
 
                 </li>
-                <li class="comments__item">
+                <li class="comments__item comments__item--answer">
                   <img class="comments__thumb" src="images/blog/comment-2.jpg" alt="Сommentator's avatar">
                   <div class="comments__content">
                     <div class="comments__top">
-                      <div class="comments__name">
-                        <p>
-                          Shannon S. Williams
-                        </p>
-                      </div>
+                      <a class="comments__name" href="#">
+                        Shannon S. Williams
+                      </a>
                       <span class="comments__date">Add 11 Oct 2020</span>
                     </div>
                     <div class="comments__text">
@@ -232,11 +188,9 @@
                   <img class="comments__thumb" src="images/blog/comment-3.jpg" alt="Сommentator's avatar">
                   <div class="comments__content">
                     <div class="comments__top">
-                      <div class="comments__name">
-                        <p>
-                          Nicholas R. Coley
-                        </p>
-                      </div>
+                      <a class="comments__name" href="#">
+                        Nicholas R. Coley
+                      </a>
                       <span class="comments__date">Add 11 Oct 2020</span>
                     </div>
                     <div class="comments__text">
@@ -266,195 +220,50 @@
 
                 <div class="comments__naming">
                   <label class="comments__label" for="name">
-                    <input type="text" class="comments__input" name="name-input" id="name" placeholder="Name">
+                    <input type="text" class="comments__input comments__input--name" name="name-input" id="name"
+                      placeholder="Name">
                   </label>
                 </div>
 
                 <div class="comments__email">
                   <label class="comments__label" for="email">
-                    <input type="email" class="comments__input" name="email-input" id="email"
+                    <input type="email" class="comments__input comments__input--mail" name="email-input" id="email"
                       placeholder="youremail@gmail.com">
                   </label>
                 </div>
 
               </div>
-              <textarea class="comments__textarea" placeholder="Comment"></textarea>
+              <label class="comment__textarea" for="comment-textarea"></label>
+              <textarea class="comments__textarea" placeholder="Comment" id="comment-textarea"></textarea>
               <button class="comments__btn" type="submit">Post comment</button>
             </form>
           </div>
 
           <div class="sidebar filters">
-
             <div class="sidebar__search">
-              <form class="sidebar__form" action="#">
-                <label class="sidebar__label" for="sidebar__input"></label>
-                <input class="sidebar__input" type="text" id="sidebar__input">
-                <button class="sidebar__btn" type="submit">
-                  <span class="sr-only">Search button</span>
-                  <svg class="sidebar__icon">
-                    <use xlink:href="images/icons/sprite.svg#blog-search"></use>
-                  </svg>
-                </button>
-              </form>
+              @@include('parts/_search.html')
             </div>
 
             <div class="filters__item">
               <h4 class="filters__title">Category</h4>
 
               <form class="filters__form" action="#">
-                <ul class="filters__list">
-                  <li class="filters__term">
-                    <label class="filters__label" for="category-input">
-                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
-                      <div class="filters__checkbox">
-                        <span class="filters__info">Chair</span>
-                        <span class="filters__info">
-                          <svg class="filters__icon">
-                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                          </svg>
-                        </span>
-                      </div>
-                    </label>
-                  </li>
-                  <li class="filters__term">
-                    <label class="filters__label" for="category-input">
-                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
-                      <div class="filters__checkbox">
-                        <span class="filters__info">Table</span>
-                        <span class="filters__info">
-                          <svg class="filters__icon">
-                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                          </svg>
-                        </span>
-                      </div>
-                    </label>
-                  </li>
-                  <li class="filters__term">
-                    <label class="filters__label" for="category-input">
-                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
-                      <div class="filters__checkbox">
-                        <span class="filters__info">Lamp</span>
-                        <span class="filters__info">
-                          <svg class="filters__icon">
-                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                          </svg>
-                        </span>
-                      </div>
-                    </label>
-                  </li>
-                  <li class="filters__term">
-                    <label class="filters__label" for="category-input">
-                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
-                      <div class="filters__checkbox">
-                        <span class="filters__info">Watch</span>
-                        <span class="filters__info">
-                          <svg class="filters__icon">
-                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                          </svg>
-                        </span>
-                      </div>
-                    </label>
-                  </li>
-                  <li class="filters__term">
-                    <label class="filters__label" for="category-input">
-                      <input class="filters__input" type="checkbox" name="category-input" id="category-input">
-                      <div class="filters__checkbox">
-                        <span class="filters__info">Clock</span>
-                        <span class="filters__info">
-                          <svg class="filters__icon">
-                            <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
-                          </svg>
-                        </span>
-                      </div>
-                    </label>
-                  </li>
-                </ul>
+                @@include('parts/_filters-category.html')
               </form>
             </div>
 
             <div class="filters__item">
               <h4 class="filters__title">Recent posts</h4>
               <ul class="resent">
-                <li class="resent__item">
-                  <a class="resent__picture" href="#">
-                    <img class="resent__picture" src="images/blog/resent-pic-1.jpg" alt="">
-                  </a>
-                  <div class="resent__info">
-                    <h5 class="resent__title">
-                      <a class="resent__heading" href="#">Corem ipsum dolor tetur adipisicing elit</a>
-                    </h5>
-                    <div class="meta-box">
-                      <a href="#" class="meta-box__date">
-                        <svg class="meta-box__icon">
-                          <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                        </svg>
-                        <time datetime="2020-01-28">28 January, 2020</time>
-                      </a>
-                    </div>
-                  </div>
-
-                </li>
-
-                <li class="resent__item">
-                  <a class="resent__picture" href="#">
-                    <img class="resent__pic" src="images/blog/resent-pic-2.jpg" alt="">
-                  </a>
-                  <div class="resent__info">
-                    <h5 class="resent__title">
-                      <a class="resent__heading" href="#">Fdipisicing elit, sed do eiusmod tempor</a>
-                    </h5>
-                    <div class="meta-box">
-                      <a href="#" class="meta-box__date">
-                        <svg class="meta-box__icon">
-                          <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                        </svg>
-                        <time datetime="2020-01-28">28 January, 2020</time>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="resent__item">
-                  <a class="resent__picture" href="#">
-                    <img class="resent__pic" src="images/blog/resent-pic-3.jpg" alt="">
-                  </a>
-                  <div class="resent__info">
-                    <h5 class="resent__title">
-                      <a class="resent__heading" href="#">Eonsectetur adipisicing elit, sed do eiusmod</a>
-                    </h5>
-                    <div class="meta-box">
-                      <a href="#" class="meta-box__date">
-                        <svg class="meta-box__icon">
-                          <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                        </svg>
-                        <time datetime="2020-01-28">28 January, 2020</time>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="resent__item">
-                  <a class="resent__picture" href="#">
-                    <img class="resent__pic" src="images/blog/resent-pic-4.jpg" alt="">
-                  </a>
-                  <div class="resent__info">
-                    <h5 class="resent__title">
-                      <a class="resent__heading" href="#">gnim ad minim veniam, quis nostrud </a>
-                    </h5>
-                    <div class="meta-box">
-                      <a href="#" class="meta-box__date">
-                        <svg class="meta-box__icon">
-                          <use xlink:href="images/icons/sprite.svg#calendar"></use>
-                        </svg>
-                        <time datetime="2020-01-28">28 January, 2020</time>
-                      </a>
-                    </div>
-                  </div>
-                </li>
+                @@loop('parts/_resent-item-date.html',[
+                {"img":"images/blog/resent-pic-1.jpg","text":"Corem ipsum dolor tetur adipisicing elit"},
+                {"img":"images/blog/resent-pic-2.jpg","text":"Fdipisicing elit, sed do eiusmod tempor"},
+                {"img":"images/blog/resent-pic-3.jpg","text":"Eonsectetur adipisicing elit, sed do eiusmod"},
+                {"img":"images/blog/resent-pic-4.jpg","text":"gnim ad minim veniam, quis nostrud"}
+                ])
               </ul>
             </div>
           </div>
-
         </div>
 
       </div>

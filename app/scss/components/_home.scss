@@ -35,7 +35,6 @@
   &__content {
     display: flex;
     justify-content: center;
-    align-items: center;
 
     @include for-tablet-landscape {
       flex-direction: column;
@@ -138,7 +137,11 @@
 
   &__product {
     position: relative;
-    padding-top: 30px;
+    padding-top: 56px;
+
+    @include for-tablet-landscape {
+      margin: 0 auto;
+    }
 
     &::after {
       @extend %content;

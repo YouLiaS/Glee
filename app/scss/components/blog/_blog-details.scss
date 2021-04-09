@@ -1,59 +1,115 @@
 .blog-common {
-  .blog-item .meta__blog {
-    bottom: 310px;
+  .comments__title {
+    padding-top: 0;
+    color: $accent;
+    font-size: 24px;
+    @extend %rubik-700;
+    line-height: 1.5;
+    margin-bottom: 50px;
 
-    @include for-desktop {
-      bottom: 339px;
-    }
-
-    @include for-tablet-landscape {
-      display: none;
+    @include for-tablet-portrait {
+      margin-bottom: 27px;
     }
   }
 
-  .blog-item__heading {
-    margin-bottom: 23px;
+  .filters__title {
+    padding-top: 0;
+    line-height: 1;
+  }
+
+  h3 {
+    margin-bottom: 17px;
     color: $dark-text;
-    @include line-clamp-4;
+    font-size: 36px;
+    @extend %rubik-400;
+
+    @include for-tablet-portrait {
+      margin-bottom: 25px;
+    }
   }
 
-  .blog-item__text {
+  h4 {
+    font-size: 18px;
+    @extend %rubik-500;
+    line-height: 1.6;
     color: $title;
-    line-height: 1.8;
-    margin-bottom: 40px;
+    padding-top: 30px;
+
+    @include for-tablet-portrait {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    color: $title;
+    line-height: 1.9;
+    margin: 14px 0;
 
     @include for-tablet-portrait {
       line-height: 1.5;
       margin-bottom: 30px;
     }
+
+    strong {
+      @extend %rubik-500;
+      color: inherit;
+    }
   }
 
-  .blog-item__text :first-child {
-    @extend %rubik-500;
-    line-height: 1.8;
-    color: $title;
-    margin-bottom: 15px;
+  .resent {
+    padding-top: 0;
+
+    &__picture {
+      @include for-desktop {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .blog__inner {
+    padding-top: 105px;
+  }
+
+  .meta__blog {
+    bottom: 380px;
+
+    @include for-tablet-landscape {
+      bottom: 530px;
+    }
 
     @include for-tablet-portrait {
-      line-height: 1.5;
+      bottom: 535px;
+      right: 0;
+      margin: 0 auto;
+      left: 0;
+      max-width: 300px;
+    }
+
+    @include for-phone-only {
+      bottom: 563px;
+      max-width: 270px;
+
+      .meta-box__date {
+        margin-right: 0;
+      }
     }
   }
 
   .blog-item__info {
     padding-top: 35px;
+
+    @include for-tablet-portrait {
+      padding-top: 70px;
+    }
   }
 
-  .blog-item__heading {
-    padding-bottom: 0;
-  }
-
-  &__blockquote {
+  blockquote {
     background-color: $extra-light-blue;
     padding: 20px 110px 20px 30px;
     border-left: 7px solid $light-blue;
     color: $title;
     line-height: 1.8;
-    margin-bottom: 45px;
+    margin: 35px 0;
 
     @include for-tablet-portrait {
       padding: 15px;
@@ -62,7 +118,7 @@
     }
   }
 
-  &__author {
+  cite {
     padding: 7px 0 0 47px;
     position: relative;
     display: block;
@@ -79,24 +135,22 @@
     }
   }
 
-  &__holder {
-    display: flex;
-    margin-bottom: 18px;
-
-    @include for-tablet-portrait {
-      display: block;
-    }
-  }
-
-  &__pic {
+  &__pic--left {
     max-width: 320px;
     min-height: 210px;
-    margin-right: 35px;
+    margin: 0 35px 5px 0;
+    object-fit: contain;
+    float: left;
 
     @include for-tablet-portrait {
       max-width: 100%;
       margin: 0 auto;
     }
+  }
+
+  &__pic--right {
+    float: right;
+    margin: 0 0 5px 35px;
   }
 
   &__box,
@@ -114,27 +168,6 @@
     @include for-tablet-portrait {
       margin-bottom: 25px;
       padding-top: 12px;
-    }
-  }
-
-  &__heading {
-    font-size: 18px;
-    @extend %rubik-500;
-    line-height: 1.6;
-    color: $title;
-
-    @include for-tablet-portrait {
-      font-size: 20px;
-    }
-  }
-
-  &__text {
-    line-height: 1.8;
-    color: $text-color;
-    @include line-clamp-4;
-
-    @include for-tablet-portrait {
-      line-height: 1.5;
     }
   }
 
@@ -170,6 +203,7 @@
   &__name {
     display: block;
     @extend %rubik-500;
+    color: $dark-grey;
     font-size: 18px;
     line-height: 1.3;
     margin-bottom: 6px;
@@ -237,22 +271,10 @@
 }
 
 .comments {
-  padding: 60px 0 27px;
+  padding-top: 60px;
 
   @include for-tablet-landscape {
-    padding: 20px 0 20px;
-  }
-
-  &__title {
-    color: $accent;
-    font-size: 24px;
-    @extend %rubik-700;
-    line-height: 1.5;
-    margin-bottom: 50px;
-
-    @include for-tablet-portrait {
-      margin-bottom: 27px;
-    }
+    padding-top: 20px;
   }
 
   &__item {
@@ -263,7 +285,7 @@
       flex-direction: column;
     }
 
-    &:nth-child(even) {
+    &--answer {
       padding-left: 135px;
 
       @include for-tablet-landscape {
@@ -271,7 +293,7 @@
       }
 
       @include for-tablet-portrait {
-        padding-left: 0;
+        padding-left: 40px;
       }
     }
   }
@@ -290,7 +312,7 @@
   }
 
   &__content {
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     border-bottom: 1px solid $light-grey;
 
     @include for-tablet-portrait {
@@ -331,7 +353,6 @@
     color: $text-color;
     line-height: 1.8;
     margin-bottom: 22px;
-    @include line-clamp-3;
 
     @include for-tablet-landscape {
       line-height: 1.5;
@@ -376,7 +397,7 @@
   }
 
   &__form {
-    padding-bottom: 40px;
+    padding: 5px 0 40px;
   }
 
   &__row {
@@ -399,25 +420,9 @@
     @include for-desktop {
       max-width: 300px;
     }
-  }
 
-  &__naming {
-    .comments__input {
-      background-image: url('../images/icons/user-input.svg');
-      background-repeat: no-repeat;
-      background-position: 96% 20px;
-    }
-
-    @include for-tablet-landscape {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__email {
-    .comments__input {
-      background-image: url('../images/icons/letter.svg');
-      background-repeat: no-repeat;
-      background-position: 96% 20px;
+    @include for-tablet-portrait {
+      max-width: 100%;
     }
   }
 
@@ -426,6 +431,20 @@
     width: 100%;
     padding: 14px 40px 14px 20px;
     min-height: 50px;
+    background-repeat: no-repeat;
+    background-position: 96% 20px;
+
+    &--name {
+      background-image: url('../images/icons/user-input.svg');
+
+      @include for-tablet-landscape {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--mail {
+      background-image: url('../images/icons/letter.svg');
+    }
 
     &::placeholder {
       color: $light-grey;
@@ -443,7 +462,7 @@
     border: 1px solid #e5e5e5;
     resize: none;
     padding: 20px 40px 20px 20px;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
     background-image: url('../images/icons/comment.svg');
     background-repeat: no-repeat;
     background-position: 98% 20px;
