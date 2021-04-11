@@ -1,0 +1,109 @@
+@@include('parts/_head.html',{
+"title":"Glee | Contacts",
+})
+<!-- HEADER -->
+@@include('parts/_header.html')
+
+<body>
+  <main>
+    <section class="contacts">
+      @@include('parts/_breadcrumbs.html',
+      {
+      "title":"Contact",
+      "current":"Contact"
+      })
+      <div class="container container--sm">
+        <div class="contacts__inner">
+          <div class="contacts__top">
+            <span class="contacts__subtitle">Write here</span>
+            <h2 class="contacts__title">Get In Touch</h2>
+          </div>
+
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <svg class="contacts__icon">
+                <use xlink:href="images/icons/sprite.svg#adress"></use>
+              </svg>
+              <address class="contacts__address">
+                <h3 class="contacts__heading">Address</h3>
+                <a class="contacts__link contacts__link--address" href="#">2416 Mapleview Drive
+                  Tampa, FL 33634</a>
+              </address>
+            </li>
+            <li class="contacts__item">
+              <svg class="contacts__icon">
+                <use xlink:href="images/icons/sprite.svg#email"></use>
+              </svg>
+              <h3 class="contacts__heading">Our Email</h3>
+              <div class="contacts__info">
+                Main Email:
+                <a class="contacts__link" href="mailto:contact@website.com">contact@website.com</a>
+                <div class="contacts__info">
+                  Inquiries:
+                  <a class="contacts__link" href="mailto:Info@mail.com">Info@mail.com</a>
+                </div>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <svg class="contacts__icon">
+                <use xlink:href="images/icons/sprite.svg#contact"></use>
+              </svg>
+              <h3 class="contacts__heading">Our Phone</h3>
+              <div class="contacts__info">
+                Office Telephone:
+                <a class="contacts__link" href="tel:0029129102320"> 0029129102320</a>
+                <div class="contacts__info">
+                  Mobile:
+                  <a class="contacts__link" href="tel:000 2324 39493">000 2324 39493</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contacts__box">
+            @@include('parts/_contact.html',{
+            "placeholder":"Email",
+            "textarea":"Message"
+            })
+            <div class="contacts__map" id="map"></div>
+          </div>
+
+        </div>
+        <div class="insights__top">
+          <h3 class="title insights__title">Our Insights & Articles</h3>
+
+          <a class="insights__link" href="#">View all
+            <svg class="insights__arrow">
+              <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+            </svg>
+          </a>
+        </div>
+        @@include('parts/_news.html')
+      </div>
+      <div class="partners" id="partners">
+        <div class="container container--sm">
+          @@include('parts/_partners.html')
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <!-- FOOTER -->
+  @@include('parts/_footer.html')
+  <!-- JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoieW91bGlhMzY5IiwiYSI6ImNrbmF0NGtjbjBxeTEyeGxjeTc5MHB1cjkifQ.nGyx-yknY6RuElzieLrvxg';
+    var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      center: [-74.5, 40], // starting position [lng, lat]
+      zoom: 9 // starting zoom
+    });
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
