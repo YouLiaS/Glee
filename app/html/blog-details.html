@@ -40,7 +40,7 @@
                 <img class="blog-item__img" src="images/blog/bedroom-bg.jpg" alt="Big bedroom interier">
               </a>
               <div class="blog-item__info">
-                <div class="meta-box meta__blog">
+                <div class="meta-box meta__blog--one">
                   <a class="meta-box__date" href="#">
                     <svg class="meta-box__icon">
                       <use xlink:href="images/icons/sprite.svg#calendar"></use>
@@ -210,33 +210,15 @@
               </ul>
             </div>
             <!-- COMMENTS ENDS -->
-            <form class="comments__form" action="#">
-              <div class="comments__headline">
-                <p>
-                  Leave A Comment
-                </p>
-              </div>
-              <div class="comments__row">
-
-                <div class="comments__naming">
-                  <label class="comments__label" for="name">
-                    <input type="text" class="comments__input comments__input--name" name="name-input" id="name"
-                      placeholder="Name">
-                  </label>
-                </div>
-
-                <div class="comments__email">
-                  <label class="comments__label" for="email">
-                    <input type="email" class="comments__input comments__input--mail" name="email-input" id="email"
-                      placeholder="youremail@gmail.com">
-                  </label>
-                </div>
-
-              </div>
-              <label class="comment__textarea" for="comment-textarea"></label>
-              <textarea class="comments__textarea" placeholder="Comment" id="comment-textarea"></textarea>
-              <button class="comments__btn" type="submit">Post comment</button>
-            </form>
+            <div class="comments__headline">
+              <p>
+                Leave A Comment
+              </p>
+            </div>
+            @@include('parts/_contact.html',{
+            "placeholder":"youremail@gmail.com",
+            "textarea":"Comment"
+            })
           </div>
 
           <div class="sidebar filters">

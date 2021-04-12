@@ -1,0 +1,132 @@
+.login {
+  &__inner {
+    padding: 120px 0;
+
+    @include for-desktop {
+      padding: 90px 0;
+    }
+
+    @include for-phone-only {
+      padding: 55px 0;
+    }
+  }
+
+  &__form {
+    max-width: 475px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__label {
+    color: $accent;
+    font-size: 14px;
+    display: block;
+
+    &--checkbox {
+      padding-left: 20px;
+
+      @include for-phone-only {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+    min-height: 60px;
+    padding: 0 15px;
+    margin-bottom: 45px;
+
+    @include for-tablet-portrait {
+      border-color: $light-grey;
+      min-height: 50px;
+    }
+
+    @include for-phone-only {
+      margin-bottom: 35px;
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: $light-blue;
+    color: $white;
+    font-size: 18px;
+    @extend %rubik-500;
+    padding: 20px;
+    margin-bottom: 35px;
+  }
+
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+    position: relative;
+
+    @include for-phone-only {
+      display: block;
+    }
+  }
+
+  &__account {
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: $accent;
+
+    &--register {
+      display: block;
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__account {
+    width: 100%;
+    display: block;
+    border: 1px solid $accent;
+    font-size: 18px;
+    @extend %rubik-500;
+    color: $title;
+    padding: 20px;
+  }
+
+  &__checkbox {
+    position: relative;
+    @extend %checkbox;
+
+    &:checked+.login__check {
+      background-image: url('../../../images/icons/done.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__check {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-color: #ebebeb;
+    margin-top: -1px;
+    margin-right: 15px;
+    left: 0;
+  }
+
+
+  &-carousel {
+    background-color: $slider-bg;
+    padding: 55px 0;
+  }
+}

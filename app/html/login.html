@@ -1,0 +1,55 @@
+@@include('parts/_head.html',{
+"title":"Glee | Login"
+})
+
+<body>
+  <!-- HEADER -->
+  @@include('parts/_header.html')
+  <main>
+    <section class="login">
+      @@include('parts/_breadcrumbs.html',{
+      "title":"Log in",
+      "title2":"Login / Registration page",
+      "current":"Log in"
+      })
+      <div class="container container--sm">
+        <div class="login__inner">
+
+          <form class="login__form" action="#">
+            <label class="login__label" for="#">
+              Username or email address *
+              <input class="login__input" type="text" required>
+            </label>
+            <label class="login__label" for="#">
+              Password *
+              <input class="login__input" type="password" required>
+            </label>
+            <button class="login__btn" type="submit">Login</button>
+            <div class="login__box">
+              <label class="login__label login__label--checkbox">
+                <input class="login__checkbox" type="checkbox">
+                <span class="login__check"></span>
+                Remember me
+              </label>
+              <a class="login__link" href="#">Lost your password?</a>
+            </div>
+            <a class="login__link login__link--register" href="#">Not registered? No problem</a>
+            <button class="login__account" type="submit">Create an account</button>
+          </form>
+
+        </div>
+      </div>
+      <div class="login-carousel">
+        <div class="container container--sm">
+          @@include('parts/_partners.html')
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER -->
+  @@include('parts/_footer.html')
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
