@@ -1,0 +1,64 @@
+.terms {
+  &__inner {
+    padding: 110px 0;
+    color: $title;
+
+    @include for-tablet-landscape {
+      padding: 40px 0;
+    }
+  }
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 24px;
+    color: $title;
+    line-height: 1.7;
+    margin-bottom: 14px;
+
+    @include for-tablet-landscape {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 55px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: start;
+    line-height: 1.9;
+
+    @include for-tablet-portrait {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__num {
+    margin-right: 20px;
+  }
+
+  &__text {
+    max-width: 1160px;
+    width: 100%;
+
+    @include for-tablet-landscape {
+      line-height: 1.6;
+    }
+  }
+
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__descr {
+    line-height: 1.9;
+  }
+
+}
