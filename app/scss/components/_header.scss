@@ -75,7 +75,7 @@
     display: block;
     text-align: center;
     background-color: #fef7f0;
-    min-height: 100vh;
+    height: 100vh;
     transform: translateX(-200%);
     overflow-y: auto;
     transition: transform .5s ease-in-out;
@@ -294,5 +294,4 @@
     height: 30px;
     background-color: $light-orange;
   }
-
 }

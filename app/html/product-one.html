@@ -1,0 +1,255 @@
+@@include('parts/_head.html',{
+"title":"Glee | Product"
+})
+
+<body>
+  <!-- HEADER -->
+  @@include('parts/_header.html')
+  <main>
+    <section class="product-one">
+      @@include('parts/_breadcrumbs.html',{
+      "title":"Product Details",
+      "title2":"Product details page",
+      "current":"Product details"
+      })
+
+      <div class="container container--sm">
+        <div class="product-one__inner">
+          <!-- SLIDER -->
+          <div class="product-one__slider">
+
+            <div class="product-one__thumbnail">
+              @@include('parts/_slider-thumb.html',{
+              "img":"../images/product-one/thumb-1.jpg"
+              })
+              @@include('parts/_slider-thumb.html',{
+              "img":"../images/product-one/thumb-2.jpg"
+              })
+              @@include('parts/_slider-thumb.html',{
+              "img":"../images/product-one/thumb-3.jpg"
+              })
+              @@include('parts/_slider-thumb.html',{
+              "img":"../images/product-one/lamp-big.jpg"
+              })
+            </div>
+
+            <div class="product-one__big">
+              @@include('parts/_slider-big.html',{
+              "img":"../images/product-one/lamp-big.jpg"
+              })
+              @@include('parts/_slider-big.html',{
+              "img":"../images/product-one/thumb-1.jpg"
+              })
+              @@include('parts/_slider-big.html',{
+              "img":"../images/product-one/thumb-2.jpg"
+              })
+              @@include('parts/_slider-big.html',{
+              "img":"../images/product-one/thumb-3.jpg"
+              })
+            </div>
+          </div>
+
+          <!-- SLIDER -->
+
+          <div class="product-one__content">
+            <h3 class="product-one__title">Pendant lamp</h3>
+            <div class="product-one__rating" data-rateyo-rating="4"></div>
+            <span class="product-one__price">23$</span>
+            <div class="product-one__descr">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </p>
+            </div>
+            <form class="product-one__form" action="#">
+              <div class="product-one__box">
+                <label class="product-one__label"></label>
+                <input class="product-one__num" type="number" value="1">
+
+                <button class="product-one__btn" type="submit">Add to cart</button>
+              </div>
+
+              <ul class="product-one__info">
+                <li class="product-one__item">
+                  <span class="product-one__subject">SKU:</span>
+                  <a class="product-one__link" href="#">014</a>
+                </li>
+                <li class="product-one__item">
+                  <span class="product-one__subject">Category:</span>
+                  <a class="product-one__link" href="#"> Lights</a>
+                </li>
+                <li class="product-one__item">
+                  <span class="product-one__subject">Tag:</span>
+                  <a class="product-one__link" href="#">Decorative</a>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+        <!-- TABS -->
+        <div class="tabs">
+          <div class="tabs__links">
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link active" href="#tab-1">Description</a>
+              </li>
+              <li class="tabs__item"><a class="tabs__link" href="#tab-2">Additional information</a>
+              </li>
+              <li class="tabs__item"><a class="tabs__link" href="#tab-3">Reviews (2)</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__content">
+            <div class="tabs__descr tabs__descr--active" id="tab-1">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+              </p>
+            </div>
+            <div class="tabs__descr" id="tab-2">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum
+              </p>
+            </div>
+            <div class="tabs__descr" id="tab-3">
+              <div class="comments">
+                <ul class="comments__list">
+                  <li class="comments__item">
+                    <img class="comments__thumb" src="images/blog/comment-1.jpg" alt="Сommentator's avatar">
+                    <div class="comments__content">
+                      <div class="comments__top">
+                        <a class="comments__name" href="#">
+                          Delores G. Robert
+                        </a>
+                        <span class="comments__date">Add 11 Oct 2020</span>
+                      </div>
+                      <div class="comments__text">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa
+                          et tristique
+                          convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                          inceptos
+                          himenaeos. Suspendisse orci sem, ultrices
+                        </p>
+                      </div>
+                      <a class="comments__link" href="#">Reply
+                        <svg class="comments__icon">
+                          <use xlink:href="images/icons/sprite.svg#arrow-small"></use>
+                        </svg>
+                      </a>
+                    </div>
+
+                  </li>
+                  <li class="comments__item">
+                    <img class="comments__thumb" src="images/blog/comment-3.jpg" alt="Сommentator's avatar">
+                    <div class="comments__content">
+                      <div class="comments__top">
+                        <a class="comments__name" href="#">
+                          Nicholas R. Coley
+                        </a>
+                        <span class="comments__date">Add 11 Oct 2020</span>
+                      </div>
+                      <div class="comments__text">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa
+                          et tristique
+                          convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                          inceptos
+                          himenaeos. Suspendisse orci sem,
+                        </p>
+                      </div>
+                      <a class="comments__link" href="#">Reply
+                        <svg class="comments__icon">
+                          <use xlink:href="images/icons/sprite.svg#arrow-small"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="related">
+          <h3 class="related__title">Related products</h3>
+          <div class="related__slider">
+            <ul class="related__list">
+              <li class="related__item">
+                @@include('parts/_product-card.html', {
+                "title": "Wooden radio",
+                "img":"images/products/wooden-radio.png",
+                "alt": "White wooden radio chair"
+                })
+              </li>
+              <li class="related__item">
+                @@include('parts/_product-card.html', {
+                "title": "Wooden chair",
+                "img" : "images/products/wooden-chair.png",
+                "alt": "White woodenchair"
+                })
+              </li>
+              <li class="related__item">
+                @@include('parts/_product-card.html', {
+                "title": "Wooden chair",
+                "img": "images/products/white-chair.png",
+                "alt": "White wooden radio chair"
+                })
+              </li>
+              <li class="related__item">
+                @@include('parts/_product-card.html', {
+                "title": "Wooden table",
+                "img":"images/products/retro-chair.png",
+                "alt": "White wooden retro chair"
+                })
+              </li>
+              <li class="related__item">
+                @@include('parts/_product-card.html', {
+                "title": "Wooden radio",
+                "img":"images/products/wooden-radio.png",
+                "alt": "White wooden radio chair"
+                })
+              </li>
+              <li class="related__item">
+                @@include('parts/_product-card.html', {
+                "title": "Wooden chair",
+                "img" : "images/products/wooden-chair.png",
+                "alt": "White woodenchair"
+                })
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="insights">
+        <div class="container container--sm">
+          <div class="insights__top">
+            <h2 class="title insights__title">Our Insights & Articles</h2>
+
+            <a class="insights__link" href="#">View all
+              <svg class="insights__arrow">
+                <use xlink:href="images/icons/sprite.svg#arrow-sm"></use>
+              </svg>
+            </a>
+          </div>
+
+          @@include('parts/_news.html')
+        </div>
+
+        <div class="partners" id="partners">
+          <div class="container container--sm">
+            @@include('parts/_partners.html')
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER -->
+  @@include('parts/_footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
